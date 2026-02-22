@@ -4,6 +4,8 @@
 
 Define what this repository is responsible for delivering, what is intentionally out of scope, and the minimum criteria for saying a jurisdiction is "supported."
 
+This repository is a data foundation for a downstream web app that presents a "tax receipt" style view of what taxes fund.
+
 ## In scope
 
 This project is in scope to:
@@ -14,11 +16,13 @@ This project is in scope to:
 - publish cleaned outputs to a stable output location, and
 - run quality checks that verify structural and accounting consistency.
 
+For the first release, normalized outputs are summary-level spending totals by category.
+
 ## Target coverage (phased)
 
-- **Federal:** Government of Canada public accounts artifacts.
-- **Provincial:** Province-level public accounts (starting with a small initial subset).
-- **Municipal:** City-level public accounts for selected municipalities (expanding iteratively).
+- **MVP required:** Federal (Canada), Ontario, Toronto.
+- **Optional early-support track:** Saskatchewan and Regina.
+- **Later expansion:** additional provinces/municipalities after MVP quality gates pass.
 
 Coverage should expand only when the previous set is reproducible and passes quality gates.
 
@@ -26,11 +30,10 @@ Coverage should expand only when the previous set is reproducible and passes qua
 
 The pipeline should prioritize commonly published public accounts concepts such as:
 
+- spending/expenditure totals by category (first release priority),
 - revenues,
-- expenses/expenditures,
-- assets/liabilities,
-- net debt/net financial position, and
-- segment/program-level line items where available.
+- assets/liabilities, and
+- net debt/net financial position.
 
 Exact inclusion per jurisdiction depends on source availability and reliable extraction.
 
@@ -50,7 +53,8 @@ For this repository, cleaned and consistent means:
 2. naming conventions are standardized across jurisdictions,
 3. currency and fiscal period are explicit and normalized,
 4. missing/unknown values are represented consistently, and
-5. each output record carries provenance metadata linking to its source.
+5. each output record carries provenance metadata linking to its source,
+6. transformation assumptions are documented in output metadata.
 
 ## Definition of "jurisdiction supported"
 

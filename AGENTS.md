@@ -8,6 +8,8 @@ This repository is intended to be actively developed by both humans and AI codin
 
 Build a reproducible pipeline that converts Canadian public accounts source materials into standardized, high-quality, traceable datasets.
 
+For v0.1, prioritize summary-level spending outputs that can power a "tax receipt" web app while keeping source and transformation assumptions explicit.
+
 ## Source of truth documents
 
 Before making changes, agents should read:
@@ -35,6 +37,7 @@ If implementation conflicts with docs, update docs and code in the same change.
 - Do not overwrite or mutate raw source files in place.
 - Do not introduce schema-breaking changes without updating `docs/DATA_SCHEMA.md`.
 - Do not bypass failed quality checks without recording a clear caveat.
+- Do not use mirror sources without documenting official URL and mirror provenance.
 
 ## Implementation conventions
 

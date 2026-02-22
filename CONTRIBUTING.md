@@ -42,6 +42,7 @@ If you change any of the following, update docs in the same change:
 - Prefer deterministic parsing/transform logic.
 - Add tests/checks where feasible.
 - Preserve provenance metadata in output records.
+- Document transformation assumptions when mapping source categories.
 
 ## Pull request checklist
 

@@ -4,6 +4,13 @@
 
 Ship a reliable, reproducible public accounts data pipeline in staged milestones, starting small and expanding coverage only after validation gates are met.
 
+The first release should produce trustworthy summary-level spending data that can power a web app showing a "tax receipt" view for Canadian taxpayers.
+
+## MVP coverage target (first release)
+
+- **Required:** Federal (Canada), Ontario, Toronto
+- **Optional early-support track:** Saskatchewan and Regina (to leverage higher local familiarity during development)
+
 ## Milestones
 
 ## M0 - Project foundation (current)
@@ -22,13 +29,13 @@ Ship a reliable, reproducible public accounts data pipeline in staged milestones
 
 **Deliverables**
 
-- Minimal ingest pipeline for initial jurisdictions.
+- Minimal ingest pipeline for initial jurisdictions (Federal, Ontario, Toronto).
 - Repeatable run command(s) for local execution.
 - Raw source files organized by jurisdiction and version/date.
 
 **Acceptance criteria**
 
-- End-to-end ingest works for agreed initial jurisdictions.
+- End-to-end ingest works for required MVP jurisdictions.
 - Ingest is idempotent for unchanged inputs.
 - Source provenance metadata is captured.
 
@@ -36,7 +43,7 @@ Ship a reliable, reproducible public accounts data pipeline in staged milestones
 
 **Deliverables**
 
-- Canonical transformation layer aligned to `docs/DATA_SCHEMA.md`.
+- Canonical transformation layer aligned to `docs/DATA_SCHEMA.md` (summary-level v0.1 outputs).
 - Schema validation checks as part of pipeline runs.
 - Initial output datasets in `output-data/`.
 
@@ -74,12 +81,12 @@ Ship a reliable, reproducible public accounts data pipeline in staged milestones
 
 ## Prioritized backlog
 
-1. Confirm first 3-5 jurisdictions for MVP.
-2. Lock canonical schema v0.1.
+1. Lock MVP jurisdictions: Federal, Ontario, Toronto (with optional SK/Regina track).
+2. Lock canonical **summary-level** schema v0.1 for spending categories.
 3. Implement ingest adapters for MVP jurisdictions.
-4. Build transform + validation modules.
+4. Build summary transformation + validation modules.
 5. Add run reporting and quality gating.
-6. Expand jurisdiction coverage.
+6. Expand jurisdiction coverage and granularity (line-item support in later versions).
 
 ## Definition of done for roadmap tasks
 

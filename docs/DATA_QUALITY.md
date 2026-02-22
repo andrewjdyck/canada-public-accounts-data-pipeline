@@ -25,17 +25,18 @@ Define the minimum quality standards required before normalized outputs are cons
 - No nulls in required fields.
 - Amount fields are numeric.
 - Unit/currency fields are populated for all monetary rows.
+- `transformation_assumptions` is populated (`none` allowed when appropriate).
 
 ## 3) Uniqueness checks
 
 - `record_id` is unique within a dataset snapshot.
-- No duplicated records across `(jurisdiction_code, fiscal_year, line_item_name, source_page_ref)` unless explicitly justified.
+- No duplicated records across `(jurisdiction_code, fiscal_year, spending_category, source_page_ref)` unless explicitly justified.
 
 ## 4) Reconciliation checks
 
 Where source structures provide totals:
 
-- Sum of child line items approximates reported totals within tolerance.
+- Sum of mapped category totals approximates reported top-level totals within tolerance.
 - Significant unexplained variance is flagged as failure.
 
 ## 5) Provenance checks

@@ -14,12 +14,25 @@ Public accounts are published by many entities in inconsistent formats (PDF, tab
 
 This repository is currently in an early scaffold/documentation phase. The folder conventions and documentation define how development should proceed, while pipeline code and data assets are still to be implemented.
 
+## Audience and product context
+
+- **Primary audience today:** the project author/developer.
+- **Near-term audience:** public users and contributors after first release.
+- **Downstream product:** a web app that shows a "receipt" for Canadian taxes and the services those taxes fund.
+
+To support that product responsibly, this repository emphasizes clarity and auditability in:
+
+- source selection,
+- transformation logic, and
+- assumptions made during normalization.
+
 ## Goals
 
 - Build a repeatable ingestion and transformation pipeline.
 - Standardize terminology and fields across jurisdictions.
 - Preserve provenance from every output record back to source material.
 - Establish quality checks that catch parsing and normalization errors early.
+- Make assumptions explicit so results are interpretable by readers.
 - Make future onboarding easy for both human contributors and AI agents.
 
 ## Non-goals (for now)
@@ -45,16 +58,12 @@ root/
   source-data/
     federal/
     provincial/
-      bc/
-      ab/
-      sk/
       on/
+      sk/            # optional early-support track
       ...
     municipal/
-      yvr/
-      yyc/
-      yqr/
-      yyz/
+      toronto/
+      regina/        # optional early-support track
       ...
   output-data/
     ...
@@ -71,6 +80,13 @@ root/
 
 See [docs/ROADMAP.md](docs/ROADMAP.md) for milestones and acceptance criteria.
 
+## Initial MVP jurisdictions
+
+- Federal (Canada)
+- Ontario
+- Toronto
+- Optional while building: Saskatchewan and Regina (higher domain familiarity)
+
 ## Documentation map
 
 - [Project scope](docs/PROJECT_SCOPE.md)
@@ -86,6 +102,7 @@ See [docs/ROADMAP.md](docs/ROADMAP.md) for milestones and acceptance criteria.
 
 - **Reproducibility first:** identical inputs should produce identical outputs.
 - **Traceability first:** every transformed row should map back to a source file/record.
+- **Transparency first:** source choices and transformation assumptions are documented.
 - **Incremental delivery:** add jurisdictions through small, verifiable iterations.
 - **Contract-driven development:** schema and quality checks are treated as core API contracts.
 

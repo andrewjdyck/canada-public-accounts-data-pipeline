@@ -5,13 +5,14 @@
 - Reproducible end-to-end runs.
 - Clear separation of ingest, transform, and validation responsibilities.
 - Traceability from outputs back to source documents.
+- Transparent documentation of transformation assumptions.
 - Easy onboarding of new jurisdictions by adding scoped adapters.
 
 ## Proposed stages
 
 1. **Source discovery**
    - Read active entries from `docs/DATA_SOURCES.md` (or a machine-readable derivative).
-   - Resolve source URLs/locations and expected artifacts.
+   - Resolve official and/or mirror URLs and expected artifacts.
 
 2. **Ingestion**
    - Download/capture source artifacts.
@@ -25,6 +26,7 @@
 4. **Normalization**
    - Map source fields and labels to canonical schema in `docs/DATA_SCHEMA.md`.
    - Normalize units, fiscal year format, and common naming conventions.
+   - For v0.1, produce summary-level spending totals by category.
 
 5. **Validation and quality checks**
    - Enforce schema constraints.
@@ -54,7 +56,7 @@ Adapter logic should be isolated per source/jurisdiction so failures and updates
 
 - Ingest outputs immutable artifacts + metadata.
 - Parse outputs structured records with source references.
-- Normalize outputs canonical records that match schema.
+- Normalize outputs canonical summary records that match schema.
 - Validate outputs explicit check results and failure reasons.
 - Publish writes datasets and run manifests.
 
