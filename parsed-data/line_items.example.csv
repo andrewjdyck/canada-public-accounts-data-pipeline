@@ -1,0 +1,4 @@
+statement_id,account_code,account_name,category,subcategory,amount
+regina-2023-consolidated,REV-TAX,Taxation,Revenue,Taxation,410000000
+regina-2023-consolidated,EXP-PROTECT,Protective Services,Expense,Police,210000000
+regina-police-2023,EXP-SAL,Police Salaries,Expense,Salaries,185000000

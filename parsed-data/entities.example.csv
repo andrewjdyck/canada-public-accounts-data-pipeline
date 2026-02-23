@@ -1,0 +1,7 @@
+entity_id,parent_entity_id,level,name,entity_type
+regina,,
+municipal,City of Regina,government
+regina-police,regina,
+municipal,Regina Police Service,police
+regina-dbd,regina,
+municipal,Regina Downtown BID,board

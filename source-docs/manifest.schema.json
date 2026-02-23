@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/source-docs/manifest.schema.json",
+  "title": "Public Accounts Source Document Manifest",
+  "type": "object",
+  "required": ["manifest_version", "documents"],
+  "properties": {
+    "manifest_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "defaults": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "object",
+          "properties": {
+            "method": { "type": "string" },
+            "license": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "file": {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    }
+  },
+  "additionalProperties": false,
+
+  "$defs": {
+    "document": {
+      "type": "object",
+      "required": [
+        "id",
+        "level",
+        "jurisdiction",
+        "entity",
+        "doc",
+        "source",
+        "storage",
+        "file"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9\\-]+$"
+        },
+
+        "level": {
+          "type": "string",
+          "enum": ["federal", "provincial", "municipal"]
+        },
+
+        "jurisdiction": {
+          "type": "object",
+          "required": ["country"],
+          "properties": {
+            "country": {
+              "type": "string",
+              "const": "CA"
+            },
+            "province": {
+              "type": ["string", "null"],
+              "pattern": "^[A-Z]{2}$"
+            },
+            "municipality": {
+              "type": ["string", "null"]
+            }
+          },
+          "additionalProperties": false
+        },
+
+        "entity": {
+          "type": "object",
+          "required": ["name", "type"],
+          "properties": {
+            "name": { "type": "string" },
+            "short": { "type": "string" },
+            "type": {
+              "type": "string",
+              "enum": ["government", "agency", "crown", "authority"]
+            }
+          },
+          "additionalProperties": false
+        },
+
+        "doc": {
+          "type": "object",
+          "required": ["kind", "title", "fiscal_year"],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "public_accounts",
+                "budget",
+                "annual_financial_report",
+                "financial_statement",
+                "estimates"
+              ]
+            },
+            "title": { "type": "string" },
+            "fiscal_year": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{4}$"
+            },
+            "period_covered": {
+              "type": "object",
+              "properties": {
+                "start": { "type": "string", "format": "date" },
+                "end": { "type": "string", "format": "date" }
+              },
+              "required": ["start", "end"],
+              "additionalProperties": false
+            },
+            "language": {
+              "type": "string",
+              "enum": ["en", "fr", "bilingual"]
+            }
+          },
+          "additionalProperties": false
+        },
+
+        "source": {
+          "type": "object",
+          "required": ["url", "retrieved_at"],
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "retrieved_at": { "type": "string", "format": "date" },
+            "publisher": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+
+        "storage": {
+          "type": "object",
+          "required": ["relpath"],
+          "properties": {
+            "relpath": { "type": "string" },
+            "filename": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+
+        "file": {
+          "type": "object",
+          "required": ["format"],
+          "properties": {
+            "format": {
+              "type": "string",
+              "enum": ["pdf", "xlsx", "csv", "html"]
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "bytes": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": false
+        },
+
+        "status": {
+          "type": "string",
+          "enum": ["planned", "downloaded", "parsed", "verified"]
+        },
+
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

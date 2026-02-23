@@ -1,0 +1,242 @@
+federal:
+  categories:
+    - name: "Health Transfers"
+      rate: 0.2
+    - name: "Military"
+      rate: 0.07
+    - name: "Social Transfers"
+      rate: 0.25
+      subcategories:
+        - name: "Old Age Security (OAS)"
+          rate: 0.15
+        - name: "Guaranteed Income Supplement (GIS)"
+          rate: 0.1
+    - name: "Interest Payments"
+      rate: 0.08
+    - name: "Other"
+      rate: 0.4
+
+provincial:
+  Ontario:
+    categories:
+      - name: "Healthcare"
+        rate: 0.6
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.35
+          - name: "Long-term Care"
+            rate: 0.15
+          - name: "Other Healthcare"
+            rate: 0.1
+      - name: "Education"
+        rate: 0.2
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.12
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Highways"
+        rate: 0.15
+      - name: "Other"
+        rate: 0.05
+
+  "British Columbia":
+    categories:
+      - name: "Healthcare"
+        rate: 0.55
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.3
+          - name: "Other Healthcare"
+            rate: 0.25
+      - name: "Education"
+        rate: 0.25
+      - name: "Transportation"
+        rate: 0.15
+      - name: "Other"
+        rate: 0.05
+
+  Alberta:
+    categories:
+      - name: "Healthcare"
+        rate: 0.4
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.25
+          - name: "Other Healthcare"
+            rate: 0.15
+      - name: "Education"
+        rate: 0.25
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.15
+          - name: "Post-secondary"
+            rate: 0.1
+      - name: "Social Services"
+        rate: 0.15
+      - name: "Transportation"
+        rate: 0.12
+      - name: "Other"
+        rate: 0.08
+
+  Saskatchewan:
+    categories:
+      - name: "Healthcare"
+        rate: 0.45
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.28
+          - name: "Other Healthcare"
+            rate: 0.17
+      - name: "Education"
+        rate: 0.22
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.14
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Social Services"
+        rate: 0.15
+      - name: "Transportation"
+        rate: 0.12
+      - name: "Other"
+        rate: 0.06
+
+  Manitoba:
+    categories:
+      - name: "Healthcare"
+        rate: 0.42
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.26
+          - name: "Other Healthcare"
+            rate: 0.16
+      - name: "Education"
+        rate: 0.24
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.15
+          - name: "Post-secondary"
+            rate: 0.09
+      - name: "Social Services"
+        rate: 0.16
+      - name: "Transportation"
+        rate: 0.12
+      - name: "Other"
+        rate: 0.06
+
+  Quebec:
+    categories:
+      - name: "Healthcare"
+        rate: 0.38
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.24
+          - name: "Other Healthcare"
+            rate: 0.14
+      - name: "Education"
+        rate: 0.28
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.18
+          - name: "Post-secondary"
+            rate: 0.1
+      - name: "Social Services"
+        rate: 0.18
+      - name: "Transportation"
+        rate: 0.1
+      - name: "Other"
+        rate: 0.06
+
+  "New Brunswick":
+    categories:
+      - name: "Healthcare"
+        rate: 0.44
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.27
+          - name: "Other Healthcare"
+            rate: 0.17
+      - name: "Education"
+        rate: 0.23
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.15
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Social Services"
+        rate: 0.15
+      - name: "Transportation"
+        rate: 0.12
+      - name: "Other"
+        rate: 0.06
+
+  "Nova Scotia":
+    categories:
+      - name: "Healthcare"
+        rate: 0.46
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.29
+          - name: "Other Healthcare"
+            rate: 0.17
+      - name: "Education"
+        rate: 0.22
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.14
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Social Services"
+        rate: 0.14
+      - name: "Transportation"
+        rate: 0.12
+      - name: "Other"
+        rate: 0.06
+
+  "Prince Edward Island":
+    categories:
+      - name: "Healthcare"
+        rate: 0.48
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.3
+          - name: "Other Healthcare"
+            rate: 0.18
+      - name: "Education"
+        rate: 0.24
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.16
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Social Services"
+        rate: 0.13
+      - name: "Transportation"
+        rate: 0.1
+      - name: "Other"
+        rate: 0.05
+
+  "Newfoundland and Labrador":
+    categories:
+      - name: "Healthcare"
+        rate: 0.47
+        subcategories:
+          - name: "Hospitals"
+            rate: 0.29
+          - name: "Other Healthcare"
+            rate: 0.18
+      - name: "Education"
+        rate: 0.23
+        subcategories:
+          - name: "Primary and Secondary"
+            rate: 0.15
+          - name: "Post-secondary"
+            rate: 0.08
+      - name: "Social Services"
+        rate: 0.14
+      - name: "Transportation"
+        rate: 0.11
+      - name: "Other"
+        rate: 0.05
+

@@ -1,0 +1,46 @@
+level: federal
+entity: canada
+fiscal_year: 2023-2024
+metric: share_of_tax_revenue
+units: proportion
+
+categories:
+  - name: Income supports & benefits
+    subcategory: OAS / GIS / EI / CCB
+    share: 0.31
+    notes: Direct transfers to individuals
+
+  - name: Transfers to provinces & territories
+    subcategory: Health / Social / Equalization
+    share: 0.22
+    notes: >
+      Funds transferred to provinces and territories.
+      These amounts will appear again in provincial spending breakdowns.
+
+  - name: Debt interest
+    share: 0.09
+    notes: Interest paid on federal public debt
+
+  - name: Defence & national security
+    share: 0.07
+    notes: Canadian Armed Forces and national security
+
+  - name: Indigenous services & reconciliation
+    share: 0.05
+    notes: Indigenous Services Canada and Crown-Indigenous Relations
+
+  - name: Federal government operations
+    share: 0.08
+    notes: Public service operations, CRA, courts, Parliament, internal services
+
+  - name: Economic development, infrastructure & environment
+    share: 0.06
+    notes: Infrastructure programs, climate initiatives, regional development
+
+  - name: International affairs & foreign aid
+    share: 0.02
+    notes: Global Affairs, diplomacy, development assistance
+
+  - name: Other federal programs
+    share: 0.02
+    notes: Residual federal programs not captured above
