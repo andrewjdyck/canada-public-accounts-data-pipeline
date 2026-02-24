@@ -28,6 +28,8 @@ documents:
       language: en                        # en | fr | bilingual
     source:
       url: "https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf"
+      official_url: "https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf"
+      source_tier: "official"
       retrieved_at: "2025-12-26"
       # publisher: "Receiver General for Canada"
     storage:
@@ -52,13 +54,15 @@ documents:
     doc:
       kind: public_accounts
       title: "Public Accounts 2024–25 Volume 2"
-      fiscal_year: "2024-225"
+      fiscal_year: "2024-2025"
       period_covered:
         start: "2024-04-01"
         end: "2025-03-31"
       language: en
     source:
       url: "https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf"
+      official_url: "https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf"
+      source_tier: "official"
       retrieved_at: "2025-12-26"
       publisher: "Saskatchewan Ministry of Finance"
     storage:
@@ -73,7 +77,7 @@ documents:
     level: municipal                        # federal | provincial | municipal
     jurisdiction:
       country: CA
-      province: sk
+      province: SK
       municipality: regina-sk
     entity:
       name: City of Regina
@@ -90,6 +94,8 @@ documents:
       language: en                        # en | fr | bilingual
     source:
       url: "https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf"
+      official_url: "https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf"
+      source_tier: "official"
       retrieved_at: "2025-12-26"
       # publisher: "Receiver General for Canada"
     storage:
@@ -105,7 +111,7 @@ documents:
     level: municipal                        # federal | provincial | municipal
     jurisdiction:
       country: CA
-      province: sk
+      province: SK
       municipality: regina-sk
     entity:
       name: City of Regina
@@ -122,6 +128,8 @@ documents:
       language: en                        # en | fr | bilingual
     source:
       url: "https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf"
+      official_url: "https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf"
+      source_tier: "official"
       retrieved_at: "2025-12-26"
       # publisher: "Receiver General for Canada"
     storage:
