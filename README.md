@@ -1,47 +1,36 @@
 # canada-public-accounts-data-pipeline
 
-A repository for building a reproducible data pipeline that produces cleaned, standardized Canadian public accounts data across federal, provincial, and municipal governments.
+A repository for building a reproducible pipeline that converts Canadian public accounts sources into cleaned, comparable datasets across federal, provincial, and municipal governments.
 
 ## Mission
 
-Public accounts are published by many entities in inconsistent formats (PDF, tables, spreadsheets, and different fiscal conventions). This project aims to:
+Public accounts are published by different governments in inconsistent formats (mostly PDFs, with varying labels and fiscal conventions). This project aims to:
 
-1. collect source public accounts data from Canadian jurisdictions,
-2. normalize and clean it into a shared schema, and
-3. publish machine-readable outputs suitable for analysis and downstream tooling.
-
-## Current status
-
-This repository is currently in an early scaffold/documentation phase. The folder conventions and documentation define how development should proceed, while pipeline code and data assets are still to be implemented.
+1. collect and catalog source documents with clear provenance,
+2. extract structured data from those sources reproducibly,
+3. normalize data into canonical formats for comparison, and
+4. publish outputs that are transparent about assumptions and transformations.
 
 ## Audience and product context
 
 - **Primary audience today:** the project author/developer.
 - **Near-term audience:** public users and contributors after first release.
-- **Downstream product:** a web app that shows a "receipt" for Canadian taxes and the services those taxes fund.
+- **Downstream product:** a web app that shows a "tax receipt" view of taxes paid and services funded.
 
-To support that product responsibly, this repository emphasizes clarity and auditability in:
+To support that use case responsibly, source choices, transformations, and assumptions must be explicit and auditable.
 
-- source selection,
-- transformation logic, and
-- assumptions made during normalization.
+## Current status
 
-## Goals
+The repository now includes:
 
-- Build a repeatable ingestion and transformation pipeline.
-- Standardize terminology and fields across jurisdictions.
-- Preserve provenance from every output record back to source material.
-- Establish quality checks that catch parsing and normalization errors early.
-- Make assumptions explicit so results are interpretable by readers.
-- Make future onboarding easy for both human contributors and AI agents.
+- source document inventory + schema under `source-docs/`,
+- early PDF extraction tooling in `src/pa_pdf/`,
+- extracted raw table outputs in `output-data/raw-tables/`,
+- manually generated summary estimates in `output-data/manually-generated/`,
+- draft parsed-data examples in `parsed-data/`,
+- planning and standards documentation in `docs/`.
 
-## Non-goals (for now)
-
-- Forecasting, policy interpretation, or causal analysis.
-- Replacing official government publications.
-- Creating opinionated rankings of governments or programs.
-
-## Proposed repository structure
+## Repository structure
 
 ```text
 root/
@@ -49,66 +38,86 @@ root/
   AGENTS.md
   CONTRIBUTING.md
   docs/
-    PROJECT_SCOPE.md
     ROADMAP.md
-    DATA_SOURCES.md
     DATA_SCHEMA.md
-    PIPELINE_ARCHITECTURE.md
     DATA_QUALITY.md
-  source-data/
+    PIPELINE_ARCHITECTURE.md
+    xbrl-notes.md
+  source-docs/
+    README.md
+    manifest.yaml
+    manifest.schema.json
     federal/
     provincial/
-      on/
-      sk/            # optional early-support track
-      ...
     municipal/
-      toronto/
-      regina/        # optional early-support track
-      ...
+  parsed-data/
+    *.example.csv
   output-data/
-    ...
+    raw-tables/
+    manually-generated/
   src/
-    ...
+    pa_pdf/
 ```
 
-## Development plan (high level)
+## Development priorities
 
-1. **Foundation:** define scope, schema, source registry, and quality gates.
-2. **Ingestion MVP:** support a small initial set of jurisdictions end-to-end.
-3. **Normalization + QA:** enforce schema and validations across all supported inputs.
-4. **Coverage expansion:** add more provinces/municipalities with repeatable onboarding.
+- **MVP jurisdictions:** Federal (Canada), Ontario, Toronto.
+- **Optional early-support track:** Saskatchewan and Regina.
+- **First release granularity:** summary-level spending categories.
 
 See [docs/ROADMAP.md](docs/ROADMAP.md) for milestones and acceptance criteria.
 
-## Initial MVP jurisdictions
+## Working with PDFs (tables inside Public Accounts)
 
-- Federal (Canada)
-- Ontario
-- Toronto
-- Optional while building: Saskatchewan and Regina (higher domain familiarity)
+Most public accounts are published as PDFs with embedded tables. Typical flow:
+
+1. inspect extractability (embedded text, detectable tables),
+2. extract tables to CSV with per-table provenance,
+3. normalize into canonical structures,
+4. validate and publish.
+
+### Quick commands (conda env `dev`)
+
+These scripts only require `pdfplumber`.
+
+Inspect a PDF:
+
+```bash
+CONDA_NO_PLUGINS=true conda run -n dev python src/pa_pdf/inspect_pdf.py --pdf source-docs/federal/ca/2025-vol2-eng.pdf --pages 1-5 --sample-page 1
+```
+
+Scan for pages with detectable tables:
+
+```bash
+CONDA_NO_PLUGINS=true conda run -n dev python src/pa_pdf/scan_tables.py --pdf source-docs/federal/ca/2025-vol2-eng.pdf --start 1 --end 50
+```
+
+Extract tables to CSV + manifest:
+
+```bash
+CONDA_NO_PLUGINS=true conda run -n dev python src/pa_pdf/extract_tables.py --pdf source-docs/federal/ca/2025-vol2-eng.pdf --out output-data/raw-tables --pages 1-50
+```
+
+Find text pattern in PDF:
+
+```bash
+CONDA_NO_PLUGINS=true conda run -n dev python src/pa_pdf/find_text.py --pdf source-docs/federal/ca/2025-vol2-eng.pdf --pattern "Table\\s+2" --ignore-case
+```
 
 ## Documentation map
 
-- [Project scope](docs/PROJECT_SCOPE.md)
 - [Roadmap](docs/ROADMAP.md)
-- [Data sources registry](docs/DATA_SOURCES.md)
 - [Canonical data schema](docs/DATA_SCHEMA.md)
-- [Pipeline architecture](docs/PIPELINE_ARCHITECTURE.md)
 - [Data quality framework](docs/DATA_QUALITY.md)
+- [Pipeline architecture](docs/PIPELINE_ARCHITECTURE.md)
+- [Source document manifest guide](source-docs/README.md)
+- [XBRL notes](docs/xbrl-notes.md)
 - [Agent guide](AGENTS.md)
 - [Contributing guide](CONTRIBUTING.md)
 
 ## Working principles
 
-- **Reproducibility first:** identical inputs should produce identical outputs.
-- **Traceability first:** every transformed row should map back to a source file/record.
-- **Transparency first:** source choices and transformation assumptions are documented.
-- **Incremental delivery:** add jurisdictions through small, verifiable iterations.
-- **Contract-driven development:** schema and quality checks are treated as core API contracts.
-
-## Getting started (current phase)
-
-1. Read the docs listed above.
-2. Align on scope, schema, and first jurisdictions.
-3. Implement pipeline modules in `src/` according to the architecture document.
-4. Validate outputs against quality checks before expanding coverage.
+- **Reproducibility first:** same inputs should produce same outputs.
+- **Traceability first:** outputs should map back to source documents/pages.
+- **Transparency first:** assumptions and caveats are documented.
+- **Incremental delivery:** expand coverage in small validated steps.

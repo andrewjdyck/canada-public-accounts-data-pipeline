@@ -1,0 +1,5 @@
+statement_id,entity_id,statement_type,consolidation_scope,fiscal_year,source_doc_id
+regina-2023-consolidated,regina,
+income_statement,consolidated,2023-2024,prov-sk-public-accounts-2023-24
+regina-police-2023,regina-police,
+income_statement,standalone,2023-2024,prov-sk-public-accounts-2023-24

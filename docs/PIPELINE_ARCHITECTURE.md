@@ -2,86 +2,66 @@
 
 ## Architecture goals
 
-- Reproducible end-to-end runs.
-- Clear separation of ingest, transform, and validation responsibilities.
-- Traceability from outputs back to source documents.
-- Transparent documentation of transformation assumptions.
-- Easy onboarding of new jurisdictions by adding scoped adapters.
+- Reproducible processing from source documents to publishable outputs
+- Strong provenance between each output and its source page/table
+- Clear separation between extraction, parsing/mapping, and publishing
+- Practical onboarding path for new jurisdictions
 
-## Proposed stages
+## Current implemented flow
 
-1. **Source discovery**
-   - Read active entries from `docs/DATA_SOURCES.md` (or a machine-readable derivative).
-   - Resolve official and/or mirror URLs and expected artifacts.
+## Stage A - Source registry
 
-2. **Ingestion**
-   - Download/capture source artifacts.
-   - Store immutable raw files under `source-data/<jurisdiction>/...`.
-   - Record source metadata (timestamp, hash, URL, retrieval status).
+- Source documents are tracked in `source-docs/manifest.yaml`
+- Registry shape is defined by `source-docs/manifest.schema.json`
+- Artifacts are stored under `source-docs/<level>/...`
 
-3. **Parsing**
-   - Extract structured records from raw files (PDF tables, spreadsheets, CSV, etc.).
-   - Preserve original labels and references (page/table metadata).
+## Stage B - PDF analysis and extraction
 
-4. **Normalization**
-   - Map source fields and labels to canonical schema in `docs/DATA_SCHEMA.md`.
-   - Normalize units, fiscal year format, and common naming conventions.
-   - For v0.1, produce summary-level spending totals by category.
+Current scripts under `src/pa_pdf/`:
 
-5. **Validation and quality checks**
-   - Enforce schema constraints.
-   - Execute data quality checks from `docs/DATA_QUALITY.md`.
-   - Produce run-level pass/warn/fail summary.
+- `inspect_pdf.py` - check text/table extractability
+- `scan_tables.py` - find pages likely containing tables
+- `find_text.py` - locate schedules/labels via regex text search
+- `extract_tables.py` - extract detected tables to CSV + JSONL manifest
 
-6. **Publishing**
-   - Write normalized outputs to `output-data/`.
-   - Emit run metadata (pipeline version, source set, validation results).
+Outputs:
 
-## Proposed code organization
+- CSV tables in `output-data/raw-tables/<pdf_stem>/page-XXXX/table-YY.csv`
+- Extraction manifest in `output-data/raw-tables/<pdf_stem>.manifest.jsonl`
+
+## Planned next flow
+
+## Stage C - Canonical parsing/mapping
+
+- Convert extracted raw tables into canonical parsed tables in `parsed-data/`
+- Normalize labels/accounts using mapping rules
+- Keep explicit source references for every parsed record
+
+## Stage D - Summary publish outputs
+
+- Produce summary-level spending outputs for the tax-receipt use case
+- Include assumptions and provenance metadata
+- Publish to stable dataset paths under `output-data/`
+
+## Stage E - Validation and release
+
+- Apply checks defined in `docs/DATA_QUALITY.md`
+- Emit run summaries and caveat notes
+- Mark datasets ready for downstream app use
+
+## Recommended code expansion
 
 ```text
 src/
-  ingest/
-    adapters/
-  parse/
-  normalize/
-  validate/
-  publish/
-  common/
+  pa_pdf/              # current extraction tooling
+  parse/               # next: canonical parsing
+  normalize/           # next: category and unit normalization
+  validate/            # next: quality checks
+  publish/             # next: release packaging
 ```
 
-Adapter logic should be isolated per source/jurisdiction so failures and updates are localized.
+## Idempotency expectations
 
-## Interface contracts between stages
-
-- Ingest outputs immutable artifacts + metadata.
-- Parse outputs structured records with source references.
-- Normalize outputs canonical summary records that match schema.
-- Validate outputs explicit check results and failure reasons.
-- Publish writes datasets and run manifests.
-
-## Idempotency and reruns
-
-- Re-running unchanged source inputs should not produce different outputs.
-- Source hashes should be used to detect unchanged artifacts.
-- Failed stages should be rerunnable without manual cleanup whenever possible.
-
-## Observability and run artifacts
-
-Each pipeline run should produce:
-
-- run ID and timestamp,
-- source list used,
-- counts by stage (fetched, parsed, normalized, rejected),
-- validation/quality summary,
-- output artifact locations.
-
-## Extension strategy
-
-To add a new jurisdiction:
-
-1. add/verify source registry entry,
-2. implement or configure source adapter,
-3. map to canonical schema,
-4. add/adjust quality checks if needed,
-5. run end-to-end and record caveats.
+- Re-running extraction on unchanged source docs should produce stable outputs.
+- Manifest/document IDs should be stable over time.
+- Pipeline steps should be restartable without manual cleanup.

@@ -14,7 +14,7 @@ Contributions should improve one or more of the following:
 ## Development workflow
 
 1. Pick or open an issue describing the change.
-2. Confirm the change aligns with `docs/PROJECT_SCOPE.md` and `docs/ROADMAP.md`.
+2. Confirm the change aligns with `README.md` and `docs/ROADMAP.md`.
 3. Implement in small commits.
 4. Update docs alongside code when contracts/behavior change.
 5. Run validations/checks relevant to the change.
@@ -22,16 +22,17 @@ Contributions should improve one or more of the following:
 
 ## Repository conventions
 
-- `source-data/` is for immutable/raw source artifacts.
-- `output-data/` is for normalized outputs and run artifacts.
-- `src/` contains ingestion, parsing, normalization, validation, and publish logic.
+- `source-docs/` stores source artifacts and the source manifest/schema.
+- `output-data/` stores extraction outputs and publishable datasets.
+- `parsed-data/` stores canonical parsed tables and mappings.
+- `src/` contains extraction and pipeline logic.
 - `docs/` contains scope/contracts/operational guidance.
 
 ## Documentation expectations
 
 If you change any of the following, update docs in the same change:
 
-- source inventory -> update `docs/DATA_SOURCES.md`
+- source inventory -> update `source-docs/manifest.yaml` and `source-docs/README.md` as needed
 - output contract -> update `docs/DATA_SCHEMA.md`
 - quality thresholds/checks -> update `docs/DATA_QUALITY.md`
 - implementation milestones -> update `docs/ROADMAP.md`

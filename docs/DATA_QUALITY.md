@@ -2,76 +2,69 @@
 
 ## Purpose
 
-Define the minimum quality standards required before normalized outputs are considered publishable.
+Define minimum checks required before data is considered reliable enough for downstream use (especially public-facing tax-receipt summaries).
 
 ## Quality dimensions
 
-- **Completeness:** required fields are populated.
-- **Validity:** values conform to type, format, and enum constraints.
-- **Consistency:** similar concepts are represented consistently across jurisdictions.
-- **Reconciliation:** totals/subtotals align where source structure allows.
-- **Traceability:** each record can be traced to a source location.
+- **Completeness** - required fields are present.
+- **Validity** - values match schema/type expectations.
+- **Consistency** - conventions are stable across jurisdictions and runs.
+- **Traceability** - outputs can be linked back to source docs/pages.
+- **Reconciliation** - mapped totals align with reported totals where available.
 
-## Required checks (minimum set)
+## Layered checks
 
-## 1) Schema checks
+## 1) Source-manifest checks (Layer 0)
 
-- Required columns exist.
-- Field types conform to `docs/DATA_SCHEMA.md`.
-- Enumerated fields only contain allowed values.
+- `source-docs/manifest.yaml` conforms to `source-docs/manifest.schema.json`.
+- Every `storage.relpath` points to an existing tracked file.
+- `doc.fiscal_year` and jurisdiction fields follow agreed formatting conventions.
 
-## 2) Null and range checks
+## 2) Raw extraction checks (Layer 1)
 
-- No nulls in required fields.
-- Amount fields are numeric.
-- Unit/currency fields are populated for all monetary rows.
-- `transformation_assumptions` is populated (`none` allowed when appropriate).
+- Every JSONL manifest row has required fields (`pdf_path`, `page_number`, `table_index`, `csv_path`, etc.).
+- Referenced CSV files exist.
+- Manifest `nrows` and `ncols` align with actual CSV content.
+- Duplicate `(pdf_stem, page_number, table_index)` records are not allowed.
 
-## 3) Uniqueness checks
+## 3) Parsed canonical checks (Layer 2)
 
-- `record_id` is unique within a dataset snapshot.
-- No duplicated records across `(jurisdiction_code, fiscal_year, spending_category, source_page_ref)` unless explicitly justified.
+- Required columns exist for each canonical table (`entities`, `statements`, `line_items`, `account_mapping`).
+- Row widths are consistent with headers.
+- Key references are valid:
+  - `statements.entity_id` exists in `entities`
+  - `line_items.statement_id` exists in `statements`
+- Numeric fields (`amount`) parse as numeric values.
 
-## 4) Reconciliation checks
+## 4) Published summary checks (Layer 3)
 
-Where source structures provide totals:
+- Required fields in `public_accounts_summary_totals` are populated.
+- `record_id` is unique within a release snapshot.
+- `amount_reported`, `normalization_factor`, and `amount_normalized_cad` are numeric.
+- `transformation_assumptions` is populated (`none` allowed when truly none).
 
-- Sum of mapped category totals approximates reported top-level totals within tolerance.
-- Significant unexplained variance is flagged as failure.
+## 5) Reconciliation checks
 
-## 5) Provenance checks
+Where source tables provide totals:
 
-- `source_id`, `source_document_url`, and ingestion metadata present.
-- Source page/table references present when technically extractable.
+- Sum of mapped category totals should approximate reported totals within tolerance.
+- Significant unexplained variance is flagged.
 
 ## Severity model
 
-- **fail:** publication blocked.
-- **warn:** publication allowed with explicit caveat.
-- **info:** diagnostic only.
+- **fail** - publication blocked
+- **warn** - publication allowed only with explicit caveat
+- **info** - diagnostic output only
 
 ## Suggested initial thresholds
 
-- Required field null rate: **0.0%** (fail if greater).
-- Duplicate `record_id` rate: **0.0%** (fail if greater).
-- Reconciliation variance tolerance: **<= 0.5%** (warn), **> 0.5%** (fail), unless source caveat documented.
-
-Thresholds should be adjusted only with documented rationale.
+- Required-field null rate: **0.0%** for publishable datasets.
+- Duplicate `record_id` rate: **0.0%**.
+- Reconciliation tolerance: **<= 0.5%** warn, **> 0.5%** fail (unless documented waiver).
 
 ## Handling failures
 
-When checks fail:
-
-1. mark run as failed,
-2. capture failing records/check IDs,
-3. block output publication unless waived,
-4. document root cause and remediation path.
-
-## Run reporting
-
-Each run should emit a quality report including:
-
-- check results by jurisdiction and fiscal year,
-- counts of fail/warn/info,
-- top failure categories,
-- link/path to affected records.
+1. Mark run as failed.
+2. Capture failing rows/check IDs.
+3. Block publication unless an explicit waiver is documented.
+4. Record root cause and remediation plan.

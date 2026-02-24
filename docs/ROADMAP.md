@@ -2,97 +2,110 @@
 
 ## Objective
 
-Ship a reliable, reproducible public accounts data pipeline in staged milestones, starting small and expanding coverage only after validation gates are met.
+Ship a reliable, reproducible public-accounts data pipeline that can feed a downstream tax-receipt web app with transparent, auditable spending summaries.
 
-The first release should produce trustworthy summary-level spending data that can power a web app showing a "tax receipt" view for Canadian taxpayers.
+## Coverage targets
 
-## MVP coverage target (first release)
+- **MVP required:** Federal (Canada), Ontario, Toronto
+- **Optional early-support track:** Saskatchewan and Regina
 
-- **Required:** Federal (Canada), Ontario, Toronto
-- **Optional early-support track:** Saskatchewan and Regina (to leverage higher local familiarity during development)
+## Current baseline (already present)
+
+- `source-docs/manifest.yaml` + `source-docs/manifest.schema.json`
+- PDF tooling in `src/pa_pdf/`:
+  - `inspect_pdf.py`
+  - `scan_tables.py`
+  - `find_text.py`
+  - `extract_tables.py`
+- Example extracted tables + JSONL manifests in `output-data/raw-tables/`
+- Draft examples in `parsed-data/`
+- Manual summary estimates in `output-data/manually-generated/`
 
 ## Milestones
 
-## M0 - Project foundation (current)
+## M0 - Foundation and extraction baseline (in progress)
 
 **Deliverables**
 
-- Documentation baseline (scope, roadmap, sources, schema, architecture, quality, contribution workflows).
-- Initial repository conventions for `source-data/`, `output-data/`, and `src/`.
+- Source-document manifest and schema
+- Repeatable PDF inspection/extraction scripts
+- Documentation baseline for schema, quality, and architecture
 
 **Acceptance criteria**
 
-- Core docs exist and are internally consistent.
-- Team/agents can identify next implementation tasks without additional context.
+- Source artifacts are cataloged in manifest
+- Extraction scripts run repeatably for at least one source PDF
+- Raw extraction outputs include per-table provenance
 
-## M1 - Ingestion MVP
+## M1 - Parsed canonical datasets (next)
 
 **Deliverables**
 
-- Minimal ingest pipeline for initial jurisdictions (Federal, Ontario, Toronto).
-- Repeatable run command(s) for local execution.
-- Raw source files organized by jurisdiction and version/date.
+- Canonical parsed tables for entities, statements, line items, and mapping
+- Stable mapping patterns for first jurisdictions
+- Data dictionary aligned with `docs/DATA_SCHEMA.md`
 
 **Acceptance criteria**
 
-- End-to-end ingest works for required MVP jurisdictions.
-- Ingest is idempotent for unchanged inputs.
-- Source provenance metadata is captured.
+- Parsed outputs are reproducible from raw extracted tables
+- Required canonical fields are populated for MVP jurisdictions
+- Mapping assumptions are documented
 
-## M2 - Normalization and schema enforcement
+## M2 - Summary-level publishable outputs (v0.1 release target)
 
 **Deliverables**
 
-- Canonical transformation layer aligned to `docs/DATA_SCHEMA.md` (summary-level v0.1 outputs).
-- Schema validation checks as part of pipeline runs.
-- Initial output datasets in `output-data/`.
+- Summary spending-category outputs per jurisdiction/fiscal year
+- Provenance + assumptions metadata
+- Basic quality report and release notes
 
 **Acceptance criteria**
 
-- Required fields are populated and typed correctly.
-- Normalized outputs are reproducible from raw sources.
-- Validation failures are explicit and actionable.
+- Summary outputs are generated for required MVP jurisdictions
+- Quality checks in `docs/DATA_QUALITY.md` pass (or waived with rationale)
+- Output structure matches `docs/DATA_SCHEMA.md`
 
-## M3 - Data quality and reconciliation checks
+## M3 - Quality hardening and onboarding workflow
 
 **Deliverables**
 
-- Quality checks from `docs/DATA_QUALITY.md` implemented.
-- Basic reconciliation checks (for example, subtotal/total consistency where applicable).
-- Run report summarizing pass/fail by jurisdiction.
+- Automated schema/quality validations
+- Standard process for adding new source docs and mappings
+- Clear contributor and agent runbook
 
 **Acceptance criteria**
 
-- Agreed quality thresholds pass for supported jurisdictions.
-- Failures block publication until resolved or explicitly waived with documented reason.
+- Validation failures are explicit and actionable
+- New jurisdiction onboarding is documented and repeatable
+- No regressions in previously supported datasets
 
-## M4 - Coverage expansion
+## M4 - Coverage expansion and taxonomy maturity
 
 **Deliverables**
 
-- Onboarding workflow for adding new jurisdictions quickly.
-- Expanded province/municipality support.
-- Updated source registry and caveat tracking.
+- Additional provincial/municipal support
+- Improved concept taxonomy and cross-jurisdiction mapping consistency
+- Better packaging for public release consumers
 
 **Acceptance criteria**
 
-- New jurisdictions can be added with documented, repeatable steps.
-- Existing coverage remains stable (no regressions in schema/quality checks).
+- Expanded coverage without breaking existing contracts
+- Mapping/versioning changes documented
+- Consumers can trace outputs to source material and assumptions
 
-## Prioritized backlog
+## Prioritized next actions
 
-1. Lock MVP jurisdictions: Federal, Ontario, Toronto (with optional SK/Regina track).
-2. Lock canonical **summary-level** schema v0.1 for spending categories.
-3. Implement ingest adapters for MVP jurisdictions.
-4. Build summary transformation + validation modules.
-5. Add run reporting and quality gating.
-6. Expand jurisdiction coverage and granularity (line-item support in later versions).
+1. Bring Ontario and Toronto source manifests/docs into `source-docs/`
+2. Stabilize parsed-data table contracts from examples to production-ready format
+3. Implement first end-to-end transformation from raw tables to summary totals
+4. Add quality checks for manifest validity, parsed-table integrity, and summary totals
+5. Publish first reproducible MVP snapshot
 
-## Definition of done for roadmap tasks
+## Definition of done
 
 A roadmap task is done when:
 
-- code and docs are updated together,
-- reproducible run steps are documented,
-- relevant validations/tests pass, and
-- output impact is described in the PR/commit message.
+- docs and code are updated together,
+- run instructions are reproducible,
+- relevant validation checks pass, and
+- caveats/assumptions are explicitly documented.

@@ -15,11 +15,12 @@ For v0.1, prioritize summary-level spending outputs that can power a "tax receip
 Before making changes, agents should read:
 
 1. `README.md`
-2. `docs/PROJECT_SCOPE.md`
-3. `docs/ROADMAP.md`
-4. `docs/DATA_SCHEMA.md`
-5. `docs/DATA_QUALITY.md`
-6. `docs/DATA_SOURCES.md`
+2. `docs/ROADMAP.md`
+3. `docs/DATA_SCHEMA.md`
+4. `docs/DATA_QUALITY.md`
+5. `docs/PIPELINE_ARCHITECTURE.md`
+6. `source-docs/README.md`
+7. `source-docs/manifest.yaml`
 
 If implementation conflicts with docs, update docs and code in the same change.
 
@@ -37,7 +38,7 @@ If implementation conflicts with docs, update docs and code in the same change.
 - Do not overwrite or mutate raw source files in place.
 - Do not introduce schema-breaking changes without updating `docs/DATA_SCHEMA.md`.
 - Do not bypass failed quality checks without recording a clear caveat.
-- Do not use mirror sources without documenting official URL and mirror provenance.
+- Do not add source docs without corresponding manifest entries.
 
 ## Implementation conventions
 

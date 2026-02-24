@@ -1,0 +1,10 @@
+level,entity,fiscal_year,category,subcategory,share_of_tax_revenue,notes
+federal,canada,2023-2024,Income supports & benefits,OAS/GIS/EI/CCB,0.31,Direct transfers to individuals
+federal,canada,2023-2024,Transfers to provinces & territories,Health/Social/Equalization,0.22,Transferred to provinces; appears again in provincial spending
+federal,canada,2023-2024,Debt interest,,0.09,Interest on federal public debt
+federal,canada,2023-2024,Defence & national security,,0.07,Canadian Armed Forces and national security
+federal,canada,2023-2024,Indigenous services & reconciliation,,0.05,Indigenous Services and Crown-Indigenous Relations
+federal,canada,2023-2024,Federal government operations,,0.08,Public service, CRA, courts, Parliament, internal services
+federal,canada,2023-2024,Economic development, infrastructure & environment,,0.06,Infrastructure, climate, regional development, industry support
+federal,canada,2023-2024,International affairs & foreign aid,,0.02,Diplomacy, development assistance, international organizations
+federal,canada,2023-2024,Other federal programs,,0.02,Residual federal programs

@@ -1,0 +1,142 @@
+manifest_version: 1
+updated_at: "2025-12-26"
+defaults:
+  download:
+    method: "manual"          # or "script"
+    license: "unknown"
+  file:
+    format: "pdf"
+
+documents:
+  - id: fed-canada-public-accounts-2024-25-vol2
+    level: federal                        # federal | provincial | municipal
+    jurisdiction:
+      country: CA
+      province: null
+      municipality: null
+    entity:
+      name: Government of Canada
+      short: canada
+      type: government                    # government | agency | crown | etc.
+    doc:
+      kind: public_accounts               # public_accounts | budget | afr | financial_statement | etc.
+      title: "Volume II: Details of Expenses and Revenues"
+      fiscal_year: "2024-2025"            # normalized
+      period_covered:
+        start: "2024-04-01"
+        end: "2025-03-31"
+      language: en                        # en | fr | bilingual
+    source:
+      url: "https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf"
+      official_url: "https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf"
+      source_tier: "official"
+      retrieved_at: "2025-12-26"
+      # publisher: "Receiver General for Canada"
+    storage:
+      relpath: "federal/ca/2025-vol2-eng.pdf"
+      filename: "2025-vol2-eng.pdf"
+    file:
+      format: pdf
+      # sha256: "PUT_HASH_HERE"
+      # bytes: 12345678
+    notes: "TBD"
+
+  - id: prov-sk-public-accounts-2024-25-vol2
+    level: provincial
+    jurisdiction:
+      country: CA
+      province: SK
+      municipality: null
+    entity:
+      name: Government of Saskatchewan
+      short: sk
+      type: government
+    doc:
+      kind: public_accounts
+      title: "Public Accounts 2024–25 Volume 2"
+      fiscal_year: "2024-2025"
+      period_covered:
+        start: "2024-04-01"
+        end: "2025-03-31"
+      language: en
+    source:
+      url: "https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf"
+      official_url: "https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf"
+      source_tier: "official"
+      retrieved_at: "2025-12-26"
+      publisher: "Saskatchewan Ministry of Finance"
+    storage:
+      relpath: "provincial/sk/2024-25 Volume 2 - 5155.pdf"
+      filename: "2024-25 Volume 2 - 5155.pdf"
+    file:
+      format: pdf
+      # sha256: "PUT_HASH_HERE"
+    tags: ["audited", "afr-adjacent"]
+  
+  - id: mun-regina-public-accounts-2024
+    level: municipal                        # federal | provincial | municipal
+    jurisdiction:
+      country: CA
+      province: SK
+      municipality: regina-sk
+    entity:
+      name: City of Regina
+      short: regina
+      airport: yqr
+      type: government                    # government | agency | crown | etc.
+    doc:
+      kind: public_accounts               # public_accounts | budget | afr | financial_statement | etc.
+      title: "2024 Public Accounts"
+      fiscal_year: "2024"            # normalized
+      period_covered:
+        start: "2024-01-01"
+        end: "2024-12-31"
+      language: en                        # en | fr | bilingual
+    source:
+      url: "https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf"
+      official_url: "https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf"
+      source_tier: "official"
+      retrieved_at: "2025-12-26"
+      # publisher: "Receiver General for Canada"
+    storage:
+      relpath: "municipal/regina-sk/final-2024-public-accounts.pdf"
+      filename: "final-2024-public-accounts.pdf"
+    file:
+      format: pdf
+      # sha256: "PUT_HASH_HERE"
+      # bytes: 12345678
+    notes: "TBD"
+
+  - id: mun-yqr-annual-report-2024
+    level: municipal                        # federal | provincial | municipal
+    jurisdiction:
+      country: CA
+      province: SK
+      municipality: regina-sk
+    entity:
+      name: City of Regina
+      short: regina
+      airport: yqr
+      type: government                    # government | agency | crown | etc.
+    doc:
+      kind: annual_report               # public_accounts | budget | afr | financial_statement | etc.
+      title: "2024 Annual Report"
+      fiscal_year: "2024"            # normalized
+      period_covered:
+        start: "2024-01-01"
+        end: "2024-12-31"
+      language: en                        # en | fr | bilingual
+    source:
+      url: "https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf"
+      official_url: "https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf"
+      source_tier: "official"
+      retrieved_at: "2025-12-26"
+      # publisher: "Receiver General for Canada"
+    storage:
+      relpath: "municipal/regina-sk/COR 2024 Annual Report.pdf"
+      filename: "COR 2024 Annual Report.pdf"
+    file:
+      format: pdf
+      # sha256: "PUT_HASH_HERE"
+      # bytes: 12345678
+    notes: "TBD"
