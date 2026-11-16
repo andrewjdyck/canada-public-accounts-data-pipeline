@@ -1,0 +1,7 @@
+# Direct dependencies, pinned. Install with:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+pdfplumber==0.11.10
+PyYAML==6.0.3
+jsonschema==4.26.0
+requests==2.34.2
+truststore==0.10.5
