@@ -1,0 +1,61 @@
+concept_id,level,parent_id,name,statcan_ccofog_codes
+01,division,,General public services,701
+01.1,group,01,"Executive and legislative organs, financial and fiscal affairs and external affairs",7011
+01.2,group,01,Foreign economic aid,7012
+01.3,group,01,General services,7013
+01.4,group,01,Basic Research,7014
+01.5+01.6+01.8,group,01,General public services not elsewhere classified,7015; 7016; 7018
+01.7,group,01,Public debt transactions,7017
+02,division,,Defence,702
+02.1,group,02,Military defence,7021
+02.2,group,02,Civil defence,7022
+02.3,group,02,Foreign military aid,7023
+02.4+02.5,group,02,Defence not elsewhere classified,7024; 7025
+03,division,,Public order and safety,703
+03.1,group,03,Police services,7031
+03.2,group,03,Fire protection services,7032
+03.3,group,03,Law courts,7033
+03.4,group,03,Prisons,7034
+03.5+03.6,group,03,Public order and safety not elsewhere classified,7035; 7036
+04,division,,Economic affairs,704
+04.1,group,04,"General economic, commercial, and labor affairs",7041
+04.2,group,04,"Agriculture, forestry, fishing, and hunting",7042
+04.3,group,04,Fuel and energy,7043
+04.4,group,04,"Mining, manufacturing, and construction",7044
+04.5,group,04,Transport,7045
+04.6+04.7+04.8+04.9,group,04,Economic affairs not elsewhere classified,7046; 7047; 7048; 7049
+05,division,,Environmental protection,705
+05.1,group,05,Waste management,7051
+05.2,group,05,Waste water management,7052
+05.3,group,05,Pollution abatement,7053
+05.4,group,05,Protection of biodiversity and landscape,7054
+05.5+05.6,group,05,Environmental protection not elsewhere classified,7055; 7056
+06,division,,Housing and community amenities,706
+06.1+06.2,group,06,Housing and community development,7061; 7062
+06.3,group,06,Water supply,7063
+06.4,group,06,Street lighting,7064
+06.5+06.6,group,06,Housing and community amenities not elsewhere classified,7065; 7066
+07,division,,Health,707
+07.1,group,07,"Medical products, appliances, and equipment",7071
+07.2,group,07,Outpatient services,7072
+07.3,group,07,Hospital services,7073
+07.4,group,07,Public health services,7074
+07.5+07.6,group,07,Health not elsewhere classified,7075; 7076
+08,division,,"Recreation, culture and religion",708
+08.1,group,08,Recreational and sporting services,7081
+08.2,group,08,Cultural services,7082
+08.3,group,08,Broadcasting and publishing services,7083
+08.4+08.5+08.6,group,08,"Recreation, culture, and religion not elsewhere classified",7084; 7085; 7086
+09,division,,Education,709
+09.2,group,09,Primary and secondary education,7092
+09.3,group,09,College education,7093
+09.4,group,09,University education,7094
+09.5+09.6+09.7+09.8,group,09,Education not elsewhere classified,7095; 7096; 7097; 7098
+10,division,,Social protection,710
+10.1+10.3,group,10,Sickness and disability,7101; 7103
+10.2,group,10,Old age,7102
+10.4,group,10,Family and children,7104
+10.5,group,10,Unemployment,7105
+10.6,group,10,Housing,7106
+10.7,group,10,Social exclusion,7107
+10.8+10.9,group,10,Social protection not elsewhere classified,7108; 7109

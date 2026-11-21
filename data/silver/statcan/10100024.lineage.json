@@ -1,0 +1,7 @@
+{
+  "doc_id": "statcan-cofog-by-component",
+  "source_file": "data/bronze/statcan/10100024/10100024-eng.zip",
+  "source_sha256": "8c1b3f89fcdf294b9a1e7cbe70d26cbe118c145700fa7a646dced23efa4a7a2d",
+  "statcan_release_time": "2025-11-27T08:30",
+  "rows": 18260
+}

@@ -1,0 +1,11 @@
+component,component_id,fiscal_year_rule,notes
+Federal government,federal,apr_mar,
+Provincial and territorial governments,provincial_territorial,apr_mar,Government proper; grants to hospitals/school boards/colleges counted as its own expense
+Health and social service institutions,health_social_institutions,apr_mar,Hospitals and health authorities
+School boards,school_boards,sep_aug,Year ending Aug 31 of the reference year
+Universities and colleges,universities_colleges,apr_mar,
+Municipalities and other local public administrations,municipal,calendar,
+Canada pension plan (CPP),cpp,apr_mar,
+Régie des rentes du Québec (RRQ),rrq,calendar,
+Consolidated Canadian general government,consolidated_all,apr_mar,Mixed fiscal years; labelled by the federal/provincial year
+Consolidated provincial-territorial and local governments,consolidated_pt_local,apr_mar,Includes municipalities; mixed fiscal years

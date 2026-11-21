@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Per-document extraction spec",
+  "description": "How to read the tables of one bronze document into silver. One file per document: config/extraction/<doc_id>.yaml. Hand-written; never rewritten by scripts.",
+  "type": "object",
+  "required": ["doc_id", "tables"],
+  "additionalProperties": false,
+  "properties": {
+    "doc_id": {"type": "string", "description": "Must match an id in data/bronze/source-docs-manifest.yaml."},
+    "notes": {"type": "string"},
+    "tables": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/table"}},
+    "cross_checks": {
+      "type": "array",
+      "description": "Equalities between cells of different tables, e.g. a schedule total equals the statement total.",
+      "items": {
+        "type": "object", "required": ["left", "right"], "additionalProperties": false,
+        "properties": {
+          "left": {"$ref": "#/$defs/cell"}, "right": {"$ref": "#/$defs/cell"},
+          "tolerance": {"type": "number", "minimum": 0}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "object", "required": ["table", "row", "column"], "additionalProperties": false,
+      "properties": {"table": {"type": "string"}, "row": {"type": "string"}, "column": {"type": "string"}}
+    },
+    "table": {
+      "type": "object",
+      "required": ["table_id", "title", "role", "method", "units", "columns", "parts", "rows"],
+      "additionalProperties": false,
+      "properties": {
+        "table_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "title": {"type": "string", "description": "Statement or schedule name as printed."},
+        "role": {
+          "type": "string",
+          "enum": ["headline", "function_breakdown", "function_by_object", "object_breakdown"],
+          "description": "headline: top-level statement; function_breakdown: expense by ministry/function (used for shares); function_by_object: sector x expense-type matrix; object_breakdown: expense by type only."
+        },
+        "method": {"type": "string", "enum": ["pdfplumber_words"], "description": "Extractor used. An LLM extractor can be added as another method."},
+        "units": {
+          "type": "object", "required": ["scale", "currency", "as_printed"], "additionalProperties": false,
+          "properties": {"scale": {"type": "number"}, "currency": {"type": "string"}, "as_printed": {"type": "string"}}
+        },
+        "scope": {"type": "string", "description": "Reporting entity, e.g. consolidated_summary or general_revenue_fund."},
+        "columns": {
+          "type": "object",
+          "description": "Column id -> attributes. fiscal_year and basis are required; any other key becomes a column dimension (e.g. sector).",
+          "additionalProperties": {
+            "type": "object", "required": ["fiscal_year", "basis"],
+            "properties": {
+              "fiscal_year": {"type": "string", "pattern": "^\\d{4}-\\d{4}$"},
+              "basis": {"type": "string", "enum": ["actual", "actual_restated", "budget"]},
+              "kind": {"type": "string", "enum": ["detail", "adjustment", "total"], "description": "Default detail."}
+            }
+          }
+        },
+        "parts": {
+          "type": "array", "minItems": 1,
+          "description": "One entry per page (or page region). Every part must yield one numeric line per row.",
+          "items": {
+            "type": "object", "required": ["page", "start_after", "end_at", "columns"], "additionalProperties": false,
+            "properties": {
+              "page": {"type": "integer", "minimum": 1, "description": "1-based PDF page index (not the printed number)."},
+              "printed_page": {"type": "string"},
+              "start_after": {"type": "string", "description": "Regex; the region starts after the first matching line."},
+              "end_at": {"type": "string", "description": "Regex; the region ends at (and includes) the first matching line."},
+              "columns": {"type": "array", "items": {"type": "string"}, "description": "Column ids left to right on this page."}
+            }
+          }
+        },
+        "rows": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "required": ["label"], "additionalProperties": false,
+            "properties": {
+              "label": {"type": "string", "description": "Canonical label (as printed, footnote markers removed)."},
+              "kind": {"type": "string", "enum": ["detail", "subtotal", "adjustment", "total"], "description": "Default detail."}
+            }
+          }
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["type"], "additionalProperties": false,
+            "properties": {
+              "type": {"type": "string", "enum": ["rows_sum", "columns_sum"]},
+              "rows": {"type": "array", "items": {"type": "string"}, "description": "rows_sum: labels to add (default: all detail rows)."},
+              "equals": {"type": "string", "description": "rows_sum: row label; columns_sum: column id."},
+              "columns": {"type": "array", "items": {"type": "string"}, "description": "rows_sum: columns to check (default all); columns_sum: column ids to add."},
+              "for_rows": {"type": "array", "items": {"type": "string"}, "description": "columns_sum: rows to check (default detail rows)."},
+              "tolerance": {"type": "number", "minimum": 0, "description": "Allowed rounding difference in printed units (default 0)."}
+            }
+          }
+        }
+      }
+    }
+  }
+}

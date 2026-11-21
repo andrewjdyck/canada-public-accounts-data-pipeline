@@ -1,0 +1,10 @@
+{
+  "doc_id": "prov-on-public-accounts-2025-26",
+  "source_file": "data/bronze/provincial/on/tbs-annual-report-and-consolidated-financial-statements-2025-2026-en.pdf",
+  "source_sha256": "8c1ccee09b1c05346b4255db2f93507a1c44729cf00324fc49ba478f18cdad47",
+  "spec_file": "config/extraction/prov-on-public-accounts-2025-26.yaml",
+  "spec_sha256": "eeab3af35a4951a9c90c67c31a4aaf2b1843944ce33690f1238276cca0c9b01f",
+  "method": "pdfplumber_words",
+  "pdfplumber_version": "0.11.10",
+  "extracted_at": "2026-11-21T23:15:44+00:00"
+}

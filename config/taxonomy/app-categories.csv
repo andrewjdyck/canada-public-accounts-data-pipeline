@@ -1,0 +1,14 @@
+level,concept_prefix,category,subcategory,notes
+provincial,07,Healthcare,,
+provincial,09,Education,,
+provincial,10,Social Services,,
+provincial,04.5,Transportation,,
+provincial,01.7,Debt Charges,,
+provincial,*,Other,,Includes _unallocated
+federal,10.2,Elderly Benefits,,Draft: federal mapping not built yet
+federal,01.5+01.6+01.8,Transfers to Provinces,,Draft: check where StatCan files CHT/CST/equalization
+federal,10.4,Children's Benefits,,Draft
+federal,10.5,Employment Insurance,,Draft
+federal,02,Defence,,Draft
+federal,01.7,Debt Charges,,Draft
+federal,*,Other,,Draft

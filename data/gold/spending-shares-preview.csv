@@ -1,0 +1,13 @@
+jurisdiction,level,fiscal_year,basis,doc_id,category,subcategory,amount_cad,share
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Debt Charges,,15122000000,0.0669
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Education,,53622000000,0.2372
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Healthcare,,90913000000,0.4022
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Other,,38423000000,0.17
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Social Services,,20688000000,0.0915
+ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Transportation,,7267000000,0.0321
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Debt Charges,,15451000000,0.0654
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Education,,56249000000,0.238
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Healthcare,,97497000000,0.4125
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Other,,37154000000,0.1572
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Social Services,,21548000000,0.0912
+ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Transportation,,8437000000,0.0357

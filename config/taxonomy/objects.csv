@@ -1,0 +1,15 @@
+object_id,parent_id,name,notes
+compensation,,Compensation of employees,
+salaries_wages,compensation,Salaries and wages,
+employee_benefits,compensation,Employee benefits,
+pensions_future_benefits,compensation,Pensions and other employee future benefits,
+transfers,,Transfer payments,"Grants to individuals, institutions and other governments"
+goods_services,,Goods and services,
+services,goods_services,Services,
+supplies_equipment,goods_services,Supplies and equipment,
+transportation_communication,goods_services,Transportation and communication,
+power_supply_contracts,goods_services,Power supply contract costs,Ontario: electricity contracts
+interest,,Interest and other debt servicing charges,
+amortization,,Amortization of tangible capital assets,Capital cost recognised as expense; excluded from StatCan CCOFOG
+other,,Other expense,
+inter_sector_elimination,,Inter-sector consolidation adjustment,Negative; removes double counting between sectors

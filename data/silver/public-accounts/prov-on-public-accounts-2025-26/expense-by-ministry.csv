@@ -1,0 +1,112 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-on-public-accounts-2025-26,expense-by-ministry,106,1,"Agriculture, Food and Agribusiness",detail,"Agriculture, Food and Agribusiness",budget_2025_26,detail,2025-2026,budget,,"1,048",1048.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,1,"Agriculture, Food and Agribusiness",detail,"Agriculture, Food and Agribusiness",actual_2025_26,detail,2025-2026,actual,,"1,098",1098.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,1,"Agriculture, Food and Agribusiness",detail,"Agriculture, Food and Agribusiness",actual_2024_25,detail,2024-2025,actual_restated,,896,896.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,2,Attorney General,detail,Attorney General,budget_2025_26,detail,2025-2026,budget,,"2,252",2252.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,2,Attorney General,detail,Attorney General,actual_2025_26,detail,2025-2026,actual,,"2,633",2633.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,2,Attorney General,detail,Attorney General,actual_2024_25,detail,2024-2025,actual_restated,,"2,867",2867.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,3,Board of Internal Economy,detail,Board of Internal Economy,budget_2025_26,detail,2025-2026,budget,,348,348.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,3,Board of Internal Economy,detail,Board of Internal Economy,actual_2025_26,detail,2025-2026,actual,,370,370.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,3,Board of Internal Economy,detail,Board of Internal Economy,actual_2024_25,detail,2024-2025,actual_restated,,482,482.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,4,"Children, Community and Social Services",detail,"Children, Community and Social Services",budget_2025_26,detail,2025-2026,budget,,"20,340",20340.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,4,"Children, Community and Social Services",detail,"Children, Community and Social Services",actual_2025_26,detail,2025-2026,actual,,"21,387",21387.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,4,"Children, Community and Social Services",detail,"Children, Community and Social Services",actual_2024_25,detail,2024-2025,actual_restated,,"20,526",20526.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,5,Citizenship and Multiculturalism,detail,Citizenship and Multiculturalism,budget_2025_26,detail,2025-2026,budget,,92,92.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,5,Citizenship and Multiculturalism,detail,Citizenship and Multiculturalism,actual_2025_26,detail,2025-2026,actual,,90,90.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,5,Citizenship and Multiculturalism,detail,Citizenship and Multiculturalism,actual_2024_25,detail,2024-2025,actual_restated,,85,85.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,6,"Colleges, Universities, Research Excellence and Security",detail,"Colleges, Universities, Research Excellence and Security",budget_2025_26,detail,2025-2026,budget,,"12,927",12927.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,6,"Colleges, Universities, Research Excellence and Security",detail,"Colleges, Universities, Research Excellence and Security",actual_2025_26,detail,2025-2026,actual,,"13,938",13938.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,6,"Colleges, Universities, Research Excellence and Security",detail,"Colleges, Universities, Research Excellence and Security",actual_2024_25,detail,2024-2025,actual_restated,,"14,102",14102.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,7,"Economic Development, Job Creation and Trade",detail,"Economic Development, Job Creation and Trade",budget_2025_26,detail,2025-2026,budget,,"2,404",2404.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,7,"Economic Development, Job Creation and Trade",detail,"Economic Development, Job Creation and Trade",actual_2025_26,detail,2025-2026,actual,,"1,928",1928.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,7,"Economic Development, Job Creation and Trade",detail,"Economic Development, Job Creation and Trade",actual_2024_25,detail,2024-2025,actual_restated,,"1,724",1724.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,8,Education,detail,Education,budget_2025_26,detail,2025-2026,budget,,"40,487",40487.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,8,Education,detail,Education,actual_2025_26,detail,2025-2026,actual,,"40,140",40140.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,8,Education,detail,Education,actual_2024_25,detail,2024-2025,actual_restated,,"37,836",37836.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,9,Teachers' Pension,detail,Teachers’ Pension,budget_2025_26,detail,2025-2026,budget,,"1,733",1733.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,9,Teachers' Pension,detail,Teachers’ Pension,actual_2025_26,detail,2025-2026,actual,,"2,171",2171.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,9,Teachers' Pension,detail,Teachers’ Pension,actual_2024_25,detail,2024-2025,actual_restated,,"1,684",1684.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,10,Emergency Preparedness and Response,detail,Emergency Preparedness and Response,budget_2025_26,detail,2025-2026,budget,,66,66.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,10,Emergency Preparedness and Response,detail,Emergency Preparedness and Response,actual_2025_26,detail,2025-2026,actual,,275,275.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,10,Emergency Preparedness and Response,detail,Emergency Preparedness and Response,actual_2024_25,detail,2024-2025,actual_restated,,47,47.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,11,Energy and Mines,detail,Energy and Mines,budget_2025_26,detail,2025-2026,budget,,"8,938",8938.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,11,Energy and Mines,detail,Energy and Mines,actual_2025_26,detail,2025-2026,actual,,"7,998",7998.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,11,Energy and Mines,detail,Energy and Mines,actual_2024_25,detail,2024-2025,actual_restated,,"7,532",7532.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,12,"Environment, Conservation and Parks",detail,"Environment, Conservation and Parks",budget_2025_26,detail,2025-2026,budget,,"1,034",1034.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,12,"Environment, Conservation and Parks",detail,"Environment, Conservation and Parks",actual_2025_26,detail,2025-2026,actual,,"1,036",1036.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,12,"Environment, Conservation and Parks",detail,"Environment, Conservation and Parks",actual_2024_25,detail,2024-2025,actual_restated,,854,854.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,13,Executive Offices,detail,Executive Offices,budget_2025_26,detail,2025-2026,budget,,78,78.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,13,Executive Offices,detail,Executive Offices,actual_2025_26,detail,2025-2026,actual,,81,81.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,13,Executive Offices,detail,Executive Offices,actual_2024_25,detail,2024-2025,actual_restated,,73,73.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,14,Finance,detail,Finance,budget_2025_26,detail,2025-2026,budget,,"1,601",1601.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,14,Finance,detail,Finance,actual_2025_26,detail,2025-2026,actual,,"1,462",1462.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,14,Finance,detail,Finance,actual_2024_25,detail,2024-2025,actual_restated,,"4,394",4394.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,15,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,budget_2025_26,detail,2025-2026,budget,,"16,198",16198.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,15,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,actual_2025_26,detail,2025-2026,actual,,"15,451",15451.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,15,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,actual_2024_25,detail,2024-2025,actual_restated,,"15,122",15122.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,16,Municipal Partnership Fund,detail,Municipal Partnership Fund,budget_2025_26,detail,2025-2026,budget,,563,563.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,16,Municipal Partnership Fund,detail,Municipal Partnership Fund,actual_2025_26,detail,2025-2026,actual,,579,579.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,16,Municipal Partnership Fund,detail,Municipal Partnership Fund,actual_2024_25,detail,2024-2025,actual_restated,,535,535.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,17,Power Supply Contract Costs,detail,Power Supply Contract Costs,budget_2025_26,detail,2025-2026,budget,,–,0.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,17,Power Supply Contract Costs,detail,Power Supply Contract Costs,actual_2025_26,detail,2025-2026,actual,,43,43.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,17,Power Supply Contract Costs,detail,Power Supply Contract Costs,actual_2024_25,detail,2024-2025,actual_restated,,40,40.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,18,Francophone Affairs,detail,Francophone Affairs,budget_2025_26,detail,2025-2026,budget,,11,11.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,18,Francophone Affairs,detail,Francophone Affairs,actual_2025_26,detail,2025-2026,actual,,14,14.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,18,Francophone Affairs,detail,Francophone Affairs,actual_2024_25,detail,2024-2025,actual_restated,,13,13.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,19,Health,detail,Health,budget_2025_26,detail,2025-2026,budget,,"87,098",87098.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,19,Health,detail,Health,actual_2025_26,detail,2025-2026,actual,,"93,883",93883.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,19,Health,detail,Health,actual_2024_25,detail,2024-2025,actual_restated,,"87,637",87637.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,20,Indigenous Affairs and First Nations Economic Reconciliation,detail,Indigenous Affairs and First Nations Economic Reconciliation,budget_2025_26,detail,2025-2026,budget,,144,144.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,20,Indigenous Affairs and First Nations Economic Reconciliation,detail,Indigenous Affairs and First Nations Economic Reconciliation,actual_2025_26,detail,2025-2026,actual,,157,157.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,20,Indigenous Affairs and First Nations Economic Reconciliation,detail,Indigenous Affairs and First Nations Economic Reconciliation,actual_2024_25,detail,2024-2025,actual_restated,,966,966.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,21,Infrastructure,detail,Infrastructure,budget_2025_26,detail,2025-2026,budget,,"3,670",3670.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,21,Infrastructure,detail,Infrastructure,actual_2025_26,detail,2025-2026,actual,,"3,334",3334.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,21,Infrastructure,detail,Infrastructure,actual_2024_25,detail,2024-2025,actual_restated,,"2,868",2868.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,22,"Labour, Immigration, Training and Skills Development",detail,"Labour, Immigration, Training and Skills Development",budget_2025_26,detail,2025-2026,budget,,"2,096",2096.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,22,"Labour, Immigration, Training and Skills Development",detail,"Labour, Immigration, Training and Skills Development",actual_2025_26,detail,2025-2026,actual,,"1,639",1639.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,22,"Labour, Immigration, Training and Skills Development",detail,"Labour, Immigration, Training and Skills Development",actual_2024_25,detail,2024-2025,actual_restated,,"1,814",1814.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,23,Long-Term Care,detail,Long-Term Care,budget_2025_26,detail,2025-2026,budget,,"3,532",3532.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,23,Long-Term Care,detail,Long-Term Care,actual_2025_26,detail,2025-2026,actual,,"3,614",3614.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,23,Long-Term Care,detail,Long-Term Care,actual_2024_25,detail,2024-2025,actual_restated,,"3,276",3276.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,24,Municipal Affairs and Housing,detail,Municipal Affairs and Housing,budget_2025_26,detail,2025-2026,budget,,"1,756",1756.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,24,Municipal Affairs and Housing,detail,Municipal Affairs and Housing,actual_2025_26,detail,2025-2026,actual,,"1,883",1883.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,24,Municipal Affairs and Housing,detail,Municipal Affairs and Housing,actual_2024_25,detail,2024-2025,actual_restated,,"2,087",2087.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,25,Natural Resources,detail,Natural Resources,budget_2025_26,detail,2025-2026,budget,,869,869.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,25,Natural Resources,detail,Natural Resources,actual_2025_26,detail,2025-2026,actual,,"1,054",1054.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,25,Natural Resources,detail,Natural Resources,actual_2024_25,detail,2024-2025,actual_restated,,"1,003",1003.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,26,Northern Economic Development and Growth,detail,Northern Economic Development and Growth,budget_2025_26,detail,2025-2026,budget,,805,805.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,26,Northern Economic Development and Growth,detail,Northern Economic Development and Growth,actual_2025_26,detail,2025-2026,actual,,884,884.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,26,Northern Economic Development and Growth,detail,Northern Economic Development and Growth,actual_2024_25,detail,2024-2025,actual_restated,,762,762.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,27,Public and Business Service Delivery and Procurement,detail,Public and Business Service Delivery and Procurement,budget_2025_26,detail,2025-2026,budget,,"1,697",1697.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,27,Public and Business Service Delivery and Procurement,detail,Public and Business Service Delivery and Procurement,actual_2025_26,detail,2025-2026,actual,,"1,618",1618.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,27,Public and Business Service Delivery and Procurement,detail,Public and Business Service Delivery and Procurement,actual_2024_25,detail,2024-2025,actual_restated,,"1,659",1659.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,28,Rural Affairs,detail,Rural Affairs,budget_2025_26,detail,2025-2026,budget,,19,19.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,28,Rural Affairs,detail,Rural Affairs,actual_2025_26,detail,2025-2026,actual,,10,10.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,28,Rural Affairs,detail,Rural Affairs,actual_2024_25,detail,2024-2025,actual_restated,,7,7.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,29,Seniors and Accessibility,detail,Seniors and Accessibility,budget_2025_26,detail,2025-2026,budget,,181,181.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,29,Seniors and Accessibility,detail,Seniors and Accessibility,actual_2025_26,detail,2025-2026,actual,,161,161.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,29,Seniors and Accessibility,detail,Seniors and Accessibility,actual_2024_25,detail,2024-2025,actual_restated,,162,162.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,30,Solicitor General,detail,Solicitor General,budget_2025_26,detail,2025-2026,budget,,"4,413",4413.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,30,Solicitor General,detail,Solicitor General,actual_2025_26,detail,2025-2026,actual,,"4,590",4590.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,30,Solicitor General,detail,Solicitor General,actual_2024_25,detail,2024-2025,actual_restated,,"4,214",4214.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,31,Sport,detail,Sport,budget_2025_26,detail,2025-2026,budget,,213,213.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,31,Sport,detail,Sport,actual_2025_26,detail,2025-2026,actual,,166,166.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,31,Sport,detail,Sport,actual_2024_25,detail,2024-2025,actual_restated,,60,60.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,32,"Tourism, Culture and Gaming",detail,"Tourism, Culture and Gaming",budget_2025_26,detail,2025-2026,budget,,"1,893",1893.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,32,"Tourism, Culture and Gaming",detail,"Tourism, Culture and Gaming",actual_2025_26,detail,2025-2026,actual,,"1,933",1933.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,32,"Tourism, Culture and Gaming",detail,"Tourism, Culture and Gaming",actual_2024_25,detail,2024-2025,actual_restated,,"1,833",1833.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,33,Transportation,detail,Transportation,budget_2025_26,detail,2025-2026,budget,,"7,801",7801.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,33,Transportation,detail,Transportation,actual_2025_26,detail,2025-2026,actual,,"8,437",8437.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,33,Transportation,detail,Transportation,actual_2024_25,detail,2024-2025,actual_restated,,"7,267",7267.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,34,Treasury Board Secretariat,detail,Treasury Board Secretariat,budget_2025_26,detail,2025-2026,budget,,399,399.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,34,Treasury Board Secretariat,detail,Treasury Board Secretariat,actual_2025_26,detail,2025-2026,actual,,449,449.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,34,Treasury Board Secretariat,detail,Treasury Board Secretariat,actual_2024_25,detail,2024-2025,actual_restated,,301,301.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,35,Employee and Pensioner Benefits,detail,Employee and Pensioner Benefits,budget_2025_26,detail,2025-2026,budget,,"1,528",1528.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,35,Employee and Pensioner Benefits,detail,Employee and Pensioner Benefits,actual_2025_26,detail,2025-2026,actual,,"1,830",1830.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,35,Employee and Pensioner Benefits,detail,Employee and Pensioner Benefits,actual_2024_25,detail,2024-2025,actual_restated,,"1,307",1307.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,36,Contingency Fund,detail,Contingency Fund3,budget_2025_26,detail,2025-2026,budget,,"3,000",3000.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,36,Contingency Fund,detail,Contingency Fund3,actual_2025_26,detail,2025-2026,actual,,–,0.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,36,Contingency Fund,detail,Contingency Fund3,actual_2024_25,detail,2024-2025,actual_restated,,–,0.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,37,Total Expense,total,Total Expense,budget_2025_26,detail,2025-2026,budget,,"231,234",231234.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,37,Total Expense,total,Total Expense,actual_2025_26,detail,2025-2026,actual,,"236,336",236336.0,1000000,CAD
+prov-on-public-accounts-2025-26,expense-by-ministry,106,37,Total Expense,total,Total Expense,actual_2024_25,detail,2024-2025,actual_restated,,"226,035",226035.0,1000000,CAD

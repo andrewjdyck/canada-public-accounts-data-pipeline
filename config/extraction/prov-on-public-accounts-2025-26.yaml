@@ -1,0 +1,349 @@
+# Extraction spec (hand-written). Schema: config/extraction.schema.json
+doc_id: prov-on-public-accounts-2025-26
+notes: Ontario Annual Report and Consolidated Financial Statements 2025-26. Every table carries the 2024-25 comparative (restated, Note 17), which
+  is the year used to reconcile against StatCan COFOG (latest reference year 2024).
+tables:
+- table_id: statement-of-operations-expense
+  title: Consolidated Statement of Operations (expense section)
+  role: headline
+  method: pdfplumber_words
+  units: &id001
+    scale: 1000000
+    currency: CAD
+    as_printed: $ Millions
+  scope: consolidated_summary
+  columns: &id002
+    budget_2025_26:
+      fiscal_year: 2025-2026
+      basis: budget
+    actual_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+    actual_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+  parts:
+  - page: 57
+    printed_page: '49'
+    start_after: ^Expense \(Schedules
+    end_at: ^Total Expenses
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Health
+  - label: Education
+  - label: Children's and Social Services
+  - label: Interest and Other Debt Servicing Charges
+  - label: Postsecondary Education
+  - label: Justice
+  - label: Other Programs
+  - label: Total Expenses
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total Expenses
+    tolerance: 2
+- table_id: expense-by-sector
+  title: 'Schedule 3: Expense by Sector'
+  role: function_by_object
+  method: pdfplumber_words
+  units: *id001
+  scope: consolidated_summary
+  columns:
+    health_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Health
+    health_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Health
+    education_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Education
+    education_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Education
+    childrens_social_services_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Children's and Social Services
+    childrens_social_services_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Children's and Social Services
+    postsecondary_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Postsecondary Education
+    postsecondary_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Postsecondary Education
+    justice_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Justice
+    justice_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Justice
+    other_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Other
+    other_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Other
+    interest_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Interest and Other Debt Servicing Charges
+    interest_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Interest and Other Debt Servicing Charges
+    adjustments_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Adjustments
+      kind: adjustment
+    adjustments_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Adjustments
+      kind: adjustment
+    total_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      sector: Total
+      kind: total
+    total_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      sector: Total
+      kind: total
+  parts:
+  - page: 104
+    printed_page: '96'
+    start_after: ^Expense$
+    end_at: ^Total
+    columns:
+    - health_2025_26
+    - health_2024_25
+    - education_2025_26
+    - education_2024_25
+    - childrens_social_services_2025_26
+    - childrens_social_services_2024_25
+    - postsecondary_2025_26
+    - postsecondary_2024_25
+    - justice_2025_26
+    - justice_2024_25
+  - page: 105
+    printed_page: '97'
+    start_after: ^Expense$
+    end_at: ^Total
+    columns:
+    - other_2025_26
+    - other_2024_25
+    - interest_2025_26
+    - interest_2024_25
+    - adjustments_2025_26
+    - adjustments_2024_25
+    - total_2025_26
+    - total_2024_25
+  rows:
+  - label: Transfer Payments
+  - label: Salaries and Wages
+  - label: Services
+  - label: Interest and Other Debt Servicing Charges
+  - label: Supplies and Equipment
+  - label: Employee Benefits
+  - label: Amortization of Tangible Capital Assets
+  - label: Pensions and Other Employee Future Benefits
+  - label: Transportation and Communication
+  - label: Power Supply Contract Costs
+  - label: Other
+  - label: Subtotal
+    kind: subtotal
+  - label: Adjustments
+    kind: adjustment
+  - label: Total
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Subtotal
+    columns:
+    - health_2025_26
+    - health_2024_25
+    - education_2025_26
+    - education_2024_25
+    - childrens_social_services_2025_26
+    - childrens_social_services_2024_25
+    - postsecondary_2025_26
+    - postsecondary_2024_25
+    - justice_2025_26
+    - justice_2024_25
+    - other_2025_26
+    - other_2024_25
+    - interest_2025_26
+    - interest_2024_25
+    tolerance: 2
+  - type: rows_sum
+    rows:
+    - Subtotal
+    - Adjustments
+    equals: Total
+    columns:
+    - health_2025_26
+    - health_2024_25
+    - education_2025_26
+    - education_2024_25
+    - childrens_social_services_2025_26
+    - childrens_social_services_2024_25
+    - postsecondary_2025_26
+    - postsecondary_2024_25
+    - justice_2025_26
+    - justice_2024_25
+    - other_2025_26
+    - other_2024_25
+    - interest_2025_26
+    - interest_2024_25
+    tolerance: 1
+  - type: columns_sum
+    columns:
+    - health_2025_26
+    - education_2025_26
+    - childrens_social_services_2025_26
+    - postsecondary_2025_26
+    - justice_2025_26
+    - other_2025_26
+    - interest_2025_26
+    - adjustments_2025_26
+    equals: total_2025_26
+    tolerance: 3
+  - type: columns_sum
+    columns:
+    - health_2024_25
+    - education_2024_25
+    - childrens_social_services_2024_25
+    - postsecondary_2024_25
+    - justice_2024_25
+    - other_2024_25
+    - interest_2024_25
+    - adjustments_2024_25
+    equals: total_2024_25
+    tolerance: 3
+- table_id: expense-by-ministry
+  title: 'Schedule 4: Expense by Ministry'
+  role: function_breakdown
+  method: pdfplumber_words
+  units: *id001
+  scope: consolidated_summary
+  columns: *id002
+  parts:
+  - page: 106
+    printed_page: '98'
+    start_after: ^\(\$ Millions\)
+    end_at: ^Total Expense
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Agriculture, Food and Agribusiness
+  - label: Attorney General
+  - label: Board of Internal Economy
+  - label: Children, Community and Social Services
+  - label: Citizenship and Multiculturalism
+  - label: Colleges, Universities, Research Excellence and Security
+  - label: Economic Development, Job Creation and Trade
+  - label: Education
+  - label: Teachers' Pension
+  - label: Emergency Preparedness and Response
+  - label: Energy and Mines
+  - label: Environment, Conservation and Parks
+  - label: Executive Offices
+  - label: Finance
+  - label: Interest and Other Debt Servicing Charges
+  - label: Municipal Partnership Fund
+  - label: Power Supply Contract Costs
+  - label: Francophone Affairs
+  - label: Health
+  - label: Indigenous Affairs and First Nations Economic Reconciliation
+  - label: Infrastructure
+  - label: Labour, Immigration, Training and Skills Development
+  - label: Long-Term Care
+  - label: Municipal Affairs and Housing
+  - label: Natural Resources
+  - label: Northern Economic Development and Growth
+  - label: Public and Business Service Delivery and Procurement
+  - label: Rural Affairs
+  - label: Seniors and Accessibility
+  - label: Solicitor General
+  - label: Sport
+  - label: Tourism, Culture and Gaming
+  - label: Transportation
+  - label: Treasury Board Secretariat
+  - label: Employee and Pensioner Benefits
+  - label: Contingency Fund
+  - label: Total Expense
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total Expense
+    tolerance: 3
+cross_checks:
+- left:
+    table: expense-by-ministry
+    row: Total Expense
+    column: budget_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Total Expenses
+    column: budget_2025_26
+- left:
+    table: expense-by-ministry
+    row: Total Expense
+    column: actual_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Total Expenses
+    column: actual_2025_26
+- left:
+    table: expense-by-ministry
+    row: Total Expense
+    column: actual_2024_25
+  right:
+    table: statement-of-operations-expense
+    row: Total Expenses
+    column: actual_2024_25
+- left:
+    table: expense-by-sector
+    row: Total
+    column: total_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Total Expenses
+    column: actual_2025_26
+- left:
+    table: expense-by-sector
+    row: Total
+    column: total_2024_25
+  right:
+    table: statement-of-operations-expense
+    row: Total Expenses
+    column: actual_2024_25
+- left:
+    table: expense-by-sector
+    row: Total
+    column: health_2024_25
+  right:
+    table: statement-of-operations-expense
+    row: Health
+    column: actual_2024_25

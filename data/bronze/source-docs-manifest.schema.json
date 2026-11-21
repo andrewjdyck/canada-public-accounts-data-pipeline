@@ -1,0 +1,334 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/data/bronze/source-docs-manifest.schema.json",
+  "title": "Public Accounts Source Document Manifest",
+  "type": "object",
+  "required": [
+    "manifest_version",
+    "documents"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "document": {
+      "type": "object",
+      "required": [
+        "id",
+        "level",
+        "jurisdiction",
+        "entity",
+        "doc",
+        "source",
+        "storage",
+        "file"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9\\-]+$"
+        },
+        "level": {
+          "type": "string",
+          "enum": [
+            "federal",
+            "provincial",
+            "municipal",
+            "national_statistics"
+          ],
+          "description": "national_statistics: a Statistics Canada table covering several levels of government."
+        },
+        "jurisdiction": {
+          "type": "object",
+          "required": [
+            "country"
+          ],
+          "properties": {
+            "country": {
+              "type": "string",
+              "const": "CA"
+            },
+            "province": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[A-Z]{2}$",
+              "description": "Two-letter province code (AB, BC, MB, NB, NL, NS, ON, PE, QC, SK); null for federal."
+            },
+            "municipality": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "entity": {
+          "type": "object",
+          "required": [
+            "name",
+            "type"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "short": {
+              "type": "string",
+              "description": "Short slug, e.g. 'canada', 'on'."
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "government",
+                "agency",
+                "crown",
+                "authority"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "doc": {
+          "type": "object",
+          "required": [
+            "kind",
+            "title",
+            "fiscal_year"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "public_accounts",
+                "budget",
+                "annual_financial_report",
+                "financial_statement",
+                "estimates",
+                "annual_report",
+                "statistical_table"
+              ]
+            },
+            "title": {
+              "type": "string"
+            },
+            "fiscal_year": {
+              "type": "string",
+              "pattern": "^\\d{4}(-\\d{4})?$",
+              "description": "'YYYY-YYYY' for April–March fiscal years; 'YYYY' for calendar-year (municipal) reporting. Statistical tables use the latest reference year they contain."
+            },
+            "period_covered": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "end": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "required": [
+                "start",
+                "end"
+              ],
+              "additionalProperties": false
+            },
+            "language": {
+              "type": "string",
+              "enum": [
+                "en",
+                "fr",
+                "bilingual"
+              ]
+            },
+            "reference_period": {
+              "type": "object",
+              "description": "First and last reference years in a statistical table.",
+              "properties": {
+                "start": {
+                  "type": "integer"
+                },
+                "end": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "start",
+                "end"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "url",
+            "retrieved_at"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "retrieved_at": {
+              "type": "string",
+              "format": "date",
+              "description": "Date the file was downloaded (or the URL last confirmed for planned documents)."
+            },
+            "publisher": {
+              "type": "string"
+            },
+            "landing_page": {
+              "type": "string",
+              "format": "uri",
+              "description": "Human-readable page that links to the document."
+            },
+            "statcan_product_id": {
+              "type": "string",
+              "pattern": "^\\d{8}$",
+              "description": "8-digit StatCan product id, e.g. 10100024 for table 10-10-0024-01."
+            },
+            "release_time": {
+              "type": "string",
+              "description": "StatCan release timestamp of the downloaded vintage (getCubeMetadata releaseTime)."
+            }
+          },
+          "additionalProperties": false
+        },
+        "storage": {
+          "type": "object",
+          "required": [
+            "relpath"
+          ],
+          "properties": {
+            "relpath": {
+              "type": "string",
+              "description": "Path under data/bronze/."
+            },
+            "filename": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "file": {
+          "type": "object",
+          "required": [
+            "format"
+          ],
+          "properties": {
+            "format": {
+              "type": "string",
+              "enum": [
+                "pdf",
+                "xlsx",
+                "csv",
+                "html",
+                "zip"
+              ]
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "description": "Recorded by fetch_sources.py --record; later runs fail on mismatch."
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "downloaded",
+            "parsed",
+            "verified"
+          ],
+          "description": "planned: URL found, not downloaded. downloaded: file + sha256 recorded. parsed: tables extracted. verified: hand-checked (A6)."
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "download": {
+          "type": "object",
+          "required": [
+            "method"
+          ],
+          "properties": {
+            "method": {
+              "type": "string",
+              "enum": [
+                "script",
+                "manual",
+                "statcan_wds"
+              ],
+              "description": "'script': fetch_sources.py downloads it. 'manual': download by browser (e.g. host blocks bots). 'statcan_wds': fetch_sources.py downloads the full-table CSV zip through StatCan's Web Data Service."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "download": {
+                "properties": {
+                  "method": {
+                    "const": "statcan_wds"
+                  }
+                }
+              }
+            },
+            "required": [
+              "download"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "required": [
+                  "url",
+                  "retrieved_at",
+                  "statcan_product_id"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "description": "Source documents (bronze layer). Field docs live here because fetch_sources.py --record rewrites source-docs-manifest.yaml (dropping YAML comments). Hand-written per-table extraction details live in config/extraction/<doc_id>.yaml."
+}

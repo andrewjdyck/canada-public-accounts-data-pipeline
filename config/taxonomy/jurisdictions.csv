@@ -1,0 +1,15 @@
+code,level,statcan_geo,name_en
+CA,federal,Canada,Federal
+NL,provincial,Newfoundland and Labrador,Newfoundland and Labrador
+PE,provincial,Prince Edward Island,Prince Edward Island
+NS,provincial,Nova Scotia,Nova Scotia
+NB,provincial,New Brunswick,New Brunswick
+QC,provincial,Quebec,Quebec
+ON,provincial,Ontario,Ontario
+MB,provincial,Manitoba,Manitoba
+SK,provincial,Saskatchewan,Saskatchewan
+AB,provincial,Alberta,Alberta
+BC,provincial,British Columbia,British Columbia
+YT,territorial,Yukon,Yukon
+NT,territorial,Northwest Territories,Northwest Territories
+NU,territorial,Nunavut,Nunavut

@@ -1,0 +1,25 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,1,Health,detail,Health,budget_2025_26,detail,2025-2026,budget,,"90,630",90630.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,1,Health,detail,Health,actual_2025_26,detail,2025-2026,actual,,"97,497",97497.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,1,Health,detail,Health,actual_2024_25,detail,2024-2025,actual_restated,,"90,913",90913.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,2,Education,detail,Education2,budget_2025_26,detail,2025-2026,budget,,"42,220",42220.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,2,Education,detail,Education2,actual_2025_26,detail,2025-2026,actual,,"42,311",42311.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,2,Education,detail,Education2,actual_2024_25,detail,2024-2025,actual_restated,,"39,520",39520.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,3,Children's and Social Services,detail,Children's and Social Services,budget_2025_26,detail,2025-2026,budget,,"20,340",20340.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,3,Children's and Social Services,detail,Children's and Social Services,actual_2025_26,detail,2025-2026,actual,,"21,387",21387.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,3,Children's and Social Services,detail,Children's and Social Services,actual_2024_25,detail,2024-2025,actual_restated,,"20,526",20526.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,4,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,budget_2025_26,detail,2025-2026,budget,,"16,198",16198.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,4,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,actual_2025_26,detail,2025-2026,actual,,"15,451",15451.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,4,Interest and Other Debt Servicing Charges,detail,Interest and Other Debt Servicing Charges,actual_2024_25,detail,2024-2025,actual_restated,,"15,122",15122.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,5,Postsecondary Education,detail,Postsecondary Education,budget_2025_26,detail,2025-2026,budget,,"12,927",12927.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,5,Postsecondary Education,detail,Postsecondary Education,actual_2025_26,detail,2025-2026,actual,,"13,938",13938.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,5,Postsecondary Education,detail,Postsecondary Education,actual_2024_25,detail,2024-2025,actual_restated,,"14,102",14102.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,6,Justice,detail,Justice,budget_2025_26,detail,2025-2026,budget,,"6,665",6665.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,6,Justice,detail,Justice,actual_2025_26,detail,2025-2026,actual,,"7,223",7223.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,6,Justice,detail,Justice,actual_2024_25,detail,2024-2025,actual_restated,,"7,081",7081.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,7,Other Programs,detail,Other Programs,budget_2025_26,detail,2025-2026,budget,,"42,254",42254.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,7,Other Programs,detail,Other Programs,actual_2025_26,detail,2025-2026,actual,,"38,529",38529.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,7,Other Programs,detail,Other Programs,actual_2024_25,detail,2024-2025,actual_restated,,"38,771",38771.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,8,Total Expenses,total,Total Expenses,budget_2025_26,detail,2025-2026,budget,,"231,234",231234.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,8,Total Expenses,total,Total Expenses,actual_2025_26,detail,2025-2026,actual,,"236,336",236336.0,1000000,CAD
+prov-on-public-accounts-2025-26,statement-of-operations-expense,57,8,Total Expenses,total,Total Expenses,actual_2024_25,detail,2024-2025,actual_restated,,"226,035",226035.0,1000000,CAD

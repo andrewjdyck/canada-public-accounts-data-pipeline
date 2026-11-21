@@ -1,0 +1,56 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+ON,expense-by-ministry,function,"Agriculture, Food and Agribusiness",04.2,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Attorney General,03.3,1,2024-2025,,manual,medium,Courts plus legal services; some 03.6
+ON,expense-by-ministry,function,Board of Internal Economy,01.1,1,2024-2025,,manual,high,Legislative Assembly
+ON,expense-by-ministry,function,"Children, Community and Social Services",10,1,2024-2025,,manual,high,"ODSP (10.1), child protection (10.4), Ontario Works (10.7): not split in this schedule"
+ON,expense-by-ministry,function,Citizenship and Multiculturalism,08,1,2024-2025,,manual,medium,
+ON,expense-by-ministry,function,"Colleges, Universities, Research Excellence and Security",09,1,2024-2025,,manual,high,College (09.3) vs university (09.4) split needs ministry detail
+ON,expense-by-ministry,function,"Economic Development, Job Creation and Trade",04.1,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Education,09,1,2024-2025,,manual,medium,Includes child care (COFOG would put it in 10.4)
+ON,expense-by-ministry,function,Teachers' Pension,09,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Emergency Preparedness and Response,03,1,2024-2025,,manual,medium,
+ON,expense-by-ministry,function,Energy and Mines,04.3,1,2024-2025,,manual,medium,Includes electricity rebates; mines would be 04.4
+ON,expense-by-ministry,function,"Environment, Conservation and Parks",05,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Executive Offices,01.1,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Finance,01.1,1,2024-2025,,manual,medium,2024-25 includes one-time items
+ON,expense-by-ministry,function,Interest and Other Debt Servicing Charges,01.7,1,2024-2025,,manual,high,StatCan also puts all interest in 01 (footnote 6)
+ON,expense-by-ministry,function,Municipal Partnership Fund,01.5+01.6+01.8,1,2024-2025,,manual,high,General-purpose transfer to municipalities (COFOG 01.8)
+ON,expense-by-ministry,function,Power Supply Contract Costs,04.3,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Francophone Affairs,08,1,2024-2025,,manual,low,
+ON,expense-by-ministry,function,Health,07,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Indigenous Affairs and First Nations Economic Reconciliation,06,1,2024-2025,,manual,low,StatCan files federal Indigenous programs under 06 n.e.c. (footnote 9); 2024-25 includes settlements
+ON,expense-by-ministry,function,Infrastructure,04,1,2024-2025,,manual,low,"Broadband, transit and capital programs"
+ON,expense-by-ministry,function,"Labour, Immigration, Training and Skills Development",04.1,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Long-Term Care,07,1,2024-2025,,manual,medium,COFOG could put nursing-home care in 10.2 (old age)
+ON,expense-by-ministry,function,Municipal Affairs and Housing,06.1+06.2,1,2024-2025,,manual,medium,
+ON,expense-by-ministry,function,Natural Resources,04.2,1,2024-2025,,manual,medium,Forestry; some 05.4
+ON,expense-by-ministry,function,Northern Economic Development and Growth,04.1,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Public and Business Service Delivery and Procurement,01.3,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Rural Affairs,04.1,1,2024-2025,,manual,medium,
+ON,expense-by-ministry,function,Seniors and Accessibility,10.2,1,2024-2025,,manual,medium,
+ON,expense-by-ministry,function,Solicitor General,03,1,2024-2025,,manual,high,Police (03.1) and corrections (03.4)
+ON,expense-by-ministry,function,Sport,08.1,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,"Tourism, Culture and Gaming",08,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Transportation,04.5,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Treasury Board Secretariat,01.3,1,2024-2025,,manual,high,
+ON,expense-by-ministry,function,Employee and Pensioner Benefits,01.3,1,2024-2025,,manual,low,Central employee benefits; belongs to every function
+ON,expense-by-ministry,function,Contingency Fund,01.5+01.6+01.8,1,2024-2025,,manual,high,Budget only
+ON,expense-by-sector,function,Health,07,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,function,Education,09,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,function,Children's and Social Services,10,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,function,Postsecondary Education,09,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,function,Justice,03,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,function,Other,_unallocated,1,2024-2025,,manual,high,Sector column; 23 ministries (see expense-by-ministry)
+ON,expense-by-sector,function,Interest and Other Debt Servicing Charges,01.7,1,2024-2025,,manual,high,Sector column
+ON,expense-by-sector,object,Transfer Payments,transfers,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Salaries and Wages,salaries_wages,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Services,services,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Interest and Other Debt Servicing Charges,interest,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Supplies and Equipment,supplies_equipment,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Employee Benefits,employee_benefits,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Amortization of Tangible Capital Assets,amortization,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Pensions and Other Employee Future Benefits,pensions_future_benefits,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Transportation and Communication,transportation_communication,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Power Supply Contract Costs,power_supply_contracts,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Other,other,1,2024-2025,,manual,high,
+ON,expense-by-sector,object,Adjustments,inter_sector_elimination,1,2024-2025,,manual,high,Sector-level elimination row

@@ -1,0 +1,6 @@
+doc_id,table_id,fiscal_year,basis,check,computed,stated,diff,ok
+prov-on-public-accounts-2025-26,expense-by-sector,2025-2026,actual,mapped facts = stated total,236336000000,236336000000,0,True
+prov-on-public-accounts-2025-26,expense-by-sector,2024-2025,actual_restated,mapped facts = stated total,226035000000,226035000000,0,True
+prov-on-public-accounts-2025-26,expense-by-ministry,2025-2026,budget,mapped facts = stated total,231234000000,231234000000,0,True
+prov-on-public-accounts-2025-26,expense-by-ministry,2025-2026,actual,mapped facts = stated total,236336000000,236336000000,0,True
+prov-on-public-accounts-2025-26,expense-by-ministry,2024-2025,actual_restated,mapped facts = stated total,226035000000,226035000000,0,True

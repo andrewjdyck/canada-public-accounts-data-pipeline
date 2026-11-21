@@ -64,7 +64,7 @@ provincial:
   - exactly the 10 provinces, no more and no fewer;
   - `schemaVersion` is one consumers support.
 - Changing the format (a new `schemaVersion`) is a breaking change for consumers. Coordinate it with the app repo before tagging.
-- Publish to: `output-data/spending-shares/<fiscal-year>.yaml`, plus a git tag (and ideally a GitHub release asset) that consumers fetch. The app's sync script is one such consumer.
+- Publish to: `data/gold/spending-shares/<fiscal-year>.yaml`, plus a git tag (and ideally a GitHub release asset) that consumers fetch. The app's sync script is one such consumer.
 
 ---
 
@@ -76,14 +76,14 @@ Status: ⬜ not started · 🔄 in progress · ✅ done
 
 | Task | Status | Details |
 |------|--------|---------|
-| A1 Source documents | 🔄 | **Progress (2026-11-14):** all 11 jurisdictions have FY2025-26 sources with sha256 recorded. Ten are downloaded by `src/pa_pdf/fetch_sources.py`. PEI was downloaded by browser, because its site blocks scripts; its direct PDF URL still needs recording. **Decision:** source PDFs are committed to git as binary files. They don't change once downloaded, and publisher links break (the Saskatchewan 2024-25 Volume 1 link already returns 404). `fetch_sources.py` checks each committed file's sha256 against the manifest. <br>**Original task:** Add federal + all 10 provinces to `source-docs/manifest.yaml` with URL, fiscal year, retrieval date and sha256. Use the latest published year for each. Prefer the consolidated "expense by function/ministry" statement in each jurisdiction's summary financial statements. Decide whether PDFs stay in git or are downloaded by script. |
-| A2 Category taxonomy | ⬜ | Define one provincial category set and one federal set. Write a mapping file per jurisdiction from source line items to categories, replacing the `*.mapping.example.yaml` files. Suggested sets: <br>• Provincial: Healthcare, Education, Social Services, Transportation, Debt Charges, Other. <br>• Federal: Elderly Benefits, Transfers to Provinces, Children's Benefits, Employment Insurance, Defence, Debt Charges, Indigenous Services, Other. |
-| A3 Locate tables | ⬜ | Use the existing `find_text` / `scan_tables` scripts to find the candidate pages in each document. Record the page numbers in the manifest. |
-| A4 LLM extraction | ⬜ | For each located table, an LLM returns structured rows (line item, amount, units, page). Validate them against a schema. Check that the rows add up to the total stated in the document. Store the raw output with the model, prompt version and page reference. |
-| A5 Ontario as reference | ⬜ | Run Ontario first and compare against the earlier hand extraction (see "Ontario reference" below). |
+| A1 Source documents | 🔄 | **Progress (2026-11-14):** all 11 jurisdictions have FY2025-26 sources with sha256 recorded. Ten are downloaded by `src/fetch/fetch_sources.py`. PEI was downloaded by browser, because its site blocks scripts; its direct PDF URL still needs recording. **Decision:** source PDFs are committed to git as binary files. They don't change once downloaded, and publisher links break (the Saskatchewan 2024-25 Volume 1 link already returns 404). `fetch_sources.py` checks each committed file's sha256 against the manifest. <br>**Original task:** Add federal + all 10 provinces to `source-docs/manifest.yaml` with URL, fiscal year, retrieval date and sha256. Use the latest published year for each. Prefer the consolidated "expense by function/ministry" statement in each jurisdiction's summary financial statements. Decide whether PDFs stay in git or are downloaded by script. |
+| A2 Category taxonomy | 🔄 | **Progress (2026-11-21):** categories are now defined as COFOG concepts (`config/taxonomy/cofog.csv`), rolled up to the app's names in `config/taxonomy/app-categories.csv`. Mappings are long CSVs with weights (`config/mappings/<code>.csv`); Ontario is done. <br>**Original task:** Define one provincial category set and one federal set. Write a mapping file per jurisdiction from source line items to categories, replacing the `*.mapping.example.yaml` files. Suggested sets: <br>• Provincial: Healthcare, Education, Social Services, Transportation, Debt Charges, Other. <br>• Federal: Elderly Benefits, Transfers to Provinces, Children's Benefits, Employment Insurance, Defence, Debt Charges, Indigenous Services, Other. |
+| A3 Locate tables | 🔄 | **Progress (2026-11-21):** table locations now live in `config/extraction/<doc_id>.yaml`, not the manifest; Ontario is done. <br>**Original task:** Use the existing `find_text` / `scan_tables` scripts to find the candidate pages in each document. Record the page numbers in the extraction spec. |
+| A4 LLM extraction | 🔄 | **Progress (2026-11-21):** spec-driven extraction with checks is built (`src/extract/extract_statement_tables.py`, `method: pdfplumber_words`), writing long-format silver tables. The LLM extractor would be a second `method` writing the same format, so checks and downstream steps don't change. Needs an Anthropic API key. <br>**Original task:** For each located table, an LLM returns structured rows (line item, amount, units, page). Validate them against a schema. Check that the rows add up to the total stated in the document. Store the raw output with the model, prompt version and page reference. |
+| A5 Ontario as reference | 🔄 | **Progress (2026-11-21):** Ontario 2024-25 (restated) gives Healthcare 0.4022, Education 0.2372, Social Services 0.0915, Transportation 0.0321, Debt Charges 0.0669, Other 0.1700, vs the hand extraction's 0.4036 / 0.2306 / 0.0892 / 0.0318 / (in Other) / 0.2448. Differences: Teachers' Pension and Seniors are now mapped to Education and Social Services, debt is separated, and the comparatives are restated. Health subcategories are not split yet. <br>**Original task:** Run Ontario first and compare against the earlier hand extraction (see "Ontario reference" below). |
 | A6 Accuracy check | ⬜ | Hand-check extracted values against the source for every jurisdiction, or for a documented sample. Record the accuracy figure, every correction made, and whether each was an extraction or a mapping error. |
-| A7 Publish | ⬜ | Write `output-data/spending-shares/<fiscal-year>.yaml` in the contract format. Validate it with the app's rules. Tag a version. |
-| A8 README | ⬜ | Document the workflow, how to rerun it, the accuracy result and known limitations. Remove the `output-data/manually-generated/` placeholders. |
+| A7 Publish | ⬜ | Write `data/gold/spending-shares/<fiscal-year>.yaml` in the contract format. Validate it with the app's rules. Tag a version. |
+| A8 README | ⬜ | Document the workflow, how to rerun it, the accuracy result and known limitations. ~~Remove the `output-data/manually-generated/` placeholders.~~ Done 2026-11-21. |
 
 ### B. Supporting work
 
@@ -91,7 +91,16 @@ Status: ⬜ not started · 🔄 in progress · ✅ done
 |------|--------|---------|
 | B1 Reproducible environment | ✅ | `requirements.txt` with pinned direct dependencies; install into `.venv`. Original task: Pin dependencies (`requirements.txt` or `pyproject.toml`) rather than relying on a local conda env. Keep API keys in env vars. |
 | B2 Output validation | ⬜ | Keep a copy of the output schema in this repo and validate against it before tagging: shares sum to 1, exactly 10 provinces, and `_meta` complete. The rules should match the checks the app applies on its side (its `lib/data-files.ts`), so a release never breaks the consumer. |
-| B3 Folder structure | ⬜ | Move the provincial mapping files to a consistent layout per jurisdiction, matching `source-docs/`. |
+| B3 Folder structure | ✅ | Done 2026-11-21: `data/{bronze,silver,gold}`, `config/`, and `src/{fetch,extract,clean,reconcile}`. `parsed-data/` and `output-data/` are removed, and the manifest is renamed `data/bronze/source-docs-manifest.yaml`. |
+
+### C. StatCan COFOG comparison
+
+| Task | Status | Details |
+|------|--------|---------|
+| C1 Download COFOG | ✅ | StatCan tables 10-10-0024-01 (by government component) and 10-10-0005-01 (consolidated) are in bronze, fetched by `fetch_sources.py` (`download.method: statcan_wds`). `--refresh` picks up new StatCan releases. |
+| C2 Comparable format | ✅ | `data/gold/statcan-cofog.csv` has the same jurisdiction codes, fiscal years and COFOG concept ids as `public-accounts-facts.csv`. |
+| C3 Reconciliation | 🔄 | `src/reconcile/reconcile_cofog.py` is built; Ontario FY2024-25 reconciles to $21M at the total once amortization is removed (see README). Extend it to each jurisdiction as it is extracted. Division-level gaps need investigating: Education vs Social protection, and long-term care. |
+| C4 Year overlap | 🔄 | StatCan's latest year is 2024 (FY2024-25, preliminary). Use the restated prior-year column in each FY2025-26 document (as for Ontario), so no extra downloads are needed. |
 
 ### Notes
 
@@ -135,7 +144,7 @@ This was done by hand in the app repo before the pipeline existed. Use it as the
 ## Suggested Order
 
 ```
-B1 → A1 → A2 → A3 → A4 + A5 (Ontario first) → A4 (remaining 10) → A6 → B2 → A7 → A8
+B1 → A1 → B3 → C1 → C2 → A2/A3/A4 + A5 (Ontario first) → C3 → A2/A3/A4 (remaining 10, each reconciled with C3) → A6 → B2 → A7 → A8
 ```
 
 ## Rough Effort

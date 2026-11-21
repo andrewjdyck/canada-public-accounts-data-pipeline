@@ -1,0 +1,13 @@
+jurisdiction,fiscal_year,pa_basis,division,division_name,pa_expense,pa_amortization,pa_expense_ex_amort,statcan,gap,gap_pct,statcan_health_institutions,statcan_school_boards,statcan_universities_colleges,statcan_status
+ON,2024-2025,actual_restated,01,General public services,23873000000,0,23873000000,21861000000,2012000000,0.092,,,,
+ON,2024-2025,actual_restated,02,Defence,0,0,0,0,0,,,,,
+ON,2024-2025,actual_restated,03,Public order and safety,7128000000,50000000,7078000000,6719000000,359000000,0.0534,,,,
+ON,2024-2025,actual_restated,04,Economic affairs,23913000000,0,23913000000,26364000000,-2451000000,-0.093,,,,
+ON,2024-2025,actual_restated,05,Environmental protection,854000000,0,854000000,1149000000,-295000000,-0.2567,,,,
+ON,2024-2025,actual_restated,06,Housing and community amenities,3053000000,0,3053000000,1362000000,1691000000,1.2416,,,,
+ON,2024-2025,actual_restated,07,Health,90913000000,2312000000,88601000000,85304000000,3297000000,0.0387,,,,
+ON,2024-2025,actual_restated,08,"Recreation, culture and religion",1991000000,0,1991000000,1725000000,266000000,0.1542,,,,
+ON,2024-2025,actual_restated,09,Education,53622000000,2367000000,51255000000,36509000000,14746000000,0.4039,,,,
+ON,2024-2025,actual_restated,10,Social protection,20688000000,34000000,20654000000,36674000000,-16020000000,-0.4368,,,,
+ON,2024-2025,actual_restated,_unallocated,Unallocated (spans several functions),0,3584000000,-3584000000,0,-3584000000,,,,,
+ON,2024-2025,actual_restated,TOTAL,Total expense,226035000000,8347000000,217688000000,217667000000,21000000,0.0001,56867000000,31931000000,18907000000,p
