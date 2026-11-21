@@ -1,0 +1,128 @@
+# Extraction spec (hand-written). Schema: config/extraction.schema.json
+doc_id: fed-canada-public-accounts-2025-26-vol1
+notes: Public Accounts of Canada 2025-2026 Volume I, Note 6. Segments are ministries; comparatives reclassified to the current presentation.
+tables:
+- table_id: expenses-by-segment
+  title: 'Note 6(f): Total expenses by segment (ministry)'
+  role: function_breakdown
+  method: pdfplumber_words
+  units:
+    scale: 1000000
+    currency: CAD
+    as_printed: in millions of dollars
+  scope: consolidated_summary
+  columns:
+    actual_2025_26: &id001
+      fiscal_year: 2025-2026
+      basis: actual
+    actual_2024_25: &id002
+      fiscal_year: 2024-2025
+      basis: actual_restated
+  parts:
+  - page: 80
+    printed_page: '80'
+    start_after: ^Ministries$
+    end_at: ^Total expenses \.
+    columns:
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Agriculture and Agri-Food
+  - label: Canadian Heritage
+  - label: Crown-Indigenous Relations and Northern Affairs
+  - label: Democratic Institutions
+  - label: Employment and Workforce Development
+  - label: Energy and Natural Resources
+  - label: Environment and Climate Change
+  - label: Finance and National Revenue
+  - label: Fisheries and Oceans
+  - label: Global Affairs
+  - label: Health
+  - label: Housing, Infrastructure and Communities
+  - label: Immigration, Refugees and Citizenship
+  - label: Indigenous Services
+  - label: Innovation, Science and Industry
+  - label: Justice
+  - label: National Defence
+  - label: Office of the Governor General's Secretary
+  - label: Parliament
+  - label: Privy Council
+  - label: Public Safety
+  - label: Public Services and Procurement
+  - label: Transport
+  - label: Treasury Board
+  - label: Veterans Affairs
+  - label: Women, Gender Equality and Youth
+  - label: Provision for valuation and other items
+  - label: Total expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Net actuarial losses
+  - label: Total expenses
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total expenses
+    tolerance: 3
+- table_id: expenses-by-object
+  title: 'Note 6(g): Expenses by object'
+  role: object_breakdown
+  method: pdfplumber_words
+  units:
+    scale: 1000000
+    currency: CAD
+    as_printed: in millions of dollars
+  scope: consolidated_summary
+  columns:
+    actual_2025_26: *id001
+    actual_2024_25: *id002
+  parts:
+  - page: 81
+    printed_page: '81'
+    start_after: ^Objects of expense
+    end_at: ^Total expenses \.
+    columns:
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Transfer payments
+  - label: Personnel, excluding net actuarial losses
+  - label: Transportation and communications
+  - label: Information
+  - label: Professional and special services
+  - label: Rentals
+  - label: Repairs and maintenance
+  - label: Utilities, materials and supplies
+  - label: Other subsidies and expenses
+  - label: Amortization of tangible capital assets
+  - label: Net loss on disposal of assets
+  - label: Total other expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Total program expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Public debt charges
+  - label: Total expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Net actuarial losses
+  - label: Total expenses
+    kind: subtotal
+  checks:
+  - type: rows_sum
+    equals: Total expenses
+    tolerance: 3
+cross_checks:
+- left:
+    table: expenses-by-segment
+    row: Total expenses
+    column: actual_2025_26
+  right:
+    table: expenses-by-object
+    row: Total expenses
+    column: actual_2025_26
+- left:
+    table: expenses-by-segment
+    row: Total expenses
+    column: actual_2024_25
+  right:
+    table: expenses-by-object
+    row: Total expenses
+    column: actual_2024_25

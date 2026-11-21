@@ -1,0 +1,37 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,1,Health,detail,Health,budget_2025_26,detail,2025-2026,budget,,"8,004,900",8004900.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,1,Health,detail,Health,actual_2025_26,detail,2025-2026,actual,,"8,671,557",8671557.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,1,Health,detail,Health,actual_2024_25,detail,2024-2025,actual,,"8,009,546",8009546.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,2,Education,detail,Education,budget_2025_26,detail,2025-2026,budget,,"4,428,100",4428100.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,2,Education,detail,Education,actual_2025_26,detail,2025-2026,actual,,"4,527,619",4527619.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,2,Education,detail,Education,actual_2024_25,detail,2024-2025,actual,,"4,374,753",4374753.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,3,Social services and assistance,detail,Social services and assistance,budget_2025_26,detail,2025-2026,budget,,"1,842,200",1842200.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,3,Social services and assistance,detail,Social services and assistance,actual_2025_26,detail,2025-2026,actual,,"1,896,213",1896213.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,3,Social services and assistance,detail,Social services and assistance,actual_2024_25,detail,2024-2025,actual,,"1,807,088",1807088.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,4,Protection of persons and property,detail,Protection of persons and property,budget_2025_26,detail,2025-2026,budget,,"1,094,800",1094800.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,4,Protection of persons and property,detail,Protection of persons and property,actual_2025_26,detail,2025-2026,actual,,"1,499,352",1499352.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,4,Protection of persons and property,detail,Protection of persons and property,actual_2024_25,detail,2024-2025,actual,,"1,166,715",1166715.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,5,Agriculture,detail,Agriculture,budget_2025_26,detail,2025-2026,budget,,"1,597,600",1597600.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,5,Agriculture,detail,Agriculture,actual_2025_26,detail,2025-2026,actual,,"1,241,322",1241322.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,5,Agriculture,detail,Agriculture,actual_2024_25,detail,2024-2025,actual,,"1,762,572",1762572.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,6,Financing charges,detail,Financing charges (schedule 16),budget_2025_26,detail,2025-2026,budget,,"1,058,500",1058500.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,6,Financing charges,detail,Financing charges (schedule 16),actual_2025_26,detail,2025-2026,actual,,"1,073,298",1073298.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,6,Financing charges,detail,Financing charges (schedule 16),actual_2024_25,detail,2024-2025,actual,,"950,540",950540.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,7,Community development,detail,Community development,budget_2025_26,detail,2025-2026,budget,,"858,400",858400.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,7,Community development,detail,Community development,actual_2025_26,detail,2025-2026,actual,,"814,768",814768.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,7,Community development,detail,Community development,actual_2024_25,detail,2024-2025,actual,,"828,439",828439.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,8,Transportation,detail,Transportation,budget_2025_26,detail,2025-2026,budget,,"716,700",716700.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,8,Transportation,detail,Transportation,actual_2025_26,detail,2025-2026,actual,,"722,791",722791.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,8,Transportation,detail,Transportation,actual_2024_25,detail,2024-2025,actual,,"700,179",700179.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,9,General government,detail,General government,budget_2025_26,detail,2025-2026,budget,,"642,200",642200.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,9,General government,detail,General government,actual_2025_26,detail,2025-2026,actual,,"684,892",684892.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,9,General government,detail,General government,actual_2024_25,detail,2024-2025,actual,,"589,948",589948.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,10,Economic development,detail,Economic development,budget_2025_26,detail,2025-2026,budget,,"351,900",351900.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,10,Economic development,detail,Economic development,actual_2025_26,detail,2025-2026,actual,,"527,353",527353.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,10,Economic development,detail,Economic development,actual_2024_25,detail,2024-2025,actual,,"361,708",361708.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,11,Environment and natural resources,detail,Environment and natural resources,budget_2025_26,detail,2025-2026,budget,,"448,600",448600.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,11,Environment and natural resources,detail,Environment and natural resources,actual_2025_26,detail,2025-2026,actual,,"421,845",421845.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,11,Environment and natural resources,detail,Environment and natural resources,actual_2024_25,detail,2024-2025,actual,,"553,361",553361.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,12,Total Expense,total,Total Expense (schedule 15),budget_2025_26,detail,2025-2026,budget,,"21,043,900",21043900.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,12,Total Expense,total,Total Expense (schedule 15),actual_2025_26,detail,2025-2026,actual,,"22,081,010",22081010.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,statement-of-operations-expense,47,12,Total Expense,total,Total Expense (schedule 15),actual_2024_25,detail,2024-2025,actual,,"21,104,849",21104849.0,1000,CAD

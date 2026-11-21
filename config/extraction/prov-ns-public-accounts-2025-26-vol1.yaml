@@ -1,0 +1,93 @@
+# Extraction spec (hand-written). Schema: config/extraction.schema.json
+doc_id: prov-ns-public-accounts-2025-26-vol1
+notes: Nova Scotia Public Accounts 2025-26 Volume 1. Split digits ('8 37,260').
+tables:
+- table_id: statement-of-operations-expense
+  title: 'Consolidated Statement of Operations: Expenses'
+  role: function_breakdown
+  method: pdfplumber_words
+  units:
+    scale: 1000
+    currency: CAD
+    as_printed: $ thousands
+  scope: consolidated_summary
+  merge_split_digits: true
+  x_tolerance: 3
+  columns:
+    budget_2025_26: &id001
+      fiscal_year: 2025-2026
+      basis: budget
+    actual_2025_26: &id002
+      fiscal_year: 2025-2026
+      basis: actual
+    actual_2024_25: &id003
+      fiscal_year: 2024-2025
+      basis: actual
+  parts:
+  - page: 78
+    printed_page: '76'
+    start_after: ^Expenses \(Schedule 2\)
+    end_at: ^Total Expenses
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Advanced Education
+  - label: Agriculture
+  - label: Communities, Culture, Tourism and Heritage
+  - label: Cyber Security and Digital Solutions
+  - label: Education and Early Childhood Development
+  - label: Emergency Management
+  - label: Energy
+  - label: Environment and Climate Change
+  - label: Finance and Treasury Board
+  - label: Fisheries and Aquaculture
+  - label: Growth and Development
+  - label: Health and Wellness
+  - label: Justice
+  - label: Labour, Skills and Immigration
+  - label: Municipal Affairs
+  - label: Natural Resources
+  - label: Opportunities and Social Development
+  - label: Public Service
+  - label: Public Works
+  - label: Seniors and Long-Term Care
+  - label: Service Nova Scotia
+  - label: Restructuring Costs
+  - label: Pension Valuation Adjustment
+  - label: Refundable Tax Credits
+  - label: Net Loss on Disposal of Crown Assets
+  - label: Debt Servicing Costs
+  - label: Total Expenses
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total Expenses
+    tolerance: 3
+- table_id: change-in-net-debt-amortization
+  title: 'Consolidated Statement of Changes in Net Debt: amortization'
+  role: object_breakdown
+  method: pdfplumber_words
+  units:
+    scale: 1000
+    currency: CAD
+    as_printed: $ thousands
+  scope: consolidated_summary
+  merge_split_digits: true
+  x_tolerance: 3
+  columns:
+    budget_2025_26: *id001
+    actual_2025_26: *id002
+    actual_2024_25: *id003
+  parts:
+  - page: 79
+    printed_page: '77'
+    start_after: ^Acquisitions and Transfers
+    end_at: ^Amortization of Tangible
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Amortization of Tangible Capital Assets

@@ -1,0 +1,12 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+NB,statement-of-operations-expense,function,Education and Training,09,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Health,07,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Social Development,10,1,2024-2025,,manual,high,Includes long-term care (nursing homes)
+NB,statement-of-operations-expense,function,Protection Services,03,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Economic Development,04.1,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Labour and Employment,04.1,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Resources,04.2,1,2024-2025,,manual,medium,
+NB,statement-of-operations-expense,function,Transportation and Infrastructure,04.5,1,2024-2025,,manual,high,
+NB,statement-of-operations-expense,function,Central Government,01.1,1,2024-2025,,manual,medium,
+NB,statement-of-operations-expense,function,Service of the Public Debt,01.7,1,2024-2025,,manual,high,
+NB,change-in-net-debt-amortization,object,Amortization of Tangible Capital Assets,amortization,1,2024-2025,,manual,high,

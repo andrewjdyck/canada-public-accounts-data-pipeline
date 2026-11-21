@@ -1,0 +1,15 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+AB,statement-of-operations-expense,function,Health,07,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Education,09,1,2024-2025,,manual,high,K-12 and post-secondary
+AB,statement-of-operations-expense,function,Social services,10,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,General government,01.1,1,2024-2025,,manual,medium,
+AB,statement-of-operations-expense,function,"Agriculture, resource management and economic development",04,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Protection of persons and property,03,1,2024-2025,,manual,medium,Includes disaster/wildfire response
+AB,statement-of-operations-expense,function,"Transportation, communications and utilities",04.5,1,2024-2025,,manual,medium,Mostly transport; utilities would be 04.3/06.3
+AB,statement-of-operations-expense,function,Regional planning and development,01.5+01.6+01.8,1,2024-2025,,manual,low,Largely municipal grants (MSI/LGFF)
+AB,statement-of-operations-expense,function,Environment,05,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Housing,06.1+06.2,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Recreation and culture,08,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Debt servicing costs,01.7,1,2024-2025,,manual,high,
+AB,statement-of-operations-expense,function,Pension recovery,01.5+01.6+01.8,1,2024-2025,,manual,low,Negative: pension expense below contributions; StatCan measures pensions differently
+AB,change-in-net-debt-amortization,object,Amortization of tangible capital assets and purchased intangibles,amortization,1,2024-2025,,manual,high,Includes purchased intangibles

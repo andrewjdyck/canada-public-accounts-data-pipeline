@@ -1,0 +1,4 @@
+table_id,check,where,computed,stated,diff,ok
+expenses-by-department,rows_sum -> Total: Expenses by Department,budget_2025_26,11468574.0,11468574.0,0.0,True
+expenses-by-department,rows_sum -> Total: Expenses by Department,actual_2025_26,11041911.0,11041911.0,0.0,True
+expenses-by-department,rows_sum -> Total: Expenses by Department,actual_2024_25,10661939.0,10661939.0,0.0,True

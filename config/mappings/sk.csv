@@ -1,0 +1,13 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+SK,statement-of-operations-expense,function,Health,07,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,Education,09,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,Social services and assistance,10,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,Protection of persons and property,03,1,2024-2025,,manual,medium,Includes wildfire/emergency response
+SK,statement-of-operations-expense,function,Agriculture,04.2,1,2024-2025,,manual,high,Includes crop insurance
+SK,statement-of-operations-expense,function,Financing charges,01.7,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,Community development,06,1,2024-2025,,manual,low,Includes municipal revenue sharing (COFOG 01.8)
+SK,statement-of-operations-expense,function,Transportation,04.5,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,General government,01.1,1,2024-2025,,manual,medium,
+SK,statement-of-operations-expense,function,Economic development,04.1,1,2024-2025,,manual,high,
+SK,statement-of-operations-expense,function,Environment and natural resources,05,1,2024-2025,,manual,medium,Part is 04.2 forestry/04.4 mining
+SK,change-in-net-debt-amortization,object,Amortization,amortization,1,2024-2025,,manual,high,

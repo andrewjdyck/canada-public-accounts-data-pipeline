@@ -69,16 +69,17 @@ Each step exits non-zero if its checks fail, so bad numbers never reach gold. To
 _As of 2026-11-21._
 
 - Bronze: FY2025-26 public accounts for federal plus all 10 provinces, StatCan tables 10-10-0024-01 and 10-10-0005-01.
-- Silver and gold: **Ontario only** so far. Three tables (Statement of Operations, Schedule 3 sector by expense type, Schedule 4 by ministry) for 2025-26, plus the restated 2024-25 comparatives. All 62 extraction checks and 5 mapping checks pass.
-- Extraction uses pdfplumber word positions plus the spec (`method: pdfplumber_words`). The LLM extractor planned in PLAN.md A4 is not built yet; it would be another `method`, writing the same silver format.
+- Silver and gold: **all 11 jurisdictions.** Each has an expense-by-function (or ministry) table and an amortization source; Ontario also has the sector-by-expense-type matrix. Every extraction check and every mapping check passes.
+- Reconciliation against StatCan covers all 11 for FY2024-25. See [docs/reconciliation-review.md](docs/reconciliation-review.md) for the analysis.
+- Extraction uses pdfplumber word positions plus the spec (`method: pdfplumber_words`). Per-table options cover layout quirks: `drop_chars` (BC, MB dot leaders), `merge_split_digits` (AB, MB, NS), `space_thousands` (QC), `ignore_unaligned_numbers` (NB, QC note columns), and row `sign` and `memo`. The LLM extractor planned in PLAN.md A4 is not built yet.
+- Mappings are first-pass by ministry name; see each row's `confidence`. The federal mapping still puts all of Finance in general public services.
 
 ## StatCan COFOG reconciliation: what we found
 
-StatCan's latest COFOG year is 2024 (= FY2024-25, preliminary). The public accounts comparison uses the restated 2024-25 column of the 2025-26 statements. See `data/gold/reconciliation/summary.md` for the full table.
+Full analysis: [docs/reconciliation-review.md](docs/reconciliation-review.md). In short, for FY2024-25:
 
-- **Totals reconcile once amortization is removed.** Ontario FY2024-25: public accounts $226,035M − amortization $8,347M = $217,688M, vs StatCan provincial government $217,667M (a $21M gap). StatCan CCOFOG excludes consumption of fixed capital (table footnote 2).
-- **Divisions don't line up.** Education is +$14.7B in the public accounts and Social protection −$16.0B, offsetting each other. Health is +$3.3B, almost exactly the Long-Term Care ministry ($3,276M), which suggests StatCan files long-term care under Social protection (10.2 Old age). Child care inside the Education ministry is another likely piece. These are hypotheses: provincial data stops at division level, so they can't be confirmed from the table itself.
-- **Provincial COFOG is division-level only** (10 categories). Groups such as hospital services exist only for federal and municipal governments, so StatCan can't supply the health subcategories the app wants.
-- **StatCan's provincial component is government proper.** Hospitals, school boards and universities/colleges are separate, unconsolidated components. Adding them double-counts provincial grants.
-
-The likely reasons it didn't reconcile when you first tried were, in order: amortization at the total level, then classification at the division level.
+- **Amortization is the first bridge.** StatCan excludes it; once it is removed, ON, PE, AB and BC agree with StatCan within 3%.
+- NS, NB, MB and NL are 5–10% higher in the public accounts (lead: health authorities and school boards consolidated at full expense). SK and QC are 12–15% lower (open; for Quebec, refundable tax credits are ruled out).
+- Categories don't line up even where totals do. Education is higher and Social protection lower in the public accounts in most large provinces. Long-term care is a strong lead (Ontario's Health gap is $3,297M; its Long-Term Care ministry is $3,276M), and child care inside education ministries is another.
+- Federally, StatCan files the Canada Health Transfer under Health. The federal mapping needs Finance split by transfer.
+- Provincial COFOG is division-level only and lags a year, so it works as a check, not as the app's source.

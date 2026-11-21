@@ -1,0 +1,10 @@
+{
+  "doc_id": "prov-mb-public-accounts-2025-26",
+  "source_file": "data/bronze/provincial/mb/annual-report-and-public-accounts-2025-26.pdf",
+  "source_sha256": "c19d2c55c35efb7595aeba7cc94a5447cbb2f9b4884b5b70c6e883f91c09e868",
+  "spec_file": "config/extraction/prov-mb-public-accounts-2025-26.yaml",
+  "spec_sha256": "280557547a829ea0236ec43358b6cbd1860d7bca1f9bbc66e9306ae80b0e211c",
+  "method": "pdfplumber_words",
+  "pdfplumber_version": "0.11.10",
+  "extracted_at": "2026-11-21T23:46:33+00:00"
+}

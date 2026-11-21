@@ -1,0 +1,4 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-sk-public-accounts-2025-26-vol1,change-in-net-debt-amortization,49,1,Amortization,detail,Amortization,budget_2025_26,detail,2025-2026,budget,,"777,200",777200.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,change-in-net-debt-amortization,49,1,Amortization,detail,Amortization,actual_2025_26,detail,2025-2026,actual,,"766,775",766775.0,1000,CAD
+prov-sk-public-accounts-2025-26-vol1,change-in-net-debt-amortization,49,1,Amortization,detail,Amortization,actual_2024_25,detail,2024-2025,actual,,"729,070",729070.0,1000,CAD

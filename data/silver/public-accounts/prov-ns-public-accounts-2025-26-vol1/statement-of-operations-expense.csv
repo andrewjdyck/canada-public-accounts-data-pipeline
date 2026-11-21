@@ -1,0 +1,82 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,1,Advanced Education,detail,Advanced Education,budget_2025_26,detail,2025-2026,budget,,"837,260",837260.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,1,Advanced Education,detail,Advanced Education,actual_2025_26,detail,2025-2026,actual,,"854,907",854907.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,1,Advanced Education,detail,Advanced Education,actual_2024_25,detail,2024-2025,actual,,"859,641",859641.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,2,Agriculture,detail,Agriculture,budget_2025_26,detail,2025-2026,budget,,"60,333",60333.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,2,Agriculture,detail,Agriculture,actual_2025_26,detail,2025-2026,actual,,"79,465",79465.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,2,Agriculture,detail,Agriculture,actual_2024_25,detail,2024-2025,actual,,"59,658",59658.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,3,"Communities, Culture, Tourism and Heritage",detail,"Communities, Culture, Tourism and Heritage",budget_2025_26,detail,2025-2026,budget,,"172,989",172989.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,3,"Communities, Culture, Tourism and Heritage",detail,"Communities, Culture, Tourism and Heritage",actual_2025_26,detail,2025-2026,actual,,"211,217",211217.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,3,"Communities, Culture, Tourism and Heritage",detail,"Communities, Culture, Tourism and Heritage",actual_2024_25,detail,2024-2025,actual,,"244,034",244034.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,4,Cyber Security and Digital Solutions,detail,Cyber Security and Digital Solutions,budget_2025_26,detail,2025-2026,budget,,"283,921",283921.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,4,Cyber Security and Digital Solutions,detail,Cyber Security and Digital Solutions,actual_2025_26,detail,2025-2026,actual,,"280,372",280372.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,4,Cyber Security and Digital Solutions,detail,Cyber Security and Digital Solutions,actual_2024_25,detail,2024-2025,actual,,"241,493",241493.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,5,Education and Early Childhood Development,detail,Education and Early Childhood Development,budget_2025_26,detail,2025-2026,budget,,"2,689,809",2689809.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,5,Education and Early Childhood Development,detail,Education and Early Childhood Development,actual_2025_26,detail,2025-2026,actual,,"2,655,073",2655073.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,5,Education and Early Childhood Development,detail,Education and Early Childhood Development,actual_2024_25,detail,2024-2025,actual,,"2,440,009",2440009.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,6,Emergency Management,detail,Emergency Management,budget_2025_26,detail,2025-2026,budget,,"71,668",71668.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,6,Emergency Management,detail,Emergency Management,actual_2025_26,detail,2025-2026,actual,,"78,956",78956.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,6,Emergency Management,detail,Emergency Management,actual_2024_25,detail,2024-2025,actual,,"51,551",51551.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,7,Energy,detail,Energy,budget_2025_26,detail,2025-2026,budget,,"48,613",48613.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,7,Energy,detail,Energy,actual_2025_26,detail,2025-2026,actual,,"58,142",58142.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,7,Energy,detail,Energy,actual_2024_25,detail,2024-2025,actual,,"43,738",43738.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,8,Environment and Climate Change,detail,Environment and Climate Change,budget_2025_26,detail,2025-2026,budget,,"154,133",154133.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,8,Environment and Climate Change,detail,Environment and Climate Change,actual_2025_26,detail,2025-2026,actual,,"149,185",149185.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,8,Environment and Climate Change,detail,Environment and Climate Change,actual_2024_25,detail,2024-2025,actual,,"148,313",148313.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,9,Finance and Treasury Board,detail,Finance and Treasury Board,budget_2025_26,detail,2025-2026,budget,,"69,706",69706.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,9,Finance and Treasury Board,detail,Finance and Treasury Board,actual_2025_26,detail,2025-2026,actual,,"86,311",86311.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,9,Finance and Treasury Board,detail,Finance and Treasury Board,actual_2024_25,detail,2024-2025,actual,,"68,683",68683.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,10,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,budget_2025_26,detail,2025-2026,budget,,"15,396",15396.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,10,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,actual_2025_26,detail,2025-2026,actual,,"14,379",14379.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,10,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,actual_2024_25,detail,2024-2025,actual,,"13,246",13246.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,11,Growth and Development,detail,Growth and Development,budget_2025_26,detail,2025-2026,budget,,"485,168",485168.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,11,Growth and Development,detail,Growth and Development,actual_2025_26,detail,2025-2026,actual,,"481,965",481965.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,11,Growth and Development,detail,Growth and Development,actual_2024_25,detail,2024-2025,actual,,"503,132",503132.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,12,Health and Wellness,detail,Health and Wellness,budget_2025_26,detail,2025-2026,budget,,"6,408,234",6408234.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,12,Health and Wellness,detail,Health and Wellness,actual_2025_26,detail,2025-2026,actual,,"6,833,966",6833966.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,12,Health and Wellness,detail,Health and Wellness,actual_2024_25,detail,2024-2025,actual,,"6,359,221",6359221.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,13,Justice,detail,Justice,budget_2025_26,detail,2025-2026,budget,,"492,629",492629.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,13,Justice,detail,Justice,actual_2025_26,detail,2025-2026,actual,,"512,508",512508.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,13,Justice,detail,Justice,actual_2024_25,detail,2024-2025,actual,,"486,485",486485.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,14,"Labour, Skills and Immigration",detail,"Labour, Skills and Immigration",budget_2025_26,detail,2025-2026,budget,,"224,037",224037.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,14,"Labour, Skills and Immigration",detail,"Labour, Skills and Immigration",actual_2025_26,detail,2025-2026,actual,,"199,441",199441.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,14,"Labour, Skills and Immigration",detail,"Labour, Skills and Immigration",actual_2024_25,detail,2024-2025,actual,,"214,949",214949.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,15,Municipal Affairs,detail,Municipal Affairs,budget_2025_26,detail,2025-2026,budget,,"337,882",337882.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,15,Municipal Affairs,detail,Municipal Affairs,actual_2025_26,detail,2025-2026,actual,,"278,524",278524.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,15,Municipal Affairs,detail,Municipal Affairs,actual_2024_25,detail,2024-2025,actual,,"314,508",314508.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,16,Natural Resources,detail,Natural Resources,budget_2025_26,detail,2025-2026,budget,,"110,502",110502.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,16,Natural Resources,detail,Natural Resources,actual_2025_26,detail,2025-2026,actual,,"176,664",176664.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,16,Natural Resources,detail,Natural Resources,actual_2024_25,detail,2024-2025,actual,,"117,532",117532.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,17,Opportunities and Social Development,detail,Opportunities and Social Development,budget_2025_26,detail,2025-2026,budget,,"1,674,544",1674544.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,17,Opportunities and Social Development,detail,Opportunities and Social Development,actual_2025_26,detail,2025-2026,actual,,"1,673,130",1673130.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,17,Opportunities and Social Development,detail,Opportunities and Social Development,actual_2024_25,detail,2024-2025,actual,,"1,610,816",1610816.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,18,Public Service,detail,Public Service,budget_2025_26,detail,2025-2026,budget,,"196,754",196754.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,18,Public Service,detail,Public Service,actual_2025_26,detail,2025-2026,actual,,"207,308",207308.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,18,Public Service,detail,Public Service,actual_2024_25,detail,2024-2025,actual,,"201,742",201742.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,19,Public Works,detail,Public Works,budget_2025_26,detail,2025-2026,budget,,"772,705",772705.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,19,Public Works,detail,Public Works,actual_2025_26,detail,2025-2026,actual,,"806,137",806137.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,19,Public Works,detail,Public Works,actual_2024_25,detail,2024-2025,actual,,"788,528",788528.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,20,Seniors and Long-Term Care,detail,Seniors and Long-Term Care,budget_2025_26,detail,2025-2026,budget,,"1,363,033",1363033.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,20,Seniors and Long-Term Care,detail,Seniors and Long-Term Care,actual_2025_26,detail,2025-2026,actual,,"1,425,571",1425571.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,20,Seniors and Long-Term Care,detail,Seniors and Long-Term Care,actual_2024_25,detail,2024-2025,actual,,"1,295,527",1295527.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,21,Service Nova Scotia,detail,Service Nova Scotia,budget_2025_26,detail,2025-2026,budget,,"164,887",164887.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,21,Service Nova Scotia,detail,Service Nova Scotia,actual_2025_26,detail,2025-2026,actual,,"174,187",174187.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,21,Service Nova Scotia,detail,Service Nova Scotia,actual_2024_25,detail,2024-2025,actual,,"215,028",215028.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,22,Restructuring Costs,detail,Restructuring Costs,budget_2025_26,detail,2025-2026,budget,,"551,472",551472.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,22,Restructuring Costs,detail,Restructuring Costs,actual_2025_26,detail,2025-2026,actual,,"1,144,079",1144079.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,22,Restructuring Costs,detail,Restructuring Costs,actual_2024_25,detail,2024-2025,actual,,"661,765",661765.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,23,Pension Valuation Adjustment,detail,Pension Valuation Adjustment (Note 5),budget_2025_26,detail,2025-2026,budget,,"17,079",17079.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,23,Pension Valuation Adjustment,detail,Pension Valuation Adjustment (Note 5),actual_2025_26,detail,2025-2026,actual,,"(40,265)",-40265.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,23,Pension Valuation Adjustment,detail,Pension Valuation Adjustment (Note 5),actual_2024_25,detail,2024-2025,actual,,"(16,151)",-16151.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,24,Refundable Tax Credits,detail,Refundable Tax Credits,budget_2025_26,detail,2025-2026,budget,,"147,960",147960.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,24,Refundable Tax Credits,detail,Refundable Tax Credits,actual_2025_26,detail,2025-2026,actual,,"165,302",165302.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,24,Refundable Tax Credits,detail,Refundable Tax Credits,actual_2024_25,detail,2024-2025,actual,,"155,907",155907.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,25,Net Loss on Disposal of Crown Assets,detail,Net Loss on Disposal of Crown Assets,budget_2025_26,detail,2025-2026,budget,,—,0.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,25,Net Loss on Disposal of Crown Assets,detail,Net Loss on Disposal of Crown Assets,actual_2025_26,detail,2025-2026,actual,,"10,786",10786.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,25,Net Loss on Disposal of Crown Assets,detail,Net Loss on Disposal of Crown Assets,actual_2024_25,detail,2024-2025,actual,,"2,023",2023.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,26,Debt Servicing Costs,detail,Debt Servicing Costs (Note 7),budget_2025_26,detail,2025-2026,budget,,"908,509",908509.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,26,Debt Servicing Costs,detail,Debt Servicing Costs (Note 7),actual_2025_26,detail,2025-2026,actual,,"869,591",869591.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,26,Debt Servicing Costs,detail,Debt Servicing Costs (Note 7),actual_2024_25,detail,2024-2025,actual,,"874,513",874513.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,27,Total Expenses,total,Total Expenses (Note 8),budget_2025_26,detail,2025-2026,budget,,"18,259,223",18259223.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,27,Total Expenses,total,Total Expenses (Note 8),actual_2025_26,detail,2025-2026,actual,,"19,386,901",19386901.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,statement-of-operations-expense,78,27,Total Expenses,total,Total Expenses (Note 8),actual_2024_25,detail,2024-2025,actual,,"17,955,891",17955891.0,1000,CAD

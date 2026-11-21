@@ -1,0 +1,4 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-ns-public-accounts-2025-26-vol1,change-in-net-debt-amortization,79,1,Amortization of Tangible Capital Assets,detail,Amortization of Tangible Capital Assets,budget_2025_26,detail,2025-2026,budget,,"681,200",681200.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,change-in-net-debt-amortization,79,1,Amortization of Tangible Capital Assets,detail,Amortization of Tangible Capital Assets,actual_2025_26,detail,2025-2026,actual,,"703,651",703651.0,1000,CAD
+prov-ns-public-accounts-2025-26-vol1,change-in-net-debt-amortization,79,1,Amortization of Tangible Capital Assets,detail,Amortization of Tangible Capital Assets,actual_2024_25,detail,2024-2025,actual,,"611,531",611531.0,1000,CAD

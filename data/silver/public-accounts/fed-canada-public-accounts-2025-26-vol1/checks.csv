@@ -1,0 +1,7 @@
+table_id,check,where,computed,stated,diff,ok
+expenses-by-segment,rows_sum -> Total expenses,actual_2025_26,565728.0,565728.0,0.0,True
+expenses-by-segment,rows_sum -> Total expenses,actual_2024_25,547299.0,547299.0,0.0,True
+expenses-by-object,rows_sum -> Total expenses,actual_2025_26,565728.0,565728.0,0.0,True
+expenses-by-object,rows_sum -> Total expenses,actual_2024_25,547299.0,547299.0,0.0,True
+(cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2025_26 vs actual_2025_26,565728.0,565728.0,0.0,True
+(cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2024_25 vs actual_2024_25,547299.0,547299.0,0.0,True

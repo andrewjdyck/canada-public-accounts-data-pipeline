@@ -44,7 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from paths import EXTRACTION_SCHEMA, EXTRACTION_SPECS, SILVER, doc_path, load_manifest, manifest_doc, rel  # noqa: E402
 
 AMOUNT = re.compile(r"^(\(-?\$?[\d,]+(\.\d+)?\)|-?\$?[\d,]+(\.\d+)?)$")  # parentheses must balance
-NIL = {"–", "-", "—", "−", "…", "...", "nil"}
+NIL = {"–", "-", "--", "—", "−", "…", "...", "nil"}
 LINE_TOLERANCE = 3.0  # points; words whose tops differ by less are on the same line
 COLUMN_TOLERANCE = 30.0  # points; max distance from an amount's right edge to its column anchor
 
@@ -68,8 +68,11 @@ def parse_amount(token: str) -> float | None:
     return -v if negative else v
 
 
-def page_lines(page) -> list[list[dict]]:
-    words = page.extract_words(keep_blank_chars=False, use_text_flow=False, x_tolerance=1.5)
+def page_lines(page, drop_chars: list[str] | None = None, x_tolerance: float = 1.5) -> list[list[dict]]:
+    if drop_chars:
+        drop = set(drop_chars)
+        page = page.filter(lambda o: o.get("object_type") != "char" or o.get("text") not in drop)
+    words = page.extract_words(keep_blank_chars=False, use_text_flow=False, x_tolerance=x_tolerance)
     words.sort(key=lambda w: (round(w["top"]), w["x0"]))
     lines: list[list[dict]] = []
     for w in words:
@@ -80,8 +83,51 @@ def page_lines(page) -> list[list[dict]]:
     return [sorted(line, key=lambda w: w["x0"]) for line in lines]
 
 
-def split_line(line: list[dict]) -> tuple[str, list[dict]]:
+HEAD = re.compile(r"^(\(|\(?-?\d{1,3})$")
+TAIL = re.compile(r"^[\d,]*\d[\d,]*\)?$")
+GROUPED = re.compile(r"^\(?-?\d{1,3}(,\d{3})*\)?$")
+MERGE_GAP = 8.0  # points between pieces of one amount
+
+
+def merge_split_digits(line: list[dict]) -> list[dict]:
+    """Rejoin '3' + '0,465' -> '30,465' and '(' + '375)' -> '(375)'; drop lone '$'."""
+    out: list[dict] = []
+    for w in line:
+        if w["text"] == "$":
+            continue
+        prev = out[-1] if out else None
+        if (prev is not None and HEAD.match(prev["text"]) and TAIL.match(w["text"])
+                and w["x0"] - prev["x1"] < MERGE_GAP and GROUPED.match(prev["text"] + w["text"])):
+            out[-1] = {**prev, "text": prev["text"] + w["text"], "x1": w["x1"]}
+        else:
+            out.append(dict(w))
+    return out
+
+
+SPACE_HEAD = re.compile(r"^\(?-?\d{1,3}( \d{3})*$")
+SPACE_TAIL = re.compile(r"^\d{3}\)?$")
+SPACE_GAP = 4.0  # points: a thousands space is narrow; column gaps are much wider
+
+
+def merge_space_thousands(line: list[dict]) -> list[dict]:
+    """Rejoin '65' + '527' -> '65,527' and '(11' + '430)' -> '(11,430)'."""
+    out: list[dict] = []
+    for w in line:
+        prev = out[-1] if out else None
+        if (prev is not None and SPACE_HEAD.match(prev["text"].replace(",", " ")) and SPACE_TAIL.match(w["text"])
+                and w["x0"] - prev["x1"] < SPACE_GAP and not prev["text"].endswith(")")):
+            out[-1] = {**prev, "text": prev["text"] + "," + w["text"], "x1": w["x1"]}
+        else:
+            out.append(dict(w))
+    return out
+
+
+def split_line(line: list[dict], merge: bool = False, space_thousands: bool = False) -> tuple[str, list[dict]]:
     """Split a line into (label text, trailing amount words)."""
+    if merge:
+        line = merge_split_digits(line)
+    if space_thousands:
+        line = merge_space_thousands(line)
     amounts: list[dict] = []
     for w in reversed(line):
         if parse_amount(w["text"]) is None:
@@ -99,7 +145,7 @@ def label_score(expected: str, raw: str) -> float:
 
 def extract_part(pdf, table: dict, part: dict) -> list[dict]:
     page = pdf.pages[part["page"] - 1]
-    lines = page_lines(page)
+    lines = page_lines(page, table.get("drop_chars"), table.get("x_tolerance", 1.5))
     texts = [" ".join(w["text"] for w in line) for line in lines]
     start = next((i for i, t in enumerate(texts) if re.search(part["start_after"], t)), None)
     if start is None:
@@ -111,7 +157,7 @@ def extract_part(pdf, table: dict, part: dict) -> list[dict]:
     numeric: list[tuple[str, list[dict]]] = []
     pending: list[str] = []
     for line in lines[start + 1 : end + 1]:
-        label, amounts = split_line(line)
+        label, amounts = split_line(line, table.get("merge_split_digits", False), table.get("space_thousands", False))
         if not amounts:
             pending.append(label)
             continue
@@ -128,9 +174,18 @@ def extract_part(pdf, table: dict, part: dict) -> list[dict]:
         raise ValueError(f"page {part['page']}: no line has one amount per column ({len(col_ids)}) to anchor columns")
     anchors = [w["x1"] for w in anchor]
 
+    if table.get("ignore_unaligned_numbers"):
+        # Note/schedule reference numbers sit left of the amount columns: move them to the label.
+        kept = []
+        for raw_label, amounts in numeric:
+            aligned = [w for w in amounts if min(abs(w["x1"] - x) for x in anchors) <= COLUMN_TOLERANCE]
+            extra = " ".join(w["text"] for w in amounts if w not in aligned)
+            kept.append(((raw_label + " " + extra).strip(), aligned))
+        numeric = kept
+
     out = []
     for order, (row, (raw_label, amounts)) in enumerate(zip(rows, numeric), start=1):
-        if label_score(row["label"], raw_label) < 0.5:
+        if not row.get("unlabelled") and label_score(row["label"], raw_label) < 0.5:
             raise ValueError(f"page {part['page']}: row {order} expected {row['label']!r}, text is {raw_label!r}")
         used: set[int] = set()
         for w in amounts:
@@ -141,7 +196,7 @@ def extract_part(pdf, table: dict, part: dict) -> list[dict]:
             col_id = col_ids[idx]
             col = table["columns"][col_id]
             dims = {k: v for k, v in col.items() if k not in ("fiscal_year", "basis", "kind")}
-            value = parse_amount(w["text"])
+            value = parse_amount(w["text"]) * row.get("sign", 1)
             out.append({
                 "page": part["page"], "row_order": order, "row_label": row["label"],
                 "row_kind": row.get("kind", "detail"), "raw_label": raw_label,

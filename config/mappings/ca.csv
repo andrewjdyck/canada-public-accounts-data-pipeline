@@ -1,0 +1,42 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+CA,expenses-by-segment,function,Agriculture and Agri-Food,04.2,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Canadian Heritage,08,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Crown-Indigenous Relations and Northern Affairs,06,1,2024-2025,,manual,low,StatCan files federal Indigenous programs under 06 n.e.c. (footnote 9)
+CA,expenses-by-segment,function,Democratic Institutions,01.1,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Employment and Workforce Development,10,1,2024-2025,,manual,medium,"OAS/GIS (10.2), EI (10.5), CCB (10.4); needs splitting for app subcategories"
+CA,expenses-by-segment,function,Energy and Natural Resources,04.3,1,2024-2025,,manual,medium,
+CA,expenses-by-segment,function,Environment and Climate Change,05,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Finance and National Revenue,01.5+01.6+01.8,1,2024-2025,,manual,low,"CHT, CST, equalization (01.8), public debt charges (01.7), CRA; StatCan may classify CHT/CST by function"
+CA,expenses-by-segment,function,Fisheries and Oceans,04.2,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Global Affairs,01,1,2024-2025,,manual,medium,Foreign aid (01.2) and diplomacy (01.1)
+CA,expenses-by-segment,function,Health,07,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,"Housing, Infrastructure and Communities",06,1,2024-2025,,manual,medium,
+CA,expenses-by-segment,function,"Immigration, Refugees and Citizenship",01,1,2024-2025,,manual,low,
+CA,expenses-by-segment,function,Indigenous Services,06,1,2024-2025,,manual,low,"Footnote 9/10: StatCan splits across 06, 09, 07"
+CA,expenses-by-segment,function,"Innovation, Science and Industry",04.1,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Justice,03.3,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,National Defence,02,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Office of the Governor General's Secretary,01.1,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Parliament,01.1,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Privy Council,01.1,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Public Safety,03,1,2024-2025,,manual,high,"RCMP, CBSA, corrections"
+CA,expenses-by-segment,function,Public Services and Procurement,01.3,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Transport,04.5,1,2024-2025,,manual,high,
+CA,expenses-by-segment,function,Treasury Board,01.3,1,2024-2025,,manual,medium,Central public-service benefits
+CA,expenses-by-segment,function,Veterans Affairs,10.1+10.3,1,2024-2025,,manual,medium,
+CA,expenses-by-segment,function,"Women, Gender Equality and Youth",10,1,2024-2025,,manual,medium,
+CA,expenses-by-segment,function,Provision for valuation and other items,01.5+01.6+01.8,1,2024-2025,,manual,low,
+CA,expenses-by-segment,function,Net actuarial losses,01.5+01.6+01.8,1,2024-2025,,manual,low,Pension remeasurement; GFS measures pensions differently
+CA,expenses-by-object,object,Transfer payments,transfers,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,"Personnel, excluding net actuarial losses",compensation,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Transportation and communications,transportation_communication,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Information,services,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Professional and special services,services,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Rentals,services,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Repairs and maintenance,services,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,"Utilities, materials and supplies",supplies_equipment,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Other subsidies and expenses,other,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Amortization of tangible capital assets,amortization,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Net loss on disposal of assets,other,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Public debt charges,interest,1,2024-2025,,manual,high,
+CA,expenses-by-object,object,Net actuarial losses,pensions_future_benefits,1,2024-2025,,manual,high,

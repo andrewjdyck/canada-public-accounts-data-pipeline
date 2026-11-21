@@ -1,4 +1,82 @@
 jurisdiction,level,fiscal_year,basis,doc_id,category,subcategory,amount_cad,share
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Debt Charges,,3215000000,0.0434
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Education,,17197000000,0.2319
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Healthcare,,29560000000,0.3987
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Other,,13221000000,0.1783
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Social Services,,8462000000,0.1141
+AB,provincial,2024-2025,actual,prov-ab-annual-report-2025-26,Transportation,,2489000000,0.0336
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Debt Charges,,2938000000,0.0379
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Education,,18200000000,0.2347
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Healthcare,,31796000000,0.4101
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Other,,13154000000,0.1696
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Social Services,,8990000000,0.1159
+AB,provincial,2025-2026,actual,prov-ab-annual-report-2025-26,Transportation,,2463000000,0.0318
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Debt Charges,,4245000000,0.0464
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Education,,19609000000,0.2146
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Healthcare,,38182000000,0.4178
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Other,,15502000000,0.1696
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Social Services,,10922000000,0.1195
+BC,provincial,2024-2025,actual,prov-bc-public-accounts-2025-26,Transportation,,2933000000,0.0321
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Debt Charges,,4898000000,0.0518
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Education,,20119000000,0.2127
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Healthcare,,40185000000,0.4249
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Other,,15875000000,0.1679
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Social Services,,10780000000,0.114
+BC,provincial,2025-2026,actual,prov-bc-public-accounts-2025-26,Transportation,,2714000000,0.0287
+CA,federal,2024-2025,actual_restated,fed-canada-public-accounts-2025-26-vol1,Defence,,37605000000,0.0687
+CA,federal,2024-2025,actual_restated,fed-canada-public-accounts-2025-26-vol1,Other,,297929000000,0.5444
+CA,federal,2024-2025,actual_restated,fed-canada-public-accounts-2025-26-vol1,Transfers to Provinces,,211765000000,0.3869
+CA,federal,2025-2026,actual,fed-canada-public-accounts-2025-26-vol1,Defence,,39361000000,0.0696
+CA,federal,2025-2026,actual,fed-canada-public-accounts-2025-26-vol1,Other,,294160000000,0.52
+CA,federal,2025-2026,actual,fed-canada-public-accounts-2025-26-vol1,Transfers to Provinces,,232207000000,0.4105
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Debt Charges,,2316000000,0.0908
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Education,,5802000000,0.2276
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Healthcare,,9472000000,0.3716
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Other,,4323000000,0.1696
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Social Services,,3004000000,0.1178
+MB,provincial,2024-2025,actual_restated,prov-mb-public-accounts-2025-26,Transportation,,576000000,0.0226
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Debt Charges,,2313000000,0.0893
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Education,,6218000000,0.2399
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Healthcare,,9659000000,0.3727
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Other,,4643000000,0.1792
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Social Services,,2461000000,0.095
+MB,provincial,2025-2026,actual,prov-mb-public-accounts-2025-26,Transportation,,621000000,0.024
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Debt Charges,,690100000,0.0502
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Education,,2875000000,0.2091
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Healthcare,,4683200000,0.3406
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Other,,2425500000,0.1764
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Social Services,,2142900000,0.1558
+NB,provincial,2024-2025,actual,prov-nb-public-accounts-2025-26-vol1,Transportation,,934200000,0.0679
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Debt Charges,,729400000,0.0488
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Education,,3075100000,0.2057
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Healthcare,,5145100000,0.3442
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Other,,2637300000,0.1764
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Social Services,,2365800000,0.1583
+NB,provincial,2025-2026,actual,prov-nb-public-accounts-2025-26-vol1,Transportation,,993900000,0.0665
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Debt Charges,,738818000,0.0693
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Education,,1728543000,0.1621
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Healthcare,,4523237000,0.4242
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Other,,2124668000,0.1993
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Social Services,,499290000,0.0468
+NL,provincial,2024-2025,actual,prov-nl-public-accounts-2025-26,Transportation,,1047383000,0.0982
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Debt Charges,,1062034000,0.0962
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Education,,1848418000,0.1674
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Healthcare,,4442752000,0.4024
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Other,,2236528000,0.2025
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Social Services,,481670000,0.0436
+NL,provincial,2025-2026,actual,prov-nl-public-accounts-2025-26,Transportation,,970509000,0.0879
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Debt Charges,,874513000,0.0487
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Education,,3299650000,0.1838
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Healthcare,,7654748000,0.4263
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Other,,3571729000,0.1989
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Social Services,,1766723000,0.0984
+NS,provincial,2024-2025,actual,prov-ns-public-accounts-2025-26-vol1,Transportation,,788528000,0.0439
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Debt Charges,,869591000,0.0449
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Education,,3509980000,0.181
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Healthcare,,8259537000,0.426
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Other,,4103224000,0.2116
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Social Services,,1838432000,0.0948
+NS,provincial,2025-2026,actual,prov-ns-public-accounts-2025-26-vol1,Transportation,,806137000,0.0416
 ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Debt Charges,,15122000000,0.0669
 ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Education,,53622000000,0.2372
 ON,provincial,2024-2025,actual_restated,prov-on-public-accounts-2025-26,Healthcare,,90913000000,0.4022
@@ -11,3 +89,39 @@ ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Healthcare,,97497
 ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Other,,37154000000,0.1572
 ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Social Services,,21548000000,0.0912
 ON,provincial,2025-2026,actual,prov-on-public-accounts-2025-26,Transportation,,8437000000,0.0357
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Debt Charges,,163558000,0.0498
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Education,,632238000,0.1923
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Healthcare,,1162021000,0.3535
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Other,,894557000,0.2721
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Social Services,,212150000,0.0645
+PE,provincial,2024-2025,actual,prov-pe-public-accounts-2025-26-vol1,Transportation,,222881000,0.0678
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Debt Charges,,170559000,0.0465
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Education,,675967000,0.1841
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Healthcare,,1362804000,0.3712
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Other,,1007387000,0.2744
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Social Services,,231980000,0.0632
+PE,provincial,2025-2026,actual,prov-pe-public-accounts-2025-26-vol1,Transportation,,223055000,0.0607
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Debt Charges,,9969000000,0.0618
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Education,,34735000000,0.2154
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Healthcare,,64227000000,0.3983
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Other,,29926000000,0.1856
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Social Services,,14722000000,0.0913
+QC,provincial,2024-2025,actual,prov-qc-public-accounts-2025-26-vol1,Transportation,,7684000000,0.0476
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Debt Charges,,10148000000,0.0612
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Education,,34724000000,0.2093
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Healthcare,,65945000000,0.3974
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Other,,30493000000,0.1838
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Social Services,,15444000000,0.0931
+QC,provincial,2025-2026,actual,prov-qc-public-accounts-2025-26-vol1,Transportation,,9176000000,0.0553
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Debt Charges,,950540000,0.045
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Education,,4374753000,0.2073
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Healthcare,,8009546000,0.3795
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Other,,5262743000,0.2494
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Social Services,,1807088000,0.0856
+SK,provincial,2024-2025,actual,prov-sk-public-accounts-2025-26-vol1,Transportation,,700179000,0.0332
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Debt Charges,,1073298000,0.0486
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Education,,4527619000,0.205
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Healthcare,,8671557000,0.3927
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Other,,5189532000,0.235
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Social Services,,1896213000,0.0859
+SK,provincial,2025-2026,actual,prov-sk-public-accounts-2025-26-vol1,Transportation,,722791000,0.0327

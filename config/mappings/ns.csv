@@ -1,0 +1,28 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+NS,statement-of-operations-expense,function,Advanced Education,09,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Agriculture,04.2,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,"Communities, Culture, Tourism and Heritage",08,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Cyber Security and Digital Solutions,01.3,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Education and Early Childhood Development,09,1,2024-2025,,manual,medium,Includes child care (10.4)
+NS,statement-of-operations-expense,function,Emergency Management,03,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Energy,04.3,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Environment and Climate Change,05,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Finance and Treasury Board,01.1,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Fisheries and Aquaculture,04.2,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Growth and Development,04.1,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Health and Wellness,07,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Justice,03,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,"Labour, Skills and Immigration",04.1,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Municipal Affairs,01.5+01.6+01.8,1,2024-2025,,manual,medium,Municipal transfers; housing moved elsewhere
+NS,statement-of-operations-expense,function,Natural Resources,04.2,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Opportunities and Social Development,10,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Public Service,01.3,1,2024-2025,,manual,medium,
+NS,statement-of-operations-expense,function,Public Works,04.5,1,2024-2025,,manual,medium,Highways plus public buildings
+NS,statement-of-operations-expense,function,Seniors and Long-Term Care,07,1,2024-2025,,manual,medium,Long-term care (COFOG may use 10.2)
+NS,statement-of-operations-expense,function,Service Nova Scotia,01.3,1,2024-2025,,manual,high,
+NS,statement-of-operations-expense,function,Restructuring Costs,01.5+01.6+01.8,1,2024-2025,,manual,low,Large 2025-26 item; spans functions
+NS,statement-of-operations-expense,function,Pension Valuation Adjustment,01.5+01.6+01.8,1,2024-2025,,manual,low,
+NS,statement-of-operations-expense,function,Refundable Tax Credits,10,1,2024-2025,,manual,low,
+NS,statement-of-operations-expense,function,Net Loss on Disposal of Crown Assets,01.5+01.6+01.8,1,2024-2025,,manual,low,
+NS,statement-of-operations-expense,function,Debt Servicing Costs,01.7,1,2024-2025,,manual,high,
+NS,change-in-net-debt-amortization,object,Amortization of Tangible Capital Assets,amortization,1,2024-2025,,manual,high,

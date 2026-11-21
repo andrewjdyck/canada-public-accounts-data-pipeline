@@ -1,0 +1,27 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+MB,statement-of-operations-expense,function,Legislative Assembly,01.1,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Executive Council,01.1,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Advanced Education and Training,09,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Agriculture,04.2,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,"Business, Mining, Trade and Job Creation",04.1,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Education and Early Childhood Learning,09,1,2024-2025,,manual,medium,Includes child care (COFOG 10.4)
+MB,statement-of-operations-expense,function,Environment and Climate Change,05,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Families,10,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Finance,01.1,1,2024-2025,,manual,medium,
+MB,statement-of-operations-expense,function,"Health, Seniors and Long-Term Care",07,1,2024-2025,,manual,medium,Includes long-term care (COFOG may use 10.2)
+MB,statement-of-operations-expense,function,"Housing, Addictions and Homelessness",06.1+06.2,1,2024-2025,,manual,low,Addictions would be 07; homelessness 10.6
+MB,statement-of-operations-expense,function,Innovation and New Technology,01.3,1,2024-2025,,manual,low,
+MB,statement-of-operations-expense,function,Justice,03,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Labour and Immigration,04.1,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Municipal and Northern Relations,01.5+01.6+01.8,1,2024-2025,,manual,medium,Mostly general transfers to municipalities (01.8)
+MB,statement-of-operations-expense,function,Natural Resources and Indigenous Futures,04.2,1,2024-2025,,manual,low,
+MB,statement-of-operations-expense,function,Public Service Commission,01.3,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Public Service Delivery,01.3,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,"Sport, Culture, Heritage and Tourism",08,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Transportation and Infrastructure,04.5,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Enabling appropriations,01.5+01.6+01.8,1,2024-2025,,manual,low,
+MB,statement-of-operations-expense,function,Emergency expenditures,03,1,2024-2025,,manual,medium,Wildfire/flood response
+MB,statement-of-operations-expense,function,Tax credits,10,1,2024-2025,,manual,low,Refundable credits; StatCan may net them from revenue
+MB,statement-of-operations-expense,function,Debt servicing,01.7,1,2024-2025,,manual,high,
+MB,statement-of-operations-expense,function,Tobacco settlement,07,1,2024-2025,,manual,low,One-time 2024-25 item
+MB,change-in-net-debt-amortization,object,Amortization of tangible capital assets,amortization,1,2024-2025,,manual,high,

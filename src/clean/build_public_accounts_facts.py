@@ -7,6 +7,8 @@ For every document with an extraction spec:
   - function_by_object tables (sector x expense type): each cell gets a function concept
     from its sector column and an object concept from its row, which is what lets you
     ask "how much of Health was salaries vs amortization".
+  - object_breakdown tables (expense by type only, or just the amortization line of the
+    Statement of Change in Net Debt): rows map to object concepts; function_id is "_all".
   - headline tables are not mapped; they are only used by the extraction checks.
 
 Validation (the script exits non-zero and writes nothing to gold if any fail):
@@ -101,7 +103,7 @@ def main() -> int:
 
         for table in spec["tables"]:
             role = table["role"]
-            if role not in ("function_breakdown", "function_by_object"):
+            if role not in ("function_breakdown", "function_by_object", "object_breakdown"):
                 continue
             silver = read_csv(SILVER / "public-accounts" / doc["id"] / f"{table['table_id']}.csv")
             stated: dict[tuple[str, str], float] = {}
@@ -115,12 +117,16 @@ def main() -> int:
                     stated[key] = amount
                 if c["column_kind"] != "detail" or c["row_kind"] not in ("detail", "adjustment"):
                     continue
-                if role == "function_breakdown" and c["row_kind"] != "detail":
+                if role != "function_by_object" and c["row_kind"] != "detail":
                     continue
                 dims = dict(kv.split("=", 1) for kv in c["column_dims"].split(";") if kv)
-                fn_label = c["row_label"] if role == "function_breakdown" else dims.get("sector", "")
-                fn_maps = lookup(idx, table["table_id"], "function", fn_label, c["fiscal_year"], errors)
-                obj_maps = ([{"concept_id": "", "weight": "1", "confidence": ""}] if role == "function_breakdown"
+                none = [{"concept_id": "", "weight": "1", "confidence": ""}]
+                if role == "object_breakdown":  # expense by type only: no function dimension
+                    fn_maps = [{"concept_id": "_all", "weight": "1", "confidence": ""}]
+                else:
+                    fn_label = c["row_label"] if role == "function_breakdown" else dims.get("sector", "")
+                    fn_maps = lookup(idx, table["table_id"], "function", fn_label, c["fiscal_year"], errors)
+                obj_maps = (none if role == "function_breakdown"
                             else lookup(idx, table["table_id"], "object", c["row_label"], c["fiscal_year"], errors))
                 for fm in fn_maps:
                     for om in obj_maps:

@@ -55,7 +55,8 @@ def main() -> int:
     names["_unallocated"] = "Unallocated (spans several functions)"
 
     pa = defaultdict(float)
-    amort = defaultdict(float)
+    amort_by_fn = defaultdict(float)  # from sector x object schedules
+    amort_total = defaultdict(float)  # from object-only tables (no function split)
     basis = {}
     for f in read_csv(facts_path):
         if f["basis"] not in ("actual", "actual_restated"):
@@ -65,8 +66,16 @@ def main() -> int:
         if f["role"] == "function_breakdown":
             pa[key + (f["function_division"],)] += amount
             basis[key] = f["basis"]
-        elif f["role"] == "function_by_object" and f["object_id"] == "amortization":
-            amort[key + (f["function_division"],)] += amount
+        elif f["object_id"] == "amortization" and f["role"] == "function_by_object":
+            amort_by_fn[key + (f["function_division"],)] += amount
+        elif f["object_id"] == "amortization" and f["role"] == "object_breakdown":
+            amort_total[key] += amount
+    # Use the function split where a jurisdiction publishes one; otherwise the whole
+    # amortization total sits on the _unallocated row and only adjusts the TOTAL.
+    amort = defaultdict(float, amort_by_fn)
+    for key, v in amort_total.items():
+        if not any(k[:2] == key for k in amort_by_fn):
+            amort[key + ("_unallocated",)] += v
 
     sc = defaultdict(float)
     ctx = defaultdict(float)
@@ -109,10 +118,6 @@ def main() -> int:
         out.append(total)
 
     for r in out:
-        if r["division"] == "_unallocated":
-            # Ministry tables put every dollar in a function; the sector table's "Other" amortization
-            # cannot be placed, so it only reduces the total.
-            r["pa_expense_ex_amort"] = -r["pa_amortization"]
         r["gap"] = r["pa_expense_ex_amort"] - r["statcan"]
         r["gap_pct"] = round(r["gap"] / r["statcan"], 4) if r["statcan"] else ""
         for k in FIELDS:

@@ -1,0 +1,4 @@
+table_id,check,where,computed,stated,diff,ok
+statement-of-operations-expense,rows_sum -> Total Expenses,budget_2025_26,25850.0,25850.0,0.0,True
+statement-of-operations-expense,rows_sum -> Total Expenses,actual_2025_26,25915.0,25915.0,0.0,True
+statement-of-operations-expense,rows_sum -> Total Expenses,actual_2024_25,25493.0,25493.0,0.0,True

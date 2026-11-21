@@ -1,0 +1,16 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+BC,statement-of-operations-expense,function,Health,07,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,Education,09,1,2024-2025,,manual,high,K-12 and post-secondary
+BC,statement-of-operations-expense,function,Social services,10,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,Other,01.5+01.6+01.8,1,2024-2025,,manual,low,"BC 'Other' function: includes CleanBC, housing and one-off programs; not split in the statement"
+BC,statement-of-operations-expense,function,Interest,01.7,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,Natural resources and economic development,04,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,Transportation,04.5,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,Protection of persons and property,03,1,2024-2025,,manual,high,
+BC,statement-of-operations-expense,function,General government,01.1,1,2024-2025,,manual,medium,
+BC,expense-by-object,object,Salaries and benefits,compensation,1,2024-2025,,manual,high,
+BC,expense-by-object,object,Government transfers,transfers,1,2024-2025,,manual,high,
+BC,expense-by-object,object,Operating costs,goods_services,1,2024-2025,,manual,high,
+BC,expense-by-object,object,Interest,interest,1,2024-2025,,manual,high,
+BC,expense-by-object,object,Amortization,amortization,1,2024-2025,,manual,high,
+BC,expense-by-object,object,Other,other,1,2024-2025,,manual,high,

@@ -1,0 +1,31 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,1,Health,detail,Health,budget_2025_26,detail,2025-2026,budget,,"39,047",39047.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,1,Health,detail,Health,actual_2025_26,detail,2025-2026,actual,,"40,185",40185.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,1,Health,detail,Health,actual_2024_25,detail,2024-2025,actual,,"38,182",38182.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,2,Education,detail,Education,budget_2025_26,detail,2025-2026,budget,,"19,849",19849.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,2,Education,detail,Education,actual_2025_26,detail,2025-2026,actual,,"20,119",20119.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,2,Education,detail,Education,actual_2024_25,detail,2024-2025,actual,,"19,609",19609.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,3,Social services,detail,Social services,budget_2025_26,detail,2025-2026,budget,,"11,336",11336.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,3,Social services,detail,Social services,actual_2025_26,detail,2025-2026,actual,,"10,780",10780.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,3,Social services,detail,Social services,actual_2024_25,detail,2024-2025,actual,,"10,922",10922.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,4,Other,detail,Other,budget_2025_26,detail,2025-2026,budget,,"7,423",7423.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,4,Other,detail,Other,actual_2025_26,detail,2025-2026,actual,,"4,022",4022.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,4,Other,detail,Other,actual_2024_25,detail,2024-2025,actual,,"4,022",4022.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,5,Interest,detail,Interest,budget_2025_26,detail,2025-2026,budget,,"5,060",5060.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,5,Interest,detail,Interest,actual_2025_26,detail,2025-2026,actual,,"4,898",4898.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,5,Interest,detail,Interest,actual_2024_25,detail,2024-2025,actual,,"4,245",4245.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,6,Natural resources and economic development,detail,Natural resources and economic development,budget_2025_26,detail,2025-2026,budget,,"4,567",4567.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,6,Natural resources and economic development,detail,Natural resources and economic development,actual_2025_26,detail,2025-2026,actual,,"5,274",5274.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,6,Natural resources and economic development,detail,Natural resources and economic development,actual_2024_25,detail,2024-2025,actual,,"6,165",6165.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,7,Transportation,detail,Transportation,budget_2025_26,detail,2025-2026,budget,,"2,897",2897.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,7,Transportation,detail,Transportation,actual_2025_26,detail,2025-2026,actual,,"2,714",2714.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,7,Transportation,detail,Transportation,actual_2024_25,detail,2024-2025,actual,,"2,933",2933.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,8,Protection of persons and property,detail,Protection of persons and property,budget_2025_26,detail,2025-2026,budget,,"2,672",2672.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,8,Protection of persons and property,detail,Protection of persons and property,actual_2025_26,detail,2025-2026,actual,,"3,375",3375.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,8,Protection of persons and property,detail,Protection of persons and property,actual_2024_25,detail,2024-2025,actual,,"3,183",3183.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,9,General government,detail,General government,budget_2025_26,detail,2025-2026,budget,,"2,064",2064.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,9,General government,detail,General government,actual_2025_26,detail,2025-2026,actual,,"3,204",3204.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,9,General government,detail,General government,actual_2024_25,detail,2024-2025,actual,,"2,132",2132.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,10,Total expense,total,,budget_2025_26,detail,2025-2026,budget,,"94,915",94915.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,10,Total expense,total,,actual_2025_26,detail,2025-2026,actual,,"94,571",94571.0,1000000,CAD
+prov-bc-public-accounts-2025-26,statement-of-operations-expense,44,10,Total expense,total,,actual_2024_25,detail,2024-2025,actual,,"91,393",91393.0,1000000,CAD

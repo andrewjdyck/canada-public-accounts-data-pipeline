@@ -1,0 +1,21 @@
+jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
+PE,statement-of-operations-expense,function,Agriculture,04.2,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,"Economic Development, Innovation and Trade",04.1,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Education and Early Years,09,1,2024-2025,,manual,medium,Includes child care (10.4)
+PE,statement-of-operations-expense,function,"Environment, Energy and Climate Action",05,1,2024-2025,,manual,medium,
+PE,statement-of-operations-expense,function,Executive Council,01.1,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Finance,01.1,1,2024-2025,,manual,medium,
+PE,statement-of-operations-expense,function,"Fisheries, Tourism, Sport and Culture",08,1,2024-2025,,manual,low,Fisheries would be 04.2
+PE,statement-of-operations-expense,function,Health and Wellness,07,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,"Housing, Land and Communities",06.1+06.2,1,2024-2025,,manual,medium,Includes municipal transfers (01.8)
+PE,statement-of-operations-expense,function,Justice and Public Safety,03,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Legislative Assembly,01.1,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Public Service Commission,01.3,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Social Development and Seniors,10,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Transportation and Infrastructure,04.5,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,"Workforce, Advanced Learning and Population",09,1,2024-2025,,manual,medium,Post-secondary plus labour programs
+PE,statement-of-operations-expense,function,Interest Charges on Debt,01.7,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Interest Charges on Capital Obligations,01.7,1,2024-2025,,manual,high,
+PE,statement-of-operations-expense,function,Amortization of Tangible Capital Assets,_unallocated,1,2024-2025,,manual,high,"PEI reports amortization as its own line, not by department"
+PE,statement-of-operations-expense,function,Accretion Expense,01.5+01.6+01.8,1,2024-2025,,manual,low,
+PE,change-in-net-debt-amortization,object,Amortization of Tangible Capital Assets,amortization,1,2024-2025,,manual,high,

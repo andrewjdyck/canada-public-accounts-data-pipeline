@@ -1,0 +1,34 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,1,Education and Training,detail,Education and Training 17,budget_2025_26,detail,2025-2026,budget,,"3,145.2",3145.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,1,Education and Training,detail,Education and Training 17,actual_2025_26,detail,2025-2026,actual,,"3,075.1",3075.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,1,Education and Training,detail,Education and Training 17,actual_2024_25,detail,2024-2025,actual,,"2,875.0",2875.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,2,Health,detail,Health 18,budget_2025_26,detail,2025-2026,budget,,"4,691.7",4691.7,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,2,Health,detail,Health 18,actual_2025_26,detail,2025-2026,actual,,"5,145.1",5145.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,2,Health,detail,Health 18,actual_2024_25,detail,2024-2025,actual,,"4,683.2",4683.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,3,Social Development,detail,Social Development 19,budget_2025_26,detail,2025-2026,budget,,"2,179.8",2179.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,3,Social Development,detail,Social Development 19,actual_2025_26,detail,2025-2026,actual,,"2,365.8",2365.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,3,Social Development,detail,Social Development 19,actual_2024_25,detail,2024-2025,actual,,"2,142.9",2142.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,4,Protection Services,detail,Protection Services 20,budget_2025_26,detail,2025-2026,budget,,445.3,445.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,4,Protection Services,detail,Protection Services 20,actual_2025_26,detail,2025-2026,actual,,443.5,443.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,4,Protection Services,detail,Protection Services 20,actual_2024_25,detail,2024-2025,actual,,417.1,417.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,5,Economic Development,detail,Economic Development 21,budget_2025_26,detail,2025-2026,budget,,505.3,505.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,5,Economic Development,detail,Economic Development 21,actual_2025_26,detail,2025-2026,actual,,401.4,401.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,5,Economic Development,detail,Economic Development 21,actual_2024_25,detail,2024-2025,actual,,390.8,390.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,6,Labour and Employment,detail,Labour and Employment,budget_2025_26,detail,2025-2026,budget,,179.7,179.7,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,6,Labour and Employment,detail,Labour and Employment,actual_2025_26,detail,2025-2026,actual,,171.3,171.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,6,Labour and Employment,detail,Labour and Employment,actual_2024_25,detail,2024-2025,actual,,183.5,183.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,7,Resources,detail,Resources 22,budget_2025_26,detail,2025-2026,budget,,436.8,436.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,7,Resources,detail,Resources 22,actual_2025_26,detail,2025-2026,actual,,428.8,428.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,7,Resources,detail,Resources 22,actual_2024_25,detail,2024-2025,actual,,424.3,424.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,8,Transportation and Infrastructure,detail,Transportation and Infrastructure 23,budget_2025_26,detail,2025-2026,budget,,991.5,991.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,8,Transportation and Infrastructure,detail,Transportation and Infrastructure 23,actual_2025_26,detail,2025-2026,actual,,993.9,993.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,8,Transportation and Infrastructure,detail,Transportation and Infrastructure 23,actual_2024_25,detail,2024-2025,actual,,934.2,934.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,9,Central Government,detail,Central Government 24,budget_2025_26,detail,2025-2026,budget,,"1,093.0",1093.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,9,Central Government,detail,Central Government 24,actual_2025_26,detail,2025-2026,actual,,"1,192.3",1192.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,9,Central Government,detail,Central Government 24,actual_2024_25,detail,2024-2025,actual,,"1,009.8",1009.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,10,Service of the Public Debt,detail,Service of the Public Debt 16,budget_2025_26,detail,2025-2026,budget,,740.4,740.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,10,Service of the Public Debt,detail,Service of the Public Debt 16,actual_2025_26,detail,2025-2026,actual,,729.4,729.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,10,Service of the Public Debt,detail,Service of the Public Debt 16,actual_2024_25,detail,2024-2025,actual,,690.1,690.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,11,Total expense,total,,budget_2025_26,detail,2025-2026,budget,,"14,408.7",14408.7,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,11,Total expense,total,,actual_2025_26,detail,2025-2026,actual,,"14,946.6",14946.6,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,statement-of-operations-expense,38,11,Total expense,total,,actual_2024_25,detail,2024-2025,actual,,"13,750.9",13750.9,1000000,CAD

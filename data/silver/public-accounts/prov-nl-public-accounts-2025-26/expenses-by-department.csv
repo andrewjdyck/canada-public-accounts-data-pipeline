@@ -1,0 +1,79 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-nl-public-accounts-2025-26,expenses-by-department,129,1,Consolidated Fund Services,detail,General Government Sector and Legislative Branch General Government Sector Consolidated Fund Services,budget_2025_26,detail,2025-2026,budget,,"1,110,396",1110396.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,1,Consolidated Fund Services,detail,General Government Sector and Legislative Branch General Government Sector Consolidated Fund Services,actual_2025_26,detail,2025-2026,actual,,"1,062,034",1062034.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,1,Consolidated Fund Services,detail,General Government Sector and Legislative Branch General Government Sector Consolidated Fund Services,actual_2024_25,detail,2024-2025,actual,,"738,818",738818.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,2,Executive Council,detail,Executive Council,budget_2025_26,detail,2025-2026,budget,,"284,903",284903.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,2,Executive Council,detail,Executive Council,actual_2025_26,detail,2025-2026,actual,,"420,713",420713.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,2,Executive Council,detail,Executive Council,actual_2024_25,detail,2024-2025,actual,,"261,888",261888.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,3,Finance,detail,Finance,budget_2025_26,detail,2025-2026,budget,,"61,379",61379.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,3,Finance,detail,Finance,actual_2025_26,detail,2025-2026,actual,,"213,660",213660.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,3,Finance,detail,Finance,actual_2024_25,detail,2024-2025,actual,,"426,207",426207.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,4,Public Procurement Agency,detail,Public Procurement Agency,budget_2025_26,detail,2025-2026,budget,,"2,286",2286.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,4,Public Procurement Agency,detail,Public Procurement Agency,actual_2025_26,detail,2025-2026,actual,,"2,772",2772.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,4,Public Procurement Agency,detail,Public Procurement Agency,actual_2024_25,detail,2024-2025,actual,,"2,685",2685.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,5,Public Service Commission,detail,Public Service Commission,budget_2025_26,detail,2025-2026,budget,,"12,650",12650.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,5,Public Service Commission,detail,Public Service Commission,actual_2025_26,detail,2025-2026,actual,,"12,474",12474.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,5,Public Service Commission,detail,Public Service Commission,actual_2024_25,detail,2024-2025,actual,,"11,901",11901.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,6,Government Services,detail,Government Services,budget_2025_26,detail,2025-2026,budget,,"43,831",43831.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,6,Government Services,detail,Government Services,actual_2025_26,detail,2025-2026,actual,,"46,396",46396.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,6,Government Services,detail,Government Services,actual_2024_25,detail,2024-2025,actual,,"41,780",41780.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,7,Transportation and Infrastructure,detail,Transportation and Infrastructure,budget_2025_26,detail,2025-2026,budget,,"1,073,832",1073832.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,7,Transportation and Infrastructure,detail,Transportation and Infrastructure,actual_2025_26,detail,2025-2026,actual,,"970,509",970509.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,7,Transportation and Infrastructure,detail,Transportation and Infrastructure,actual_2024_25,detail,2024-2025,actual,,"1,047,383",1047383.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,8,Labrador Affairs,detail,Labrador Affairs,budget_2025_26,detail,2025-2026,budget,,"17,301",17301.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,8,Labrador Affairs,detail,Labrador Affairs,actual_2025_26,detail,2025-2026,actual,,"18,713",18713.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,8,Labrador Affairs,detail,Labrador Affairs,actual_2024_25,detail,2024-2025,actual,,"16,575",16575.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,9,Legislature,detail,Legislative Branch Legislature,budget_2025_26,detail,2025-2026,budget,,"35,133",35133.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,9,Legislature,detail,Legislative Branch Legislature,actual_2025_26,detail,2025-2026,actual,,"41,671",41671.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,9,Legislature,detail,Legislative Branch Legislature,actual_2024_25,detail,2024-2025,actual,,"28,820",28820.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,10,General Government Sector and Legislative Branch,subtotal,,budget_2025_26,detail,2025-2026,budget,,"2,641,711",2641711.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,10,General Government Sector and Legislative Branch,subtotal,,actual_2025_26,detail,2025-2026,actual,,"2,788,942",2788942.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,10,General Government Sector and Legislative Branch,subtotal,,actual_2024_25,detail,2024-2025,actual,,"2,576,057",2576057.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,11,"Environment, Conservation and Climate Change",detail,"Resource Sector Environment, Conservation and Climate Change",budget_2025_26,detail,2025-2026,budget,,"96,455",96455.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,11,"Environment, Conservation and Climate Change",detail,"Resource Sector Environment, Conservation and Climate Change",actual_2025_26,detail,2025-2026,actual,,"93,442",93442.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,11,"Environment, Conservation and Climate Change",detail,"Resource Sector Environment, Conservation and Climate Change",actual_2024_25,detail,2024-2025,actual,,"113,431",113431.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,12,Energy and Mines,detail,Energy and Mines,budget_2025_26,detail,2025-2026,budget,,"104,756",104756.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,12,Energy and Mines,detail,Energy and Mines,actual_2025_26,detail,2025-2026,actual,,"65,842",65842.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,12,Energy and Mines,detail,Energy and Mines,actual_2024_25,detail,2024-2025,actual,,"43,499",43499.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,13,"Tourism, Culture, Arts and Recreation",detail,"Tourism, Culture, Arts and Recreation",budget_2025_26,detail,2025-2026,budget,,"103,816",103816.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,13,"Tourism, Culture, Arts and Recreation",detail,"Tourism, Culture, Arts and Recreation",actual_2025_26,detail,2025-2026,actual,,"88,589",88589.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,13,"Tourism, Culture, Arts and Recreation",detail,"Tourism, Culture, Arts and Recreation",actual_2024_25,detail,2024-2025,actual,,"108,576",108576.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,14,"Forestry, Agriculture and Lands",detail,"Forestry, Agriculture and Lands",budget_2025_26,detail,2025-2026,budget,,"182,867",182867.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,14,"Forestry, Agriculture and Lands",detail,"Forestry, Agriculture and Lands",actual_2025_26,detail,2025-2026,actual,,"176,600",176600.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,14,"Forestry, Agriculture and Lands",detail,"Forestry, Agriculture and Lands",actual_2024_25,detail,2024-2025,actual,,"147,561",147561.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,15,"Jobs, Growth and Rural Development",detail,"Jobs, Growth and Rural Development",budget_2025_26,detail,2025-2026,budget,,"223,692",223692.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,15,"Jobs, Growth and Rural Development",detail,"Jobs, Growth and Rural Development",actual_2025_26,detail,2025-2026,actual,,"289,970",289970.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,15,"Jobs, Growth and Rural Development",detail,"Jobs, Growth and Rural Development",actual_2024_25,detail,2024-2025,actual,,"266,850",266850.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,16,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,budget_2025_26,detail,2025-2026,budget,,"10,097",10097.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,16,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,actual_2025_26,detail,2025-2026,actual,,"17,418",17418.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,16,Fisheries and Aquaculture,detail,Fisheries and Aquaculture,actual_2024_25,detail,2024-2025,actual,,"12,124",12124.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,17,Resource Sector,subtotal,,budget_2025_26,detail,2025-2026,budget,,"721,683",721683.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,17,Resource Sector,subtotal,,actual_2025_26,detail,2025-2026,actual,,"731,861",731861.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,17,Resource Sector,subtotal,,actual_2024_25,detail,2024-2025,actual,,"692,041",692041.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,18,Social Supports and Well-Being,detail,Social Sector Social Supports and Well-Being,budget_2025_26,detail,2025-2026,budget,,"509,466",509466.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,18,Social Supports and Well-Being,detail,Social Sector Social Supports and Well-Being,actual_2025_26,detail,2025-2026,actual,,"479,427",479427.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,18,Social Supports and Well-Being,detail,Social Sector Social Supports and Well-Being,actual_2024_25,detail,2024-2025,actual,,"497,336",497336.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,19,Education and Early Childhood Development,detail,Education and Early Childhood Development,budget_2025_26,detail,2025-2026,budget,,"1,844,044",1844044.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,19,Education and Early Childhood Development,detail,Education and Early Childhood Development,actual_2025_26,detail,2025-2026,actual,,"1,848,418",1848418.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,19,Education and Early Childhood Development,detail,Education and Early Childhood Development,actual_2024_25,detail,2024-2025,actual,,"1,728,543",1728543.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,20,Health and Community Services,detail,Health and Community Services,budget_2025_26,detail,2025-2026,budget,,"5,004,657",5004657.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,20,Health and Community Services,detail,Health and Community Services,actual_2025_26,detail,2025-2026,actual,,"4,442,752",4442752.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,20,Health and Community Services,detail,Health and Community Services,actual_2024_25,detail,2024-2025,actual,,"4,523,237",4523237.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,21,Justice and Public Safety,detail,Justice and Public Safety,budget_2025_26,detail,2025-2026,budget,,"489,124",489124.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,21,Justice and Public Safety,detail,Justice and Public Safety,actual_2025_26,detail,2025-2026,actual,,"351,239",351239.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,21,Justice and Public Safety,detail,Justice and Public Safety,actual_2024_25,detail,2024-2025,actual,,"363,082",363082.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,22,Newfoundland and Labrador Housing Corporation,detail,Newfoundland and Labrador Housing Corporation,budget_2025_26,detail,2025-2026,budget,,"163,494",163494.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,22,Newfoundland and Labrador Housing Corporation,detail,Newfoundland and Labrador Housing Corporation,actual_2025_26,detail,2025-2026,actual,,"195,601",195601.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,22,Newfoundland and Labrador Housing Corporation,detail,Newfoundland and Labrador Housing Corporation,actual_2024_25,detail,2024-2025,actual,,"210,478",210478.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,23,Municipal and Community Affairs,detail,Municipal and Community Affairs,budget_2025_26,detail,2025-2026,budget,,"91,543",91543.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,23,Municipal and Community Affairs,detail,Municipal and Community Affairs,actual_2025_26,detail,2025-2026,actual,,"201,428",201428.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,23,Municipal and Community Affairs,detail,Municipal and Community Affairs,actual_2024_25,detail,2024-2025,actual,,"69,211",69211.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,24,Seniors,detail,Seniors,budget_2025_26,detail,2025-2026,budget,,"2,852",2852.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,24,Seniors,detail,Seniors,actual_2025_26,detail,2025-2026,actual,,"2,243",2243.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,24,Seniors,detail,Seniors,actual_2024_25,detail,2024-2025,actual,,"1,954",1954.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,25,Social Sector,subtotal,,budget_2025_26,detail,2025-2026,budget,,"8,105,180",8105180.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,25,Social Sector,subtotal,,actual_2025_26,detail,2025-2026,actual,,"7,521,108",7521108.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,25,Social Sector,subtotal,,actual_2024_25,detail,2024-2025,actual,,"7,393,841",7393841.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,26,Total: Expenses by Department,total,Total: Expenses by Department,budget_2025_26,detail,2025-2026,budget,,"11,468,574",11468574.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,26,Total: Expenses by Department,total,Total: Expenses by Department,actual_2025_26,detail,2025-2026,actual,,"11,041,911",11041911.0,1000,CAD
+prov-nl-public-accounts-2025-26,expenses-by-department,129,26,Total: Expenses by Department,total,Total: Expenses by Department,actual_2024_25,detail,2024-2025,actual,,"10,661,939",10661939.0,1000,CAD
