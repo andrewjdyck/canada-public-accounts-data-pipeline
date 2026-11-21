@@ -1,0 +1,2 @@
+# Source documents are committed as-is; never diff or normalise them.
+*.pdf binary
