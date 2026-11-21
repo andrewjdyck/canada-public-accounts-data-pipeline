@@ -1,134 +1,519 @@
-manifest_version: 1
-updated_at: "2025-12-26"
-defaults:
-  download:
-    method: "manual"          # or "script"
-    license: "unknown"
-  file:
-    format: "pdf"
-
+manifest_version: 2
+updated_at: '2026-11-16'
 documents:
-  - id: fed-canada-public-accounts-2024-25-vol2
-    level: federal                        # federal | provincial | municipal
-    jurisdiction:
-      country: CA
-      province: null
-      municipality: null
-    entity:
-      name: Government of Canada
-      short: canada
-      type: government                    # government | agency | crown | etc.
-    doc:
-      kind: public_accounts               # public_accounts | budget | afr | financial_statement | etc.
-      title: "Volume II: Details of Expenses and Revenues"
-      fiscal_year: "2024-2025"            # normalized
-      period_covered:
-        start: "2024-04-01"
-        end: "2025-03-31"
-      language: en                        # en | fr | bilingual
-    source:
-      url: "https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf"
-      retrieved_at: "2025-12-26"
-      # publisher: "Receiver General for Canada"
-    storage:
-      relpath: "federal/ca/2025-vol2-eng.pdf"
-      filename: "2025-vol2-eng.pdf"
-    file:
-      format: pdf
-      # sha256: "PUT_HASH_HERE"
-      # bytes: 12345678
-    notes: "TBD"
-
-  - id: prov-sk-public-accounts-2024-25-vol2
-    level: provincial
-    jurisdiction:
-      country: CA
-      province: SK
-      municipality: null
-    entity:
-      name: Government of Saskatchewan
-      short: sk
-      type: government
-    doc:
-      kind: public_accounts
-      title: "Public Accounts 2024–25 Volume 2"
-      fiscal_year: "2024-225"
-      period_covered:
-        start: "2024-04-01"
-        end: "2025-03-31"
-      language: en
-    source:
-      url: "https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf"
-      retrieved_at: "2025-12-26"
-      publisher: "Saskatchewan Ministry of Finance"
-    storage:
-      relpath: "provincial/sk/2024-25 Volume 2 - 5155.pdf"
-      filename: "2024-25 Volume 2 - 5155.pdf"
-    file:
-      format: pdf
-      # sha256: "PUT_HASH_HERE"
-    tags: ["audited", "afr-adjacent"]
-  
-  - id: mun-regina-public-accounts-2024
-    level: municipal                        # federal | provincial | municipal
-    jurisdiction:
-      country: CA
-      province: sk
-      municipality: regina-sk
-    entity:
-      name: City of Regina
-      short: regina
-      airport: yqr
-      type: government                    # government | agency | crown | etc.
-    doc:
-      kind: public_accounts               # public_accounts | budget | afr | financial_statement | etc.
-      title: "2024 Public Accounts"
-      fiscal_year: "2024"            # normalized
-      period_covered:
-        start: "2024-01-01"
-        end: "2024-12-31"
-      language: en                        # en | fr | bilingual
-    source:
-      url: "https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf"
-      retrieved_at: "2025-12-26"
-      # publisher: "Receiver General for Canada"
-    storage:
-      relpath: "municipal/regina-sk/final-2024-public-accounts.pdf"
-      filename: "final-2024-public-accounts.pdf"
-    file:
-      format: pdf
-      # sha256: "PUT_HASH_HERE"
-      # bytes: 12345678
-    notes: "TBD"
-
-  - id: mun-yqr-annual-report-2024
-    level: municipal                        # federal | provincial | municipal
-    jurisdiction:
-      country: CA
-      province: sk
-      municipality: regina-sk
-    entity:
-      name: City of Regina
-      short: regina
-      airport: yqr
-      type: government                    # government | agency | crown | etc.
-    doc:
-      kind: annual_report               # public_accounts | budget | afr | financial_statement | etc.
-      title: "2024 Annual Report"
-      fiscal_year: "2024"            # normalized
-      period_covered:
-        start: "2024-01-01"
-        end: "2024-12-31"
-      language: en                        # en | fr | bilingual
-    source:
-      url: "https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf"
-      retrieved_at: "2025-12-26"
-      # publisher: "Receiver General for Canada"
-    storage:
-      relpath: "municipal/regina-sk/COR 2024 Annual Report.pdf"
-      filename: "COR 2024 Annual Report.pdf"
-    file:
-      format: pdf
-      # sha256: "PUT_HASH_HERE"
-      # bytes: 12345678
-    notes: "TBD"
+- id: fed-canada-public-accounts-2025-26-vol1
+  level: federal
+  jurisdiction:
+    country: CA
+    province: null
+    municipality: null
+  entity:
+    name: Government of Canada
+    short: canada
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts of Canada 2026, Volume I: Summary Report and Consolidated Financial Statements'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2026/pdf/2026-vol1-eng.pdf
+    landing_page: https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2026/intro-eng.html
+    retrieved_at: '2026-11-14'
+    publisher: Receiver General for Canada
+  download:
+    method: script
+  storage:
+    relpath: federal/ca/2026-vol1-eng.pdf
+  file:
+    format: pdf
+    sha256: 4641cd5476fe1a34139edfae612d3d906d050519f485517154c268f948a3f19e
+    bytes: 9713521
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-ab-annual-report-2025-26
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: AB
+    municipality: null
+  entity:
+    name: Government of Alberta
+    short: ab
+    type: government
+  doc:
+    kind: annual_report
+    title: Government of Alberta 2025-26 Annual Report (includes Consolidated Financial Statements)
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://open.alberta.ca/dataset/7714457c-7527-443a-a7db-dd8c1c8ead86/resource/3d001693-e3c4-47ac-824c-604440df2eb0/download/goa-annual-report-2025-2026.pdf
+    landing_page: https://www.alberta.ca/government-and-ministry-annual-reports
+    retrieved_at: '2026-11-14'
+    publisher: Alberta Treasury Board and Finance
+  download:
+    method: script
+  storage:
+    relpath: provincial/ab/goa-annual-report-2025-2026.pdf
+  file:
+    format: pdf
+    sha256: 3eb12d338bc4c2a4d764dfada07d76ff608c1e353c9127ac579309404308a25d
+    bytes: 4863613
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-bc-public-accounts-2025-26
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: BC
+    municipality: null
+  entity:
+    name: Government of British Columbia
+    short: bc
+    type: government
+  doc:
+    kind: public_accounts
+    title: Public Accounts 2025/26 (Summary Financial Statements)
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/public-accounts-2025-26.pdf
+    landing_page: https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts
+    retrieved_at: '2026-11-14'
+    publisher: Office of the Comptroller General of British Columbia
+  download:
+    method: script
+  storage:
+    relpath: provincial/bc/public-accounts-2025-26.pdf
+  file:
+    format: pdf
+    sha256: 4176b93681fd1f2a6a4fef46c381b378564a3c3eff19f253da836f525143c117
+    bytes: 2689721
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-mb-public-accounts-2025-26
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: MB
+    municipality: null
+  entity:
+    name: Government of Manitoba
+    short: mb
+    type: government
+  doc:
+    kind: public_accounts
+    title: Province of Manitoba Annual Report and Public Accounts 2025-26
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.gov.mb.ca/asset_library/en/finances/annual-report-and-public-accounts-2025-26.pdf
+    retrieved_at: '2026-11-14'
+    publisher: Manitoba Finance
+  download:
+    method: script
+  storage:
+    relpath: provincial/mb/annual-report-and-public-accounts-2025-26.pdf
+  file:
+    format: pdf
+    sha256: c19d2c55c35efb7595aeba7cc94a5447cbb2f9b4884b5b70c6e883f91c09e868
+    bytes: 5260989
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-nb-public-accounts-2025-26-vol1
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: NB
+    municipality: null
+  entity:
+    name: Government of New Brunswick
+    short: nb
+    type: government
+  doc:
+    kind: public_accounts
+    title: Public Accounts for the fiscal year ended March 31, 2026, Volume 1 (Audited Consolidated Financial Statements)
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.gnb.ca/content/dam/GNB3/org/ftb-fct/doc/public-accounts-vol-1-2026.pdf
+    landing_page: https://www.gnb.ca/en/news/n-b.2026.09.public-accounts-for-2025-26.html
+    retrieved_at: '2026-11-14'
+    publisher: New Brunswick Department of Finance and Treasury Board
+  download:
+    method: script
+  storage:
+    relpath: provincial/nb/public-accounts-vol-1-2026.pdf
+  file:
+    format: pdf
+    sha256: c73f0a8b104cfa2793edfb90fb4abd64e7faec51ef1109e0f65ea73f2f97ff1f
+    bytes: 11804214
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-nl-public-accounts-2025-26
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: NL
+    municipality: null
+  entity:
+    name: Government of Newfoundland and Labrador
+    short: nl
+    type: government
+  doc:
+    kind: public_accounts
+    title: Public Accounts, Consolidated Summary Financial Statements, March 31, 2026
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.gov.nl.ca/exec/tbs/files/Consolidated-Summary-Financial-Statements-March-31-2026-Web.pdf
+    landing_page: https://www.gov.nl.ca/exec/tbs/home/publications/public-accounts/
+    retrieved_at: '2026-11-14'
+    publisher: Office of the Comptroller General of Newfoundland and Labrador
+  download:
+    method: script
+  storage:
+    relpath: provincial/nl/Consolidated-Summary-Financial-Statements-March-31-2026-Web.pdf
+  file:
+    format: pdf
+    sha256: c912edac48faac7e047b54615d892f89dfd38eecd0bec004720fff1adcd1c198
+    bytes: 4771835
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-ns-public-accounts-2025-26-vol1
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: NS
+    municipality: null
+  entity:
+    name: Government of Nova Scotia
+    short: ns
+    type: government
+  doc:
+    kind: public_accounts
+    title: Public Accounts Volume 1, Consolidated Financial Statements, March 31, 2026
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://notices.novascotia.ca/files/public-accounts/2026/pa-volume-1-financial-statements-2026.pdf
+    retrieved_at: '2026-11-14'
+    publisher: Nova Scotia Department of Finance and Treasury Board
+  download:
+    method: script
+  storage:
+    relpath: provincial/ns/pa-volume-1-financial-statements-2026.pdf
+  file:
+    format: pdf
+    sha256: d33a79176dff14433e25186d5c082e4fd2824837dfa3a22f9e26f1c290571dd5
+    bytes: 30709362
+  status: downloaded
+  tags:
+  - spending-shares
+- id: prov-on-public-accounts-2025-26
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: 'ON'
+    municipality: null
+  entity:
+    name: Government of Ontario
+    short: 'on'
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts of Ontario 2025-26: Annual Report and Consolidated Financial Statements'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.ontario.ca/files/2026-09/tbs-annual-report-and-consolidated-financial-statements-2025-2026-en-2026-09-23-v3.pdf
+    landing_page: https://www.ontario.ca/page/public-accounts-ontario-2025-26
+    retrieved_at: '2026-11-14'
+    publisher: Treasury Board Secretariat of Ontario
+  download:
+    method: script
+  storage:
+    relpath: provincial/on/tbs-annual-report-and-consolidated-financial-statements-2025-2026-en.pdf
+  file:
+    format: pdf
+    sha256: 8c1ccee09b1c05346b4255db2f93507a1c44729cf00324fc49ba478f18cdad47
+    bytes: 6271765
+  status: downloaded
+  tags:
+  - spending-shares
+  notes: The 2024-25 hand extraction (PLAN.md "Ontario reference") used Summary Table 9 of the ministry statements; this annual
+    report carries the sector-level expense schedule.
+  extraction:
+    statement: 'Consolidated Statement of Operations (expense by sector); detail in Schedule 3: Expense by Sector and Schedule
+      4: Expense by Ministry'
+    pages:
+    - 57
+    - 104
+    - 105
+    - 106
+    printed_pages:
+    - '49'
+    - '96'
+    - '97'
+    - '98'
+    units: millions of dollars
+    stated_total: 236336
+- id: prov-pe-public-accounts-2025-26-vol1
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: PE
+    municipality: null
+  entity:
+    name: Government of Prince Edward Island
+    short: pe
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts of the Province of Prince Edward Island, Volume I: Consolidated Financial Statements, year ended
+      March 31, 2026'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.princeedwardisland.ca/en/topic/public-accounts
+    retrieved_at: '2026-11-14'
+    publisher: Prince Edward Island Department of Finance and Affordability
+  download:
+    method: manual
+  storage:
+    relpath: provincial/pe/2026 - PA - Volume I.pdf
+  file:
+    format: pdf
+    sha256: 926a1ba5f5713899cc466521fcfd32f726b98bb94da793b96848867f06090eb3
+    bytes: 3500097
+  status: downloaded
+  tags:
+  - spending-shares
+  notes: princeedwardisland.ca sits behind a bot check that blocks scripted downloads; downloaded manually by browser from
+    the public accounts page on 2026-11-14. Direct PDF URL not yet recorded; source.url is the landing page.
+- id: prov-qc-public-accounts-2025-26-vol1
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: QC
+    municipality: null
+  entity:
+    name: Gouvernement du Québec
+    short: qc
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts 2025-2026, Volume 1: Consolidated Financial Statements of the Gouvernement du Québec'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/finances/publications-adm/Comptes-publics/EN/CPTEN_vol1-2025-2026.pdf
+    retrieved_at: '2026-11-14'
+    publisher: Ministère des Finances du Québec
+  download:
+    method: script
+  storage:
+    relpath: provincial/qc/CPTEN_vol1-2025-2026.pdf
+  file:
+    format: pdf
+    sha256: 5c396fedf704392c9d11a9d54e47bc0d5a1e0006d0534ffdc765b48d1db97c82
+    bytes: 2314732
+  status: downloaded
+  tags:
+  - spending-shares
+  notes: English edition. Per PLAN.md, check its tables match the French edition before relying on it.
+- id: prov-sk-public-accounts-2025-26-vol1
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: null
+  entity:
+    name: Government of Saskatchewan
+    short: sk
+    type: government
+  doc:
+    kind: public_accounts
+    title: 2025-26 Public Accounts Volume 1 (Summary Financial Statements)
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://publications.saskatchewan.ca/api/v1/products/130210/formats/157848/download
+    landing_page: https://publications.saskatchewan.ca/#/products/130210
+    retrieved_at: '2026-11-14'
+    publisher: Saskatchewan Ministry of Finance
+  download:
+    method: script
+  storage:
+    relpath: provincial/sk/2025-26-public-accounts-volume-1.pdf
+  file:
+    format: pdf
+    sha256: 4e060c6c3e1a846122e2c78f4cfd741234455bff1d163fb544bdf344ef247e97
+    bytes: 2364612
+  status: downloaded
+  tags:
+  - spending-shares
+- id: fed-canada-public-accounts-2024-25-vol2
+  level: federal
+  jurisdiction:
+    country: CA
+    province: null
+    municipality: null
+  entity:
+    name: Government of Canada
+    short: canada
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Volume II: Details of Expenses and Revenues'
+    fiscal_year: 2024-2025
+    period_covered:
+      start: '2024-04-01'
+      end: '2025-03-31'
+    language: en
+  source:
+    url: https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2025/pdf/2025-vol2-eng.pdf
+    retrieved_at: '2025-12-26'
+    publisher: Receiver General for Canada
+  download:
+    method: manual
+  storage:
+    relpath: federal/ca/2025-vol2-eng.pdf
+  file:
+    format: pdf
+    sha256: f09cd3bdac5c259ae7e4cb6184378691ace9057c8dd06c9a6f6f4c187faf0327
+    bytes: 3281958
+  status: downloaded
+- id: prov-sk-public-accounts-2024-25-vol2
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: null
+  entity:
+    name: Government of Saskatchewan
+    short: sk
+    type: government
+  doc:
+    kind: public_accounts
+    title: Public Accounts 2024–25 Volume 2
+    fiscal_year: 2024-2025
+    period_covered:
+      start: '2024-04-01'
+      end: '2025-03-31'
+    language: en
+  source:
+    url: https://www.saskatchewan.ca/-/media/news-release-backgrounders/2025/oct/2024-25-volume-2---5155.pdf
+    retrieved_at: '2025-12-26'
+    publisher: Saskatchewan Ministry of Finance
+  download:
+    method: manual
+  storage:
+    relpath: provincial/sk/2024-25 Volume 2 - 5155.pdf
+  file:
+    format: pdf
+    sha256: 84813b40574333a3fc09ff4deee4c703450ab1f9e446764becc488472887e053
+    bytes: 4169988
+  tags:
+  - audited
+  - afr-adjacent
+  status: downloaded
+- id: mun-regina-public-accounts-2024
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: regina-sk
+  entity:
+    name: City of Regina
+    short: regina
+    type: government
+  doc:
+    kind: public_accounts
+    title: 2024 Public Accounts
+    fiscal_year: '2024'
+    period_covered:
+      start: '2024-01-01'
+      end: '2024-12-31'
+    language: en
+  source:
+    url: https://openregina.ca/dataset/78855ada-6fe9-4536-a5fe-1a68437fc283/resource/2d4ca457-ab3a-45e5-84b7-8247831f22f6/download/final-2024-public-accounts.pdf
+    retrieved_at: '2025-12-26'
+  download:
+    method: manual
+  storage:
+    relpath: municipal/regina-sk/final-2024-public-accounts.pdf
+  file:
+    format: pdf
+    sha256: 94c3c9e89e367751830c4863e0f984cec2bfb5c992ac9e2697895ec32ca73589
+    bytes: 8950628
+  status: downloaded
+- id: mun-regina-annual-report-2024
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: regina-sk
+  entity:
+    name: City of Regina
+    short: regina
+    type: government
+  doc:
+    kind: annual_report
+    title: 2024 Annual Report
+    fiscal_year: '2024'
+    period_covered:
+      start: '2024-01-01'
+      end: '2024-12-31'
+    language: en
+  source:
+    url: https://reginafiles.blob.core.windows.net/media/CityOfRegina_AnnualReports/COR%202024%20Annual%20Report.pdf
+    retrieved_at: '2025-12-26'
+  download:
+    method: manual
+  storage:
+    relpath: municipal/regina-sk/COR 2024 Annual Report.pdf
+  file:
+    format: pdf
+    sha256: eb5050c66f068fdf8943b52edc1a1d7a71c5cc5e5ac13879cffce176ec3b157e
+    bytes: 51616978
+  status: downloaded
