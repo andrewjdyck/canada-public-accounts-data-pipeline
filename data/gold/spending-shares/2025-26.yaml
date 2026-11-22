@@ -2,7 +2,7 @@
 # rate = share of that government's total expense (federal excludes transfers to provinces/territories).
 schemaVersion: 1
 dataset: canada-spending-shares
-pipelineVersion: 1a156ed-dirty
+pipelineVersion: bc837fd
 generatedAt: '2026-11-22'
 fiscalYear: 2025-26
 federal:
