@@ -3,8 +3,8 @@
   "source_file": "data/bronze/provincial/nb/public-accounts-vol-1-2026.pdf",
   "source_sha256": "c73f0a8b104cfa2793edfb90fb4abd64e7faec51ef1109e0f65ea73f2f97ff1f",
   "spec_file": "config/extraction/prov-nb-public-accounts-2025-26-vol1.yaml",
-  "spec_sha256": "5c6d4709667f56e20b16f56db770d9809b31c9a4becfbce106345d7ce21d593b",
+  "spec_sha256": "a3d04eb05add08beff446b9b6bac21169146ec69fd6c0d9757d5aa9c0f671cf3",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-21T23:46:33+00:00"
+  "extracted_at": "2026-11-22T17:51:03+00:00"
 }

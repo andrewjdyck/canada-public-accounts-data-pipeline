@@ -1,5 +1,5 @@
 manifest_version: 3
-updated_at: '2026-11-21'
+updated_at: '2026-11-22'
 documents:
 - id: fed-canada-public-accounts-2025-26-vol1
   level: federal
@@ -309,6 +309,40 @@ documents:
   - spending-shares
   notes: princeedwardisland.ca sits behind a bot check that blocks scripted downloads; downloaded manually by browser from
     the public accounts page on 2026-11-14. Direct PDF URL not yet recorded; source.url is the landing page.
+- id: prov-pe-public-accounts-2025-26-vol2
+  level: provincial
+  jurisdiction:
+    country: CA
+    province: PE
+    municipality: null
+  entity:
+    name: Government of Prince Edward Island
+    short: pe
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts 2025-26 Volume II: departmental expense details (unaudited)'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.princeedwardisland.ca/en/topic/public-accounts
+    retrieved_at: '2026-11-14'
+    publisher: Prince Edward Island Department of Finance and Affordability
+  download:
+    method: manual
+  storage:
+    relpath: provincial/pe/2026 - PA - Volume II.pdf
+  file:
+    format: pdf
+    sha256: 1541ba39b8186af898c18803749b881f175b339dbb16ae9c15d6fe083bd2352a
+    bytes: 2168094
+  status: downloaded
+  tags:
+  - spending-shares
+  notes: Downloaded by browser with Volume I (site blocks scripts). Used for the Municipal Affairs grant detail.
 - id: prov-qc-public-accounts-2025-26-vol1
   level: provincial
   jurisdiction:

@@ -78,3 +78,66 @@ tables:
     - actual_2024_25
   rows:
   - label: Depreciation
+- table_id: portfolio-by-object-2025-26
+  title: 'Appendix 2: Consolidated statement of expenditure by portfolio and type, 2025-26 (one row)'
+  role: headline
+  method: pdfplumber_words
+  units:
+    scale: 1000000
+    currency: CAD
+    as_printed: millions of dollars
+  scope: consolidated_summary
+  space_thousands: true
+  columns:
+    transfers_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      object: Transfers
+    remuneration_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      object: Remuneration
+    operating_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      object: Operating
+    doubtful_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      object: Doubtful accounts, other allowances and losses
+    total_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      object: Total
+      kind: total
+  parts:
+  - page: 199
+    printed_page: ''
+    start_after: ^l’Assemblée nationale
+    end_at: ^Affaires municipales et Habitation
+    columns:
+    - transfers_2025_26
+    - remuneration_2025_26
+    - operating_2025_26
+    - doubtful_2025_26
+    - total_2025_26
+  rows:
+  - label: Affaires municipales et Habitation
+  checks:
+  - type: columns_sum
+    columns:
+    - transfers_2025_26
+    - remuneration_2025_26
+    - operating_2025_26
+    - doubtful_2025_26
+    equals: total_2025_26
+    tolerance: 1
+cross_checks:
+- left:
+    table: portfolio-by-object-2025-26
+    row: Affaires municipales et Habitation
+    column: total_2025_26
+  right:
+    table: statement-of-operations-expenditure
+    row: Affaires municipales et Habitation
+    column: actual_2025_26

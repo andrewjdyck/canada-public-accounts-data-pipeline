@@ -27,6 +27,7 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 | gold | `data/gold/statcan-cofog.csv` | `src/clean/clean_statcan_cofog.py` | StatCan COFOG with the same jurisdiction, fiscal-year and concept ids |
 | gold | `data/gold/reconciliation/` | `src/reconcile/reconcile_cofog.py` | Public accounts vs StatCan by COFOG division, plus `summary.md` |
 | gold | `data/gold/validation/` | clean step | Mapping and total checks |
+| gold | `data/gold/spending-shares/<fy>.yaml` | `src/publish/build_spending_shares.py` | **The can-tax-receipt output file** (validated), plus `<fy>-amounts.csv` with the dollars behind each rate |
 
 | Config | Purpose |
 |---|---|
@@ -34,13 +35,14 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 | `config/mappings/<jurisdiction>.csv` | The "spread": each source line maps to a concept, with weights for splits ([README](config/mappings/README.md)) |
 | `config/taxonomy/` | COFOG concepts, object concepts, app category rollups, StatCan components, jurisdictions ([README](config/taxonomy/README.md)) |
 | `config/reconciling-items.csv` | Known reasons public accounts and StatCan differ |
+| `config/output/` | Output contract settings: category order, federal rules, municipal-transfer overrides, and this repo's copy of the output schema |
 
 ## Running it
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-make all PY=.venv/bin/python        # fetch, extract, clean, reconcile
+make all PY=.venv/bin/python        # fetch, extract, clean, reconcile, publish
 ```
 
 Or step by step:
@@ -52,6 +54,7 @@ Or step by step:
 .venv/bin/python src/clean/clean_statcan_cofog.py
 .venv/bin/python src/clean/build_public_accounts_facts.py   # gold
 .venv/bin/python src/reconcile/reconcile_cofog.py
+.venv/bin/python src/publish/build_spending_shares.py   # output file for the app
 ```
 
 Each step exits non-zero if its checks fail, so bad numbers never reach gold. To check for a newer StatCan release: `fetch_sources.py --only statcan-cofog-by-component --refresh --record`.

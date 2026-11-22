@@ -1,0 +1,58 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,1,Service New Brunswick,detail,Service New Brunswick,budget_2025_26,detail,2025-2026,budget,,251.8,251.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,1,Service New Brunswick,detail,Service New Brunswick,actual_2025_26,detail,2025-2026,actual,,278.7,278.7,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,1,Service New Brunswick,detail,Service New Brunswick,actual_2024_25,detail,2024-2025,actual,,263.3,263.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,2,Pension Expense,detail,Pension Expense,budget_2025_26,detail,2025-2026,budget,,169.5,169.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,2,Pension Expense,detail,Pension Expense,actual_2025_26,detail,2025-2026,actual,,178.0,178.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,2,Pension Expense,detail,Pension Expense,actual_2024_25,detail,2024-2025,actual,,164.8,164.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,3,Local Government,detail,Local Government,budget_2025_26,detail,2025-2026,budget,,188.5,188.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,3,Local Government,detail,Local Government,actual_2025_26,detail,2025-2026,actual,,201.3,201.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,3,Local Government,detail,Local Government,actual_2024_25,detail,2024-2025,actual,,130.2,130.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,4,New Brunswick Residential Electricity Rebate,detail,New Brunswick Residential Electricity Rebate,budget_2025_26,detail,2025-2026,budget,,92.6,92.6,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,4,New Brunswick Residential Electricity Rebate,detail,New Brunswick Residential Electricity Rebate,actual_2025_26,detail,2025-2026,actual,,99.8,99.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,4,New Brunswick Residential Electricity Rebate,detail,New Brunswick Residential Electricity Rebate,actual_2024_25,detail,2024-2025,actual,,27.4,27.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,5,Revenue Sharing Agreements with First Nations,detail,Revenue Sharing Agreements with First Nations,budget_2025_26,detail,2025-2026,budget,,28.9,28.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,5,Revenue Sharing Agreements with First Nations,detail,Revenue Sharing Agreements with First Nations,actual_2025_26,detail,2025-2026,actual,,61.1,61.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,5,Revenue Sharing Agreements with First Nations,detail,Revenue Sharing Agreements with First Nations,actual_2024_25,detail,2024-2025,actual,,26.2,26.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,6,Enterprise Resource Planning,detail,Enterprise Resource Planning,budget_2025_26,detail,2025-2026,budget,,58.1,58.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,6,Enterprise Resource Planning,detail,Enterprise Resource Planning,actual_2025_26,detail,2025-2026,actual,,58.1,58.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,6,Enterprise Resource Planning,detail,Enterprise Resource Planning,actual_2024_25,detail,2024-2025,actual,,52.9,52.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,7,General Government,detail,General Government,budget_2025_26,detail,2025-2026,budget,,88.1,88.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,7,General Government,detail,General Government,actual_2025_26,detail,2025-2026,actual,,50.0,50.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,7,General Government,detail,General Government,actual_2024_25,detail,2024-2025,actual,,73.6,73.6,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,8,Injured Workers Liability Accrual,detail,Injured Workers Liability Accrual,budget_2025_26,detail,2025-2026,budget,,5.0,5.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,8,Injured Workers Liability Accrual,detail,Injured Workers Liability Accrual,actual_2025_26,detail,2025-2026,actual,,52.8,52.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,8,Injured Workers Liability Accrual,detail,Injured Workers Liability Accrual,actual_2024_25,detail,2024-2025,actual,,44.0,44.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,9,Canada Pension Plan Employer Contributions,detail,Canada Pension Plan Employer Contributions,budget_2025_26,detail,2025-2026,budget,,40.8,40.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,9,Canada Pension Plan Employer Contributions,detail,Canada Pension Plan Employer Contributions,actual_2025_26,detail,2025-2026,actual,,48.5,48.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,9,Canada Pension Plan Employer Contributions,detail,Canada Pension Plan Employer Contributions,actual_2024_25,detail,2024-2025,actual,,44.0,44.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,10,Retirement Allowance,detail,Retirement Allowance,budget_2025_26,detail,2025-2026,budget,,42.0,42.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,10,Retirement Allowance,detail,Retirement Allowance,actual_2025_26,detail,2025-2026,actual,,43.9,43.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,10,Retirement Allowance,detail,Retirement Allowance,actual_2024_25,detail,2024-2025,actual,,44.1,44.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,11,Legislative Assembly,detail,Legislative Assembly,budget_2025_26,detail,2025-2026,budget,,38.4,38.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,11,Legislative Assembly,detail,Legislative Assembly,actual_2025_26,detail,2025-2026,actual,,36.2,36.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,11,Legislative Assembly,detail,Legislative Assembly,actual_2024_25,detail,2024-2025,actual,,43.8,43.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,12,Finance and Treasury Board,detail,Finance and Treasury Board,budget_2025_26,detail,2025-2026,budget,,33.6,33.6,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,12,Finance and Treasury Board,detail,Finance and Treasury Board,actual_2025_26,detail,2025-2026,actual,,32.8,32.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,12,Finance and Treasury Board,detail,Finance and Treasury Board,actual_2024_25,detail,2024-2025,actual,,46.5,46.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,13,Financial and Consumer Services Commission,detail,Financial and Consumer Services Commission,budget_2025_26,detail,2025-2026,budget,,17.9,17.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,13,Financial and Consumer Services Commission,detail,Financial and Consumer Services Commission,actual_2025_26,detail,2025-2026,actual,,16.2,16.2,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,13,Financial and Consumer Services Commission,detail,Financial and Consumer Services Commission,actual_2024_25,detail,2024-2025,actual,,16.1,16.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,14,Executive Council,detail,Executive Council,budget_2025_26,detail,2025-2026,budget,,13.0,13.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,14,Executive Council,detail,Executive Council,actual_2025_26,detail,2025-2026,actual,,13.0,13.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,14,Executive Council,detail,Executive Council,actual_2024_25,detail,2024-2025,actual,,11.6,11.6,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,15,Amortization Expense,detail,Amortization Expense,budget_2025_26,detail,2025-2026,budget,,11.0,11.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,15,Amortization Expense,detail,Amortization Expense,actual_2025_26,detail,2025-2026,actual,,12.3,12.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,15,Amortization Expense,detail,Amortization Expense,actual_2024_25,detail,2024-2025,actual,,10.9,10.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,16,New Brunswick Lotteries and Gaming Corporation,detail,New Brunswick Lotteries and Gaming Corporation,budget_2025_26,detail,2025-2026,budget,,5.9,5.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,16,New Brunswick Lotteries and Gaming Corporation,detail,New Brunswick Lotteries and Gaming Corporation,actual_2025_26,detail,2025-2026,actual,,6.3,6.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,16,New Brunswick Lotteries and Gaming Corporation,detail,New Brunswick Lotteries and Gaming Corporation,actual_2024_25,detail,2024-2025,actual,,5.8,5.8,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,17,Office of the Premier,detail,Office of the Premier,budget_2025_26,detail,2025-2026,budget,,1.9,1.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,17,Office of the Premier,detail,Office of the Premier,actual_2025_26,detail,2025-2026,actual,,1.9,1.9,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,17,Office of the Premier,detail,Office of the Premier,actual_2024_25,detail,2024-2025,actual,,2.5,2.5,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,18,Provision Expense,detail,Provision Expense,budget_2025_26,detail,2025-2026,budget,,6.0,6.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,18,Provision Expense,detail,Provision Expense,actual_2025_26,detail,2025-2026,actual,,1.4,1.4,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,18,Provision Expense,detail,Provision Expense,actual_2024_25,detail,2024-2025,actual,,2.1,2.1,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,19,Total Central Government,total,,budget_2025_26,detail,2025-2026,budget,,"1,093.0",1093.0,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,19,Total Central Government,total,,actual_2025_26,detail,2025-2026,actual,,"1,192.3",1192.3,1000000,CAD
+prov-nb-public-accounts-2025-26-vol1,schedule-24-central-government,97,19,Total Central Government,total,,actual_2024_25,detail,2024-2025,actual,,"1,009.8",1009.8,1000000,CAD

@@ -1,0 +1,41 @@
+# Output contract settings for data/gold/spending-shares/<fiscal-year>.yaml (PLAN.md "Output Contract").
+# Hand-written. Read by src/publish/build_spending_shares.py.
+schemaVersion: 1
+dataset: canada-spending-shares
+fiscalYear: "2025-26"
+fiscal_year_key: "2025-2026"   # fiscal_year as stored in gold facts
+basis: actual
+
+provincial:
+  # Category order in the output. Amounts come from gold facts (function_breakdown tables):
+  #   1. a line listed in category-overrides.csv goes to that category;
+  #   2. otherwise its COFOG concept rolls up through config/taxonomy/app-categories.csv.
+  # Denominator = the statement's total expense (all lines, municipal transfers included).
+  categories: [Healthcare, Education, Social Services, Transportation, Municipal Transfers, Debt Charges, Other]
+
+federal:
+  doc_id: fed-canada-public-accounts-2025-26-vol1
+  column: actual_2025_26
+  # Denominator = total expenses minus every transfer to provinces and territories.
+  total:
+    - {table: expenses-by-segment, row: Total expenses}
+  excluded_transfers_to_provinces:
+    - {table: statement-of-operations-expense, row: Major transfer payments to other levels of government,
+       note: "Canada Health Transfer, Canada Social Transfer, Canada-wide Early Learning and Child Care, fiscal arrangements (equalization, Territorial Formula Financing) and other major transfers (Canada Community-Building Fund, Home Care and Mental Health), Note 6(a)"}
+    - {amount_millions: 2018, page: 79, row: "EI payments to provinces and territories (Labour Market Development Agreements)",
+       quote: "payments to provinces and territories related to Labour Market Development Agreements of $2,018 million", subtract_from: Employment Insurance}
+  categories:
+    - name: Elderly Benefits
+      cells: [{table: statement-of-operations-expense, row: "Old age security benefits, guaranteed income supplement and spouse's allowance"}]
+    - name: Children's Benefits
+      cells: [{table: statement-of-operations-expense, row: "Children's benefits"}]
+    - name: Employment Insurance
+      cells: [{table: statement-of-operations-expense, row: Employment insurance and support measures}]
+    - name: Defence
+      cells: [{table: expenses-by-segment, row: National Defence}]
+    - name: Indigenous Services
+      cells: [{table: expenses-by-segment, row: Indigenous Services}, {table: expenses-by-segment, row: Crown-Indigenous Relations and Northern Affairs}]
+    - name: Debt Charges
+      cells: [{table: statement-of-operations-expense, row: Public debt charges}]
+    - name: Other
+      remainder: true

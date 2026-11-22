@@ -3,5 +3,17 @@ expenses-by-segment,rows_sum -> Total expenses,actual_2025_26,565728.0,565728.0,
 expenses-by-segment,rows_sum -> Total expenses,actual_2024_25,547299.0,547299.0,0.0,True
 expenses-by-object,rows_sum -> Total expenses,actual_2025_26,565728.0,565728.0,0.0,True
 expenses-by-object,rows_sum -> Total expenses,actual_2024_25,547299.0,547299.0,0.0,True
+statement-of-operations-expense,"rows_sum -> Total expenses, excluding net actuarial losses",budget_2025_26,574155.0,574155.0,0.0,True
+statement-of-operations-expense,"rows_sum -> Total expenses, excluding net actuarial losses",actual_2025_26,552088.0,552088.0,0.0,True
+statement-of-operations-expense,"rows_sum -> Total expenses, excluding net actuarial losses",actual_2024_25,543279.0,543279.0,0.0,True
+statement-of-operations-expense,rows_sum -> Total transfer payments,budget_2025_26,376156.0,376156.0,0.0,True
+statement-of-operations-expense,rows_sum -> Total transfer payments,actual_2025_26,367506.0,367506.0,0.0,True
+statement-of-operations-expense,rows_sum -> Total transfer payments,actual_2024_25,359415.0,359415.0,0.0,True
+major-transfers-other-governments,rows_sum -> Total major transfer payments to other levels of government,actual_2025_26,110841.0,110841.0,0.0,True
+major-transfers-other-governments,rows_sum -> Total major transfer payments to other levels of government,actual_2024_25,105101.0,105101.0,0.0,True
 (cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2025_26 vs actual_2025_26,565728.0,565728.0,0.0,True
 (cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2024_25 vs actual_2024_25,547299.0,547299.0,0.0,True
+(cross),major-transfers-other-governments[Total major transfer payments to other levels of government] = statement-of-operations-expense[Major transfer payments to other levels of government],actual_2025_26 vs actual_2025_26,110841.0,110841.0,0.0,True
+(cross),"statement-of-operations-expense[Total expenses, excluding net actuarial losses] = expenses-by-segment[Total expenses, excluding net actuarial losses]",actual_2025_26 vs actual_2025_26,552088.0,552088.0,0.0,True
+(cross),major-transfers-other-governments[Total major transfer payments to other levels of government] = statement-of-operations-expense[Major transfer payments to other levels of government],actual_2024_25 vs actual_2024_25,105101.0,105101.0,0.0,True
+(cross),"statement-of-operations-expense[Total expenses, excluding net actuarial losses] = expenses-by-segment[Total expenses, excluding net actuarial losses]",actual_2024_25 vs actual_2024_25,543279.0,543279.0,0.0,True

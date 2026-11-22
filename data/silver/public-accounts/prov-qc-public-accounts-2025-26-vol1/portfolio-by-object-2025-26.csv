@@ -1,0 +1,6 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-qc-public-accounts-2025-26-vol1,portfolio-by-object-2025-26,199,1,Affaires municipales et Habitation,detail,Affaires municipales et Habitation,transfers_2025_26,detail,2025-2026,actual,object=Transfers,"4,856",4856.0,1000000,CAD
+prov-qc-public-accounts-2025-26-vol1,portfolio-by-object-2025-26,199,1,Affaires municipales et Habitation,detail,Affaires municipales et Habitation,remuneration_2025_26,detail,2025-2026,actual,object=Remuneration,152,152.0,1000000,CAD
+prov-qc-public-accounts-2025-26-vol1,portfolio-by-object-2025-26,199,1,Affaires municipales et Habitation,detail,Affaires municipales et Habitation,operating_2025_26,detail,2025-2026,actual,object=Operating,243,243.0,1000000,CAD
+prov-qc-public-accounts-2025-26-vol1,portfolio-by-object-2025-26,199,1,Affaires municipales et Habitation,detail,Affaires municipales et Habitation,doubtful_2025_26,detail,2025-2026,actual,"object=Doubtful accounts, other allowances and losses",2,2.0,1000000,CAD
+prov-qc-public-accounts-2025-26-vol1,portfolio-by-object-2025-26,199,1,Affaires municipales et Habitation,detail,Affaires municipales et Habitation,total_2025_26,total,2025-2026,actual,object=Total,"5,253",5253.0,1000000,CAD

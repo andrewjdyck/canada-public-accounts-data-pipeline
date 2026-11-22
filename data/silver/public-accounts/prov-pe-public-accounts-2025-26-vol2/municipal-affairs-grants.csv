@@ -1,0 +1,15 @@
+doc_id,table_id,page,row_order,row_label,row_kind,raw_label,column_id,column_kind,fiscal_year,basis,column_dims,value_as_printed,amount,scale,currency
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,1,Municipal Administrative Support Program,detail,Municipal Administrative Support Program,actual_2025_26,detail,2025-2026,actual,,-,0.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,1,Municipal Administrative Support Program,detail,Municipal Administrative Support Program,estimates_2025_26,detail,2025-2026,budget,,"125,000",125000.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,2,Federation of P.E.I. Municipalities,detail,Federation of P.E.I. Municipalities,actual_2025_26,detail,2025-2026,actual,,"100,000",100000.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,2,Federation of P.E.I. Municipalities,detail,Federation of P.E.I. Municipalities,estimates_2025_26,detail,2025-2026,budget,,-,0.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,3,Municipal Equalization Grants,detail,Municipal Equalization Grants,actual_2025_26,detail,2025-2026,actual,,"9,019,983",9019983.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,3,Municipal Equalization Grants,detail,Municipal Equalization Grants,estimates_2025_26,detail,2025-2026,budget,,"9,200,000",9200000.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,4,Municipal Training Support,detail,Municipal Training Support,actual_2025_26,detail,2025-2026,actual,,"23,419",23419.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,4,Municipal Training Support,detail,Municipal Training Support,estimates_2025_26,detail,2025-2026,budget,,"7,800",7800.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,5,Municipal Transitional Funding,detail,Municipal Transitional Funding,actual_2025_26,detail,2025-2026,actual,,"194,596",194596.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,5,Municipal Transitional Funding,detail,Municipal Transitional Funding,estimates_2025_26,detail,2025-2026,budget,,"176,400",176400.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,6,Real Property Tax Credit Program,detail,Real Property Tax Credit Program,actual_2025_26,detail,2025-2026,actual,,"38,740,430",38740430.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,6,Real Property Tax Credit Program,detail,Real Property Tax Credit Program,estimates_2025_26,detail,2025-2026,budget,,"37,245,000",37245000.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,7,Miscellaneous,detail,Miscellaneous,actual_2025_26,detail,2025-2026,actual,,"1,092,139",1092139.0,1,CAD
+prov-pe-public-accounts-2025-26-vol2,municipal-affairs-grants,147,7,Miscellaneous,detail,Miscellaneous,estimates_2025_26,detail,2025-2026,budget,,"1,225,000",1225000.0,1,CAD

@@ -2,3 +2,9 @@ table_id,check,where,computed,stated,diff,ok
 statement-of-operations-expense,rows_sum -> Total expense,budget_2025_26,14408.7,14408.7,0.0,True
 statement-of-operations-expense,rows_sum -> Total expense,actual_2025_26,14946.6,14946.6,0.0,True
 statement-of-operations-expense,rows_sum -> Total expense,actual_2024_25,13750.9,13750.9,0.0,True
+schedule-24-central-government,rows_sum -> Total Central Government,budget_2025_26,1093.0,1093.0,0.0,True
+schedule-24-central-government,rows_sum -> Total Central Government,actual_2025_26,1192.3,1192.3,0.0,True
+schedule-24-central-government,rows_sum -> Total Central Government,actual_2024_25,1009.8,1009.8,0.0,True
+(cross),schedule-24-central-government[Total Central Government] = statement-of-operations-expense[Central Government],budget_2025_26 vs budget_2025_26,1093.0,1093.0,0.0,True
+(cross),schedule-24-central-government[Total Central Government] = statement-of-operations-expense[Central Government],actual_2025_26 vs actual_2025_26,1192.3,1192.3,0.0,True
+(cross),schedule-24-central-government[Total Central Government] = statement-of-operations-expense[Central Government],actual_2024_25 vs actual_2024_25,1009.8,1009.8,0.0,True

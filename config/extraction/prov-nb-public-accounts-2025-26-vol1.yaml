@@ -73,3 +73,86 @@ tables:
     - actual_2024_25
   rows:
   - label: Amortization of Tangible Capital Assets
+- table_id: schedule-24-central-government
+  title: 'Schedule 24: Central Government'
+  role: headline
+  method: pdfplumber_words
+  units:
+    scale: 1000000
+    currency: CAD
+    as_printed: millions
+  scope: consolidated_summary
+  merge_split_digits: true
+  columns:
+    budget_2025_26:
+      fiscal_year: 2025-2026
+      basis: budget
+    actual_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+    actual_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual
+  parts:
+  - page: 97
+    printed_page: '93'
+    start_after: ^CENTRAL GOVERNMENT$
+    end_at: ^\$ [\d,.]+ \$
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Service New Brunswick
+  - label: Pension Expense
+  - label: Local Government
+  - label: New Brunswick Residential Electricity Rebate
+  - label: Revenue Sharing Agreements with First Nations
+  - label: Enterprise Resource Planning
+  - label: General Government
+  - label: Injured Workers Liability Accrual
+  - label: Canada Pension Plan Employer Contributions
+  - label: Retirement Allowance
+  - label: Legislative Assembly
+  - label: Finance and Treasury Board
+  - label: Financial and Consumer Services Commission
+  - label: Executive Council
+  - label: Amortization Expense
+  - label: New Brunswick Lotteries and Gaming Corporation
+  - label: Office of the Premier
+  - label: Provision Expense
+  - label: Total Central Government
+    kind: total
+    unlabelled: true
+  checks:
+  - type: rows_sum
+    equals: Total Central Government
+    tolerance: 0.3
+cross_checks:
+- left:
+    table: schedule-24-central-government
+    row: Total Central Government
+    column: budget_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Central Government
+    column: budget_2025_26
+  tolerance: 0.1
+- left:
+    table: schedule-24-central-government
+    row: Total Central Government
+    column: actual_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Central Government
+    column: actual_2025_26
+  tolerance: 0.1
+- left:
+    table: schedule-24-central-government
+    row: Total Central Government
+    column: actual_2024_25
+  right:
+    table: statement-of-operations-expense
+    row: Central Government
+    column: actual_2024_25
+  tolerance: 0.1

@@ -1,0 +1,37 @@
+# Extraction spec (hand-written). Schema: config/extraction.schema.json
+doc_id: prov-pe-public-accounts-2025-26-vol2
+notes: PEI Public Accounts 2025-26 Volume II (unaudited, General Revenue Fund detail). Only the Municipal Affairs grants are read, to identify
+  transfers to municipalities.
+tables:
+- table_id: municipal-affairs-grants
+  title: 'Department of Housing, Land and Communities: Municipal Affairs grants'
+  role: headline
+  method: pdfplumber_words
+  units:
+    scale: 1
+    currency: CAD
+    as_printed: $
+  scope: general_revenue_fund
+  columns:
+    actual_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+    estimates_2025_26:
+      fiscal_year: 2025-2026
+      basis: budget
+  parts:
+  - page: 147
+    printed_page: '139'
+    start_after: ^Grants$
+    end_at: ^Miscellaneous
+    columns:
+    - actual_2025_26
+    - estimates_2025_26
+  rows:
+  - label: Municipal Administrative Support Program
+  - label: Federation of P.E.I. Municipalities
+  - label: Municipal Equalization Grants
+  - label: Municipal Training Support
+  - label: Municipal Transitional Funding
+  - label: Real Property Tax Credit Program
+  - label: Miscellaneous

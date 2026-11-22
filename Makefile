@@ -1,9 +1,9 @@
 # Bronze -> silver -> gold. Run `make all`, or one step at a time.
 PY ?= python3
 
-.PHONY: all fetch extract clean reconcile
+.PHONY: all fetch extract clean reconcile publish
 
-all: fetch extract clean reconcile
+all: fetch extract clean reconcile publish
 
 # bronze: download missing sources and verify sha256 against the manifest
 fetch:
@@ -22,3 +22,7 @@ clean:
 # gold: public accounts vs StatCan CCOFOG
 reconcile:
 	$(PY) src/reconcile/reconcile_cofog.py
+
+# gold: the can-tax-receipt output file, validated against config/output/spending-shares.schema.json
+publish:
+	$(PY) src/publish/build_spending_shares.py

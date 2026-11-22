@@ -109,6 +109,100 @@ tables:
   - type: rows_sum
     equals: Total expenses
     tolerance: 3
+- table_id: statement-of-operations-expense
+  title: 'Consolidated Statement of Operations: Expenses by type'
+  role: headline
+  method: pdfplumber_words
+  units: &id003
+    scale: 1000000
+    currency: CAD
+    as_printed: in millions of dollars
+  scope: consolidated_summary
+  columns:
+    budget_2025_26:
+      fiscal_year: 2025-2026
+      basis: budget
+    actual_2025_26: &id004
+      fiscal_year: 2025-2026
+      basis: actual
+    actual_2024_25: &id005
+      fiscal_year: 2024-2025
+      basis: actual_restated
+  parts:
+  - page: 63
+    printed_page: '63'
+    start_after: ^Expenses \(Note 6
+    end_at: ^Total expenses, excluding net actuarial
+    columns:
+    - budget_2025_26
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Old age security benefits, guaranteed income supplement and spouse's allowance
+    kind: detail
+  - label: Major transfer payments to other levels of government
+    kind: detail
+  - label: Employment insurance and support measures
+    kind: detail
+  - label: Children's benefits
+    kind: detail
+  - label: Pollution pricing proceeds returned
+    kind: detail
+  - label: Other transfer payments
+    kind: detail
+  - label: Total transfer payments
+    kind: subtotal
+  - label: Other expenses, excluding net actuarial losses
+    kind: detail
+  - label: Total program expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Public debt charges
+    kind: detail
+  - label: Total expenses, excluding net actuarial losses
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total expenses, excluding net actuarial losses
+    tolerance: 2
+  - type: rows_sum
+    rows:
+    - Old age security benefits, guaranteed income supplement and spouse's allowance
+    - Major transfer payments to other levels of government
+    - Employment insurance and support measures
+    - Children's benefits
+    - Pollution pricing proceeds returned
+    - Other transfer payments
+    equals: Total transfer payments
+    tolerance: 2
+- table_id: major-transfers-other-governments
+  title: 'Note 6(a): Major transfer payments to other levels of government'
+  role: headline
+  method: pdfplumber_words
+  units: *id003
+  scope: consolidated_summary
+  columns:
+    actual_2025_26: *id004
+    actual_2024_25: *id005
+  parts:
+  - page: 79
+    printed_page: '79'
+    start_after: ^2026 2025$
+    end_at: ^Total major transfer payments
+    columns:
+    - actual_2025_26
+    - actual_2024_25
+  rows:
+  - label: Canada Health Transfer
+  - label: Canada Social Transfer
+  - label: Canada-wide Early Learning and Child Care
+  - label: Fiscal arrangements
+  - label: Other major transfers
+  - label: Total major transfer payments to other levels of government
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total major transfer payments to other levels of government
+    tolerance: 2
 cross_checks:
 - left:
     table: expenses-by-segment
@@ -125,4 +219,36 @@ cross_checks:
   right:
     table: expenses-by-object
     row: Total expenses
+    column: actual_2024_25
+- left:
+    table: major-transfers-other-governments
+    row: Total major transfer payments to other levels of government
+    column: actual_2025_26
+  right:
+    table: statement-of-operations-expense
+    row: Major transfer payments to other levels of government
+    column: actual_2025_26
+- left:
+    table: statement-of-operations-expense
+    row: Total expenses, excluding net actuarial losses
+    column: actual_2025_26
+  right:
+    table: expenses-by-segment
+    row: Total expenses, excluding net actuarial losses
+    column: actual_2025_26
+- left:
+    table: major-transfers-other-governments
+    row: Total major transfer payments to other levels of government
+    column: actual_2024_25
+  right:
+    table: statement-of-operations-expense
+    row: Major transfer payments to other levels of government
+    column: actual_2024_25
+- left:
+    table: statement-of-operations-expense
+    row: Total expenses, excluding net actuarial losses
+    column: actual_2024_25
+  right:
+    table: expenses-by-segment
+    row: Total expenses, excluding net actuarial losses
     column: actual_2024_25
