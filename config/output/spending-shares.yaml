@@ -11,6 +11,8 @@ provincial:
   #   1. a line listed in category-overrides.csv goes to that category;
   #   2. otherwise its COFOG concept rolls up through config/taxonomy/app-categories.csv.
   # Denominator = the statement's total expense (all lines, municipal transfers included).
+  # Municipal Transfers holds only transfers whose end use the published reports don't reveal
+  # (README "Principles" 3). Transfers whose purpose is known belong in that service's category.
   categories: [Healthcare, Education, Social Services, Transportation, Municipal Transfers, Debt Charges, Other]
 
 federal:

@@ -1,8 +1,22 @@
 # canada-public-accounts-data-pipeline
 
-A repository with cleaned and consistent public accounts data for Canadian government entities: federal, provincial, and municipal.
+**What are Canadians buying with their taxes?** This repository uses the public accounts that federal and provincial governments already publish to work out which goods and services government spending delivers to citizens: health care, schooling, income support, roads, policing and so on.
 
-Its first consumer is [can-tax-receipt](https://github.com/andrewjdyck/can-tax-receipt) (MyTaxReceipt.ca), which needs each government's spending broken down by category. See [PLAN.md](./PLAN.md) for the MVP and task list.
+Plenty of reporting already covers *who* spends public money (which ministry, which order of government) and *how much* they spend. This project focuses on *what is delivered*. Every dollar is classified by the service it pays for, not by the organisation that spends or passes it on.
+
+Its first consumer is [can-tax-receipt](https://github.com/andrewjdyck/can-tax-receipt) (MyTaxReceipt.ca), which shows each taxpayer what their taxes bought. See [PLAN.md](./PLAN.md) for the MVP and task list.
+
+## Principles
+
+These rules decide every classification choice in the pipeline:
+
+1. **Classify by what is delivered, not who spends it.** Categories are services and goods (health care, education, income support, transportation, ...), anchored to the international Classification of the Functions of Government (COFOG). Ministry and department names are only evidence of what was delivered.
+2. **Follow pass-through money to the service it pays for.** A transfer from one government to another is not a service. Count it once, where the service is delivered and in that service's category, not as spending by the government that passed it on.
+   - The Canada Health Transfer, Canada Social Transfer, equalization and other federal transfers to provinces and territories are **excluded from federal shares** (numerator and denominator). They reappear as health, education and social services in provincial spending.
+   - A provincial transfer to a municipality or agency whose purpose is known (transit, social housing, hospitals) is counted **in that service's category**.
+3. **Name the gap when the service can't be identified.** A transfer whose end use the published reports don't reveal, such as an unconditional grant to municipalities, is kept as its own transparent category (e.g. Municipal Transfers) rather than guessed into a service. As better sources are found, these amounts should move into service categories. They are a measure of what isn't yet known, not a destination.
+4. **Use what governments already publish.** Every figure comes from audited public accounts (or, for detail, the governments' own supplementary volumes) and traces to a document, page and printed line. Statistics Canada's COFOG tables are used to check the work, not as the source.
+5. **Show the judgment calls.** Each mapping from a printed line to a service carries a confidence level and a note. Where the published detail forces a compromise (a line that mixes services, a total that can't be split), it is stated in the output's `extractionNotes`.
 
 ## Data layers
 
