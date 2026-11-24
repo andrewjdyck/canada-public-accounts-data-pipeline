@@ -2,7 +2,7 @@
 # rate = share of that government's expense spent on the service (README 'Principles'; docs/federal-design.md).
 schemaVersion: 1
 dataset: canada-spending-shares
-pipelineVersion: 15c9ac0-dirty
+pipelineVersion: bf015e5
 generatedAt: '2026-11-24'
 fiscalYear: 2025-26
 federal:
