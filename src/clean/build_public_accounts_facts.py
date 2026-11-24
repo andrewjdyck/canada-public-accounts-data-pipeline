@@ -19,7 +19,8 @@ Validation (the script exits non-zero and writes nothing to gold if any fail):
 
 Outputs:
   data/gold/public-accounts-facts.csv          one row per mapped amount, with provenance
-  data/gold/spending-shares-preview.csv        shares by app category (function_breakdown tables)
+  data/gold/spending-shares-preview.csv        shares by service, every year and basis (function_breakdown tables;
+                                               the published federal shares use federal-leaves.csv instead)
   data/gold/validation/public-accounts.csv     results of the checks above
 
 Usage:
@@ -37,6 +38,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from clean.common import cofog, division_of, fiscal_year_in, read_csv, write_csv  # noqa: E402
 from paths import EXTRACTION_SPECS, GOLD, MAPPINGS, SILVER, TAXONOMY, load_manifest, manifest_doc, rel  # noqa: E402
+from services import service_for, service_names  # noqa: E402
 
 FACT_FIELDS = ["jurisdiction", "level", "doc_id", "table_id", "role", "page", "fiscal_year", "basis", "scope",
                "function_id", "function_division", "object_id", "source_label", "source_column", "weight",
@@ -64,24 +66,11 @@ def lookup(idx, table_id: str, dimension: str, label: str, fy: str, errors: list
     return hits
 
 
-def category_for(concept_id: str, level: str, rollups: list[dict]) -> tuple[str, str]:
-    best = None
-    for r in rollups:
-        if r["level"] != level:
-            continue
-        p = r["concept_prefix"]
-        if p == "*" or concept_id == p or concept_id.startswith(p + "."):
-            score = -1 if p == "*" else len(p)
-            if best is None or score > best[0]:
-                best = (score, r["category"], r["subcategory"])
-    return (best[1], best[2]) if best else ("Other", "")
-
-
 def main() -> int:
     manifest = load_manifest()
     concepts = cofog()
     objects = {r["object_id"] for r in read_csv(TAXONOMY / "objects.csv")}
-    rollups = read_csv(TAXONOMY / "app-categories.csv")
+    names = service_names()
     facts, checks, errors = [], [], []
 
     for spec_path in sorted(EXTRACTION_SPECS.glob("*.yaml")):
@@ -164,7 +153,7 @@ def main() -> int:
         if f["role"] != "function_breakdown" or f["basis"] == "budget":
             continue
         key = (f["jurisdiction"], f["level"], f["fiscal_year"], f["basis"], f["doc_id"])
-        cat, sub = category_for(f["function_id"], f["level"], rollups)
+        cat, sub = names[service_for(f["function_id"])], ""
         totals[key] += f["amount_cad"]
         by_cat[key + (cat, sub)] += f["amount_cad"]
     shares = [dict(zip(SHARE_FIELDS, (*k, round(v), round(v / totals[k[:5]], 4)))) for k, v in sorted(by_cat.items())]

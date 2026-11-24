@@ -185,7 +185,7 @@ def extract_part(pdf, table: dict, part: dict) -> list[dict]:
 
     out = []
     for order, (row, (raw_label, amounts)) in enumerate(zip(rows, numeric), start=1):
-        if not row.get("unlabelled") and label_score(row["label"], raw_label) < 0.5:
+        if not (row.get("unlabelled") or part.get("unlabelled")) and label_score(row["label"], raw_label) < 0.5:
             raise ValueError(f"page {part['page']}: row {order} expected {row['label']!r}, text is {raw_label!r}")
         used: set[int] = set()
         for w in amounts:

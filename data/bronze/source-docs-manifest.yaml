@@ -35,6 +35,41 @@ documents:
   status: downloaded
   tags:
   - spending-shares
+- id: fed-canada-public-accounts-2025-26-vol2
+  level: federal
+  jurisdiction:
+    country: CA
+    province: null
+    municipality: null
+  entity:
+    name: Government of Canada
+    short: canada
+    type: government
+  doc:
+    kind: public_accounts
+    title: 'Public Accounts of Canada 2026, Volume II: Details of Expenses and Revenues'
+    fiscal_year: 2025-2026
+    period_covered:
+      start: '2025-04-01'
+      end: '2026-03-31'
+    language: en
+  source:
+    url: https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2026/pdf/2026-vol2-eng.pdf
+    landing_page: https://www.tpsgc-pwgsc.gc.ca/recgen/cpc-pac/2026/intro-eng.html
+    retrieved_at: '2026-11-14'
+    publisher: Receiver General for Canada
+  download:
+    method: manual
+  storage:
+    relpath: federal/ca/2026-vol2-eng.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - spending-shares
+  notes: 'Program-level transfer payments by department (unaudited); splits Volume I Table 3.6 ''other transfers'' cells.
+    Download by browser: the server sends an incomplete certificate chain (Entrust OV TLS Issuing RSA CA 2 missing), which
+    scripted clients reject. Save to data/bronze/federal/ca/2026-vol2-eng.pdf, then run fetch_sources.py --record.'
 - id: prov-ab-annual-report-2025-26
   level: provincial
   jurisdiction:

@@ -1,79 +1,135 @@
-level,jurisdiction,category,amount_cad,denominator_cad,rate,source_lines
-federal,Federal,Elderly Benefits,82741000000,452869000000,0.1827,
-federal,Federal,Children's Benefits,30100000000,452869000000,0.0665,
-federal,Federal,Employment Insurance,26812000000,452869000000,0.0592,
-federal,Federal,Defence,39361000000,452869000000,0.0869,
-federal,Federal,Indigenous Services,35229000000,452869000000,0.0778,
-federal,Federal,Debt Charges,53541000000,452869000000,0.1182,
-federal,Federal,Other,185085000000,452869000000,0.4087,
-federal,Federal,(excluded: transfers to provinces),112859000000,452869000000,,
-provincial,Alberta,Healthcare,31796000000,77541000000,0.4101,Health
-provincial,Alberta,Education,18200000000,77541000000,0.2347,Education
-provincial,Alberta,Social Services,8990000000,77541000000,0.1159,Social services
-provincial,Alberta,Transportation,2463000000,77541000000,0.0318,"Transportation, communications and utilities"
-provincial,Alberta,Municipal Transfers,1477000000,77541000000,0.019,Regional planning and development
-provincial,Alberta,Debt Charges,2938000000,77541000000,0.0379,Debt servicing costs
-provincial,Alberta,Other,11677000000,77541000000,0.1506,"Agriculture, resource management and economic development; Environment; General government; Housing; Pension recovery; Protection of persons and property; Recreation and culture"
-provincial,British Columbia,Healthcare,40185000000,94571000000,0.4249,Health
-provincial,British Columbia,Education,20119000000,94571000000,0.2127,Education
-provincial,British Columbia,Social Services,10780000000,94571000000,0.114,Social services
-provincial,British Columbia,Transportation,2714000000,94571000000,0.0287,Transportation
-provincial,British Columbia,Municipal Transfers,0,94571000000,0.0,
-provincial,British Columbia,Debt Charges,4898000000,94571000000,0.0518,Interest
-provincial,British Columbia,Other,15875000000,94571000000,0.1679,General government; Natural resources and economic development; Other; Protection of persons and property
-provincial,Manitoba,Healthcare,9659000000,25915000000,0.3727,"Health, Seniors and Long-Term Care; Tobacco settlement"
-provincial,Manitoba,Education,6218000000,25915000000,0.2399,Advanced Education and Training; Education and Early Childhood Learning
-provincial,Manitoba,Social Services,2461000000,25915000000,0.095,Families; Tax credits
-provincial,Manitoba,Transportation,621000000,25915000000,0.024,Transportation and Infrastructure
-provincial,Manitoba,Municipal Transfers,710000000,25915000000,0.0274,Municipal and Northern Relations
-provincial,Manitoba,Debt Charges,2313000000,25915000000,0.0893,Debt servicing
-provincial,Manitoba,Other,3933000000,25915000000,0.1517,"Agriculture; Business, Mining, Trade and Job Creation; Emergency expenditures; Enabling appropriations; Environment and Climate Change; Executive Council; Finance; Housing, Addictions and Homelessness; Innovation and New Technology; Justice; Labour and Immigration; Legislative Assembly; Natural Resources and Indigenous Futures; Public Service Commission; Public Service Delivery; Sport, Culture, Heritage and Tourism"
-provincial,New Brunswick,Healthcare,5145100000,14946600000,0.3442,Health
-provincial,New Brunswick,Education,3075100000,14946600000,0.2057,Education and Training
-provincial,New Brunswick,Social Services,2365800000,14946600000,0.1583,Social Development
-provincial,New Brunswick,Transportation,993900000,14946600000,0.0665,Transportation and Infrastructure
-provincial,New Brunswick,Municipal Transfers,201300000,14946600000,0.0135,Local Government (from Central Government)
-provincial,New Brunswick,Debt Charges,729400000,14946600000,0.0488,Service of the Public Debt
-provincial,New Brunswick,Other,2436000000,14946600000,0.163,Central Government; Economic Development; Labour and Employment; Protection Services; Resources
-provincial,Newfoundland and Labrador,Healthcare,4442752000,11041911000,0.4024,Health and Community Services
-provincial,Newfoundland and Labrador,Education,1848418000,11041911000,0.1674,Education and Early Childhood Development
-provincial,Newfoundland and Labrador,Social Services,481670000,11041911000,0.0436,Seniors; Social Supports and Well-Being
-provincial,Newfoundland and Labrador,Transportation,970509000,11041911000,0.0879,Transportation and Infrastructure
-provincial,Newfoundland and Labrador,Municipal Transfers,201428000,11041911000,0.0182,Municipal and Community Affairs
-provincial,Newfoundland and Labrador,Debt Charges,1062034000,11041911000,0.0962,Consolidated Fund Services
-provincial,Newfoundland and Labrador,Other,2035100000,11041911000,0.1843,"Energy and Mines; Environment, Conservation and Climate Change; Executive Council; Finance; Fisheries and Aquaculture; Forestry, Agriculture and Lands; Government Services; Jobs, Growth and Rural Development; Justice and Public Safety; Labrador Affairs; Legislature; Newfoundland and Labrador Housing Corporation; Public Procurement Agency; Public Service Commission; Tourism, Culture, Arts and Recreation"
-provincial,Nova Scotia,Healthcare,8259537000,19386901000,0.426,Health and Wellness; Seniors and Long-Term Care
-provincial,Nova Scotia,Education,3509980000,19386901000,0.181,Advanced Education; Education and Early Childhood Development
-provincial,Nova Scotia,Social Services,1838432000,19386901000,0.0948,Opportunities and Social Development; Refundable Tax Credits
-provincial,Nova Scotia,Transportation,806137000,19386901000,0.0416,Public Works
-provincial,Nova Scotia,Municipal Transfers,278524000,19386901000,0.0144,Municipal Affairs
-provincial,Nova Scotia,Debt Charges,869591000,19386901000,0.0449,Debt Servicing Costs
-provincial,Nova Scotia,Other,3824700000,19386901000,0.1973,"Agriculture; Communities, Culture, Tourism and Heritage; Cyber Security and Digital Solutions; Emergency Management; Energy; Environment and Climate Change; Finance and Treasury Board; Fisheries and Aquaculture; Growth and Development; Justice; Labour, Skills and Immigration; Natural Resources; Net Loss on Disposal of Crown Assets; Pension Valuation Adjustment; Public Service; Restructuring Costs; Service Nova Scotia"
-provincial,Ontario,Healthcare,97497000000,236336000000,0.4125,Health; Long-Term Care
-provincial,Ontario,Education,56249000000,236336000000,0.238,"Colleges, Universities, Research Excellence and Security; Education; Teachers' Pension"
-provincial,Ontario,Social Services,21548000000,236336000000,0.0912,"Children, Community and Social Services; Seniors and Accessibility"
-provincial,Ontario,Transportation,8437000000,236336000000,0.0357,Transportation
-provincial,Ontario,Municipal Transfers,579000000,236336000000,0.0024,Municipal Partnership Fund
-provincial,Ontario,Debt Charges,15451000000,236336000000,0.0654,Interest and Other Debt Servicing Charges
-provincial,Ontario,Other,36575000000,236336000000,0.1548,"Agriculture, Food and Agribusiness; Attorney General; Board of Internal Economy; Citizenship and Multiculturalism; Contingency Fund; Economic Development, Job Creation and Trade; Emergency Preparedness and Response; Employee and Pensioner Benefits; Energy and Mines; Environment, Conservation and Parks; Executive Offices; Finance; Francophone Affairs; Indigenous Affairs and First Nations Economic Reconciliation; Infrastructure; Labour, Immigration, Training and Skills Development; Municipal Affairs and Housing; Natural Resources; Northern Economic Development and Growth; Power Supply Contract Costs; Public and Business Service Delivery and Procurement; Rural Affairs; Solicitor General; Sport; Tourism, Culture and Gaming; Treasury Board Secretariat"
-provincial,Prince Edward Island,Healthcare,1362804000,3671752000,0.3712,Health and Wellness
-provincial,Prince Edward Island,Education,675967000,3671752000,0.1841,"Education and Early Years; Workforce, Advanced Learning and Population"
-provincial,Prince Edward Island,Social Services,231980000,3671752000,0.0632,Social Development and Seniors
-provincial,Prince Edward Island,Transportation,223055000,3671752000,0.0607,Transportation and Infrastructure
-provincial,Prince Edward Island,Municipal Transfers,9337998,3671752000,0.0025,"Federation of P.E.I. Municipalities (from Housing, Land and Communities); Municipal Equalization Grants (from Housing, Land and Communities); Municipal Training Support (from Housing, Land and Communities); Municipal Transitional Funding (from Housing, Land and Communities)"
-provincial,Prince Edward Island,Debt Charges,170559000,3671752000,0.0465,Interest Charges on Capital Obligations; Interest Charges on Debt
-provincial,Prince Edward Island,Other,998049002,3671752000,0.2718,"Accretion Expense; Agriculture; Amortization of Tangible Capital Assets; Economic Development, Innovation and Trade; Environment, Energy and Climate Action; Executive Council; Finance; Fisheries, Tourism, Sport and Culture; Housing, Land and Communities; Justice and Public Safety; Legislative Assembly; Public Service Commission"
-provincial,Quebec,Healthcare,65945000000,165930000000,0.3974,Santé et Services sociaux
-provincial,Quebec,Education,34724000000,165930000000,0.2093,Enseignement supérieur; Éducation
-provincial,Quebec,Social Services,15444000000,165930000000,0.0931,Emploi et Solidarité sociale; Famille
-provincial,Quebec,Transportation,9176000000,165930000000,0.0553,Transports et Mobilité durable
-provincial,Quebec,Municipal Transfers,4856000000,165930000000,0.0293,Affaires municipales et Habitation (from Affaires municipales et Habitation)
-provincial,Quebec,Debt Charges,10148000000,165930000000,0.0612,Debt service
-provincial,Quebec,Other,25637000000,165930000000,0.1544,"Affaires municipales et Habitation; Environnement, Lutte contre les changements climatiques, Faune et Parcs; Other portfolios; Économie, Innovation et Énergie"
-provincial,Saskatchewan,Healthcare,8671557000,22081010000,0.3927,Health
-provincial,Saskatchewan,Education,4527619000,22081010000,0.205,Education
-provincial,Saskatchewan,Social Services,1896213000,22081010000,0.0859,Social services and assistance
-provincial,Saskatchewan,Transportation,722791000,22081010000,0.0327,Transportation
-provincial,Saskatchewan,Municipal Transfers,814768000,22081010000,0.0369,Community development
-provincial,Saskatchewan,Debt Charges,1073298000,22081010000,0.0486,Financing charges
-provincial,Saskatchewan,Other,4374764000,22081010000,0.1982,Agriculture; Economic development; Environment and natural resources; General government; Protection of persons and property
+level,jurisdiction,category,amount_cad,denominator_cad,rate,in_shares,source_lines
+federal,Federal,Economic Development and Research,26892795484,405233000000,0.0664,True,
+federal,Federal,Culture and Recreation,5894034684,405233000000,0.0145,True,
+federal,Federal,Debt Charges,53541000000,405233000000,0.1321,True,
+federal,Federal,Government Administration,49146115499,405233000000,0.1213,True,
+federal,Federal,Seniors' Benefits,82741000000,405233000000,0.204,True,
+federal,Federal,Employment Insurance,26812000000,405233000000,0.0662,True,
+federal,Federal,Unidentified,28027744164,405233000000,0.0692,True,
+federal,Federal,Environment,4781067811,405233000000,0.0118,True,
+federal,Federal,Child and Family Benefits,30100000000,405233000000,0.0743,True,
+federal,Federal,International Affairs and Aid,9757599637,405233000000,0.0241,True,
+federal,Federal,Health,13936976015,405233000000,0.0344,True,
+federal,Federal,Housing and Communities,874438931,405233000000,0.0022,True,
+federal,Federal,Social Assistance,4685107974,405233000000,0.0116,True,
+federal,Federal,Public Safety and Justice,19325734304,405233000000,0.0477,True,
+federal,Federal,Defence,43065711197,405233000000,0.1063,True,
+federal,Federal,Transportation,5651674300,405233000000,0.0139,True,
+federal,Federal,Other municipal / Indigenous transfers,45795000000,405233000000,,False,
+federal,Federal,Transfers to provinces and territories,110392000000,405233000000,,False,
+federal,Federal,Pollution pricing proceeds returned,4308000000,405233000000,,False,
+provincial,Alberta,Health,31796000000,77541000000,0.4101,True,Health
+provincial,Alberta,Education,18200000000,77541000000,0.2347,True,Education
+provincial,Alberta,Social Assistance,8990000000,77541000000,0.1159,True,Social services
+provincial,Alberta,Government Administration,3408000000,77541000000,0.044,True,General government; Pension recovery
+provincial,Alberta,Economic Development and Research,3317000000,77541000000,0.0428,True,"Agriculture, resource management and economic development"
+provincial,Alberta,Public Safety and Justice,3296000000,77541000000,0.0425,True,Protection of persons and property
+provincial,Alberta,Transportation,2463000000,77541000000,0.0318,True,"Transportation, communications and utilities"
+provincial,Alberta,Municipal Transfers,1477000000,77541000000,0.019,True,Regional planning and development
+provincial,Alberta,Environment,752000000,77541000000,0.0097,True,Environment
+provincial,Alberta,Housing and Communities,467000000,77541000000,0.006,True,Housing
+provincial,Alberta,Culture and Recreation,437000000,77541000000,0.0056,True,Recreation and culture
+provincial,Alberta,Debt Charges,2938000000,77541000000,0.0379,True,Debt servicing costs
+provincial,British Columbia,Health,40185000000,94571000000,0.4249,True,Health
+provincial,British Columbia,Education,20119000000,94571000000,0.2127,True,Education
+provincial,British Columbia,Social Assistance,10780000000,94571000000,0.114,True,Social services
+provincial,British Columbia,Government Administration,7226000000,94571000000,0.0764,True,General government; Other
+provincial,British Columbia,Debt Charges,4898000000,94571000000,0.0518,True,Interest
+provincial,British Columbia,Economic Development and Research,5274000000,94571000000,0.0558,True,Natural resources and economic development
+provincial,British Columbia,Transportation,2714000000,94571000000,0.0287,True,Transportation
+provincial,British Columbia,Public Safety and Justice,3375000000,94571000000,0.0357,True,Protection of persons and property
+provincial,Manitoba,Government Administration,699000000,25915000000,0.027,True,Enabling appropriations; Executive Council; Finance; Innovation and New Technology; Legislative Assembly; Public Service Commission; Public Service Delivery
+provincial,Manitoba,Education,6218000000,25915000000,0.2399,True,Advanced Education and Training; Education and Early Childhood Learning
+provincial,Manitoba,Economic Development and Research,736000000,25915000000,0.0284,True,"Agriculture; Business, Mining, Trade and Job Creation; Labour and Immigration; Natural Resources and Indigenous Futures"
+provincial,Manitoba,Environment,293000000,25915000000,0.0113,True,Environment and Climate Change
+provincial,Manitoba,Social Assistance,2461000000,25915000000,0.095,True,Families; Tax credits
+provincial,Manitoba,Health,9659000000,25915000000,0.3727,True,"Health, Seniors and Long-Term Care; Tobacco settlement"
+provincial,Manitoba,Housing and Communities,851000000,25915000000,0.0328,True,"Housing, Addictions and Homelessness"
+provincial,Manitoba,Public Safety and Justice,1232000000,25915000000,0.0475,True,Emergency expenditures; Justice
+provincial,Manitoba,Municipal Transfers,710000000,25915000000,0.0274,True,Municipal and Northern Relations
+provincial,Manitoba,Culture and Recreation,122000000,25915000000,0.0047,True,"Sport, Culture, Heritage and Tourism"
+provincial,Manitoba,Transportation,621000000,25915000000,0.024,True,Transportation and Infrastructure
+provincial,Manitoba,Debt Charges,2313000000,25915000000,0.0893,True,Debt servicing
+provincial,New Brunswick,Education,3075100000,14946600000,0.2057,True,Education and Training
+provincial,New Brunswick,Health,5145100000,14946600000,0.3442,True,Health
+provincial,New Brunswick,Social Assistance,2365800000,14946600000,0.1583,True,Social Development
+provincial,New Brunswick,Public Safety and Justice,443500000,14946600000,0.0297,True,Protection Services
+provincial,New Brunswick,Economic Development and Research,1001500000,14946600000,0.067,True,Economic Development; Labour and Employment; Resources
+provincial,New Brunswick,Transportation,993900000,14946600000,0.0665,True,Transportation and Infrastructure
+provincial,New Brunswick,Government Administration,991000000,14946600000,0.0663,True,Central Government
+provincial,New Brunswick,Municipal Transfers,201300000,14946600000,0.0135,True,Local Government (from Central Government)
+provincial,New Brunswick,Debt Charges,729400000,14946600000,0.0488,True,Service of the Public Debt
+provincial,Newfoundland and Labrador,Debt Charges,1062034000,11041911000,0.0962,True,Consolidated Fund Services
+provincial,Newfoundland and Labrador,Government Administration,737686000,11041911000,0.0668,True,Executive Council; Finance; Government Services; Legislature; Public Procurement Agency; Public Service Commission
+provincial,Newfoundland and Labrador,Transportation,970509000,11041911000,0.0879,True,Transportation and Infrastructure
+provincial,Newfoundland and Labrador,Economic Development and Research,568543000,11041911000,0.0515,True,"Energy and Mines; Fisheries and Aquaculture; Forestry, Agriculture and Lands; Jobs, Growth and Rural Development; Labrador Affairs"
+provincial,Newfoundland and Labrador,Environment,93442000,11041911000,0.0085,True,"Environment, Conservation and Climate Change"
+provincial,Newfoundland and Labrador,Culture and Recreation,88589000,11041911000,0.008,True,"Tourism, Culture, Arts and Recreation"
+provincial,Newfoundland and Labrador,Social Assistance,479427000,11041911000,0.0434,True,Social Supports and Well-Being
+provincial,Newfoundland and Labrador,Education,1848418000,11041911000,0.1674,True,Education and Early Childhood Development
+provincial,Newfoundland and Labrador,Health,4442752000,11041911000,0.4024,True,Health and Community Services
+provincial,Newfoundland and Labrador,Public Safety and Justice,351239000,11041911000,0.0318,True,Justice and Public Safety
+provincial,Newfoundland and Labrador,Housing and Communities,195601000,11041911000,0.0177,True,Newfoundland and Labrador Housing Corporation
+provincial,Newfoundland and Labrador,Municipal Transfers,201428000,11041911000,0.0182,True,Municipal and Community Affairs
+provincial,Newfoundland and Labrador,Seniors' Benefits,2243000,11041911000,0.0002,True,Seniors
+provincial,Nova Scotia,Education,3509980000,19386901000,0.181,True,Advanced Education; Education and Early Childhood Development
+provincial,Nova Scotia,Economic Development and Research,1010056000,19386901000,0.0521,True,"Agriculture; Energy; Fisheries and Aquaculture; Growth and Development; Labour, Skills and Immigration; Natural Resources"
+provincial,Nova Scotia,Culture and Recreation,211217000,19386901000,0.0109,True,"Communities, Culture, Tourism and Heritage"
+provincial,Nova Scotia,Government Administration,1862778000,19386901000,0.0961,True,Cyber Security and Digital Solutions; Finance and Treasury Board; Net Loss on Disposal of Crown Assets; Pension Valuation Adjustment; Public Service; Restructuring Costs; Service Nova Scotia
+provincial,Nova Scotia,Public Safety and Justice,591464000,19386901000,0.0305,True,Emergency Management; Justice
+provincial,Nova Scotia,Environment,149185000,19386901000,0.0077,True,Environment and Climate Change
+provincial,Nova Scotia,Health,8259537000,19386901000,0.426,True,Health and Wellness; Seniors and Long-Term Care
+provincial,Nova Scotia,Municipal Transfers,278524000,19386901000,0.0144,True,Municipal Affairs
+provincial,Nova Scotia,Social Assistance,1838432000,19386901000,0.0948,True,Opportunities and Social Development; Refundable Tax Credits
+provincial,Nova Scotia,Transportation,806137000,19386901000,0.0416,True,Public Works
+provincial,Nova Scotia,Debt Charges,869591000,19386901000,0.0449,True,Debt Servicing Costs
+provincial,Ontario,Economic Development and Research,17988000000,236336000000,0.0761,True,"Agriculture, Food and Agribusiness; Economic Development, Job Creation and Trade; Energy and Mines; Infrastructure; Labour, Immigration, Training and Skills Development; Natural Resources; Northern Economic Development and Growth; Power Supply Contract Costs; Rural Affairs"
+provincial,Ontario,Public Safety and Justice,7498000000,236336000000,0.0317,True,Attorney General; Emergency Preparedness and Response; Solicitor General
+provincial,Ontario,Government Administration,5810000000,236336000000,0.0246,True,Board of Internal Economy; Contingency Fund; Employee and Pensioner Benefits; Executive Offices; Finance; Public and Business Service Delivery and Procurement; Treasury Board Secretariat
+provincial,Ontario,Social Assistance,21387000000,236336000000,0.0905,True,"Children, Community and Social Services"
+provincial,Ontario,Culture and Recreation,2203000000,236336000000,0.0093,True,"Citizenship and Multiculturalism; Francophone Affairs; Sport; Tourism, Culture and Gaming"
+provincial,Ontario,Education,56249000000,236336000000,0.238,True,"Colleges, Universities, Research Excellence and Security; Education; Teachers' Pension"
+provincial,Ontario,Environment,1036000000,236336000000,0.0044,True,"Environment, Conservation and Parks"
+provincial,Ontario,Debt Charges,15451000000,236336000000,0.0654,True,Interest and Other Debt Servicing Charges
+provincial,Ontario,Municipal Transfers,579000000,236336000000,0.0024,True,Municipal Partnership Fund
+provincial,Ontario,Health,97497000000,236336000000,0.4126,True,Health; Long-Term Care
+provincial,Ontario,Housing and Communities,2040000000,236336000000,0.0086,True,Indigenous Affairs and First Nations Economic Reconciliation; Municipal Affairs and Housing
+provincial,Ontario,Seniors' Benefits,161000000,236336000000,0.0007,True,Seniors and Accessibility
+provincial,Ontario,Transportation,8437000000,236336000000,0.0357,True,Transportation
+provincial,Prince Edward Island,Economic Development and Research,272736000,3671752000,0.0743,True,"Agriculture; Economic Development, Innovation and Trade"
+provincial,Prince Edward Island,Education,675967000,3671752000,0.1841,True,"Education and Early Years; Workforce, Advanced Learning and Population"
+provincial,Prince Edward Island,Environment,117328000,3671752000,0.032,True,"Environment, Energy and Climate Action"
+provincial,Prince Edward Island,Government Administration,195675000,3671752000,0.0533,True,Accretion Expense; Executive Council; Finance; Legislative Assembly; Public Service Commission
+provincial,Prince Edward Island,Culture and Recreation,57425000,3671752000,0.0156,True,"Fisheries, Tourism, Sport and Culture"
+provincial,Prince Edward Island,Health,1362804000,3671752000,0.3712,True,Health and Wellness
+provincial,Prince Edward Island,Housing and Communities,121897002,3671752000,0.0332,True,"Housing, Land and Communities"
+provincial,Prince Edward Island,Municipal Transfers,9337998,3671752000,0.0025,True,"Federation of P.E.I. Municipalities (from Housing, Land and Communities); Municipal Equalization Grants (from Housing, Land and Communities); Municipal Training Support (from Housing, Land and Communities); Municipal Transitional Funding (from Housing, Land and Communities)"
+provincial,Prince Edward Island,Public Safety and Justice,94418000,3671752000,0.0257,True,Justice and Public Safety
+provincial,Prince Edward Island,Social Assistance,231980000,3671752000,0.0632,True,Social Development and Seniors
+provincial,Prince Edward Island,Transportation,223055000,3671752000,0.0607,True,Transportation and Infrastructure
+provincial,Prince Edward Island,Debt Charges,170559000,3671752000,0.0465,True,Interest Charges on Capital Obligations; Interest Charges on Debt
+provincial,Prince Edward Island,Unidentified,138570000,3671752000,0.0377,True,Amortization of Tangible Capital Assets
+provincial,Quebec,Government Administration,6804000000,165930000000,0.041,True,"Assemblée nationale; Conseil du trésor, Administration gouvernementale et Efficacité de l’État; Conseil exécutif; Cybersécurité et Numérique; Finances; Personnes désignées par l’Assemblée nationale"
+provincial,Quebec,Housing and Communities,397000000,165930000000,0.0024,True,Affaires municipales et Habitation
+provincial,Quebec,Municipal Transfers,4856000000,165930000000,0.0293,True,Affaires municipales et Habitation (from Affaires municipales et Habitation)
+provincial,Quebec,Economic Development and Research,7936000000,165930000000,0.0478,True,"Agriculture, Pêcheries et Alimentation; Ressources naturelles et Forêts; Tourisme; Travail; Économie, Innovation et Énergie"
+provincial,Quebec,Culture and Recreation,2223000000,165930000000,0.0134,True,Culture et Communications; Langue française
+provincial,Quebec,Education,34724000000,165930000000,0.2093,True,Enseignement supérieur; Éducation
+provincial,Quebec,Social Assistance,6340000000,165930000000,0.0382,True,"Emploi et Solidarité sociale; Immigration, Francisation et Intégration"
+provincial,Quebec,Environment,1802000000,165930000000,0.0109,True,"Environnement, Lutte contre les changements climatiques, Faune et Parcs"
+provincial,Quebec,Child and Family Benefits,9633000000,165930000000,0.0581,True,Famille
+provincial,Quebec,Public Safety and Justice,5796000000,165930000000,0.0349,True,Justice; Sécurité publique
+provincial,Quebec,International Affairs and Aid,150000000,165930000000,0.0009,True,Relations internationales et Francophonie
+provincial,Quebec,Health,65945000000,165930000000,0.3973,True,Santé et Services sociaux
+provincial,Quebec,Transportation,9176000000,165930000000,0.0553,True,Transports et Mobilité durable
+provincial,Quebec,Debt Charges,10148000000,165930000000,0.0612,True,Debt service
+provincial,Saskatchewan,Health,8671557000,22081010000,0.3928,True,Health
+provincial,Saskatchewan,Education,4527619000,22081010000,0.205,True,Education
+provincial,Saskatchewan,Social Assistance,1896213000,22081010000,0.0859,True,Social services and assistance
+provincial,Saskatchewan,Public Safety and Justice,1499352000,22081010000,0.0679,True,Protection of persons and property
+provincial,Saskatchewan,Economic Development and Research,1768675000,22081010000,0.0801,True,Agriculture; Economic development
+provincial,Saskatchewan,Debt Charges,1073298000,22081010000,0.0486,True,Financing charges
+provincial,Saskatchewan,Municipal Transfers,814768000,22081010000,0.0369,True,Community development
+provincial,Saskatchewan,Transportation,722791000,22081010000,0.0327,True,Transportation
+provincial,Saskatchewan,Government Administration,684892000,22081010000,0.031,True,General government
+provincial,Saskatchewan,Environment,421845000,22081010000,0.0191,True,Environment and natural resources

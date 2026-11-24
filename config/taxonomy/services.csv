@@ -1,0 +1,19 @@
+service_id,name,cofog_prefixes,notes
+health,Health,07,
+education,Education,09,
+seniors_benefits,Seniors' Benefits,10.2,"Income support for seniors (OAS/GIS, provincial seniors' programs)"
+child_family_benefits,Child and Family Benefits,10.4,"Canada Child Benefit, child and family services"
+employment_insurance,Employment Insurance,10.5,
+social_assistance,Social Assistance,10,"Rest of social protection: income assistance, disability support (10.1+10.3), social exclusion (10.7), n.e.c."
+housing_communities,Housing and Communities,06;10.6,"COFOG 06 plus housing benefits (10.6)"
+defence,Defence,02,
+public_safety_justice,Public Safety and Justice,03,
+transportation,Transportation,04.5,
+economic_development,Economic Development and Research,04;01.4,"Rest of economic affairs plus basic research"
+environment,Environment,05,
+culture_recreation,Culture and Recreation,08,
+international,International Affairs and Aid,01.2,
+government_administration,Government Administration,01,"Rest of general public services: executive, legislature, finance, central services, n.e.c."
+debt_charges,Debt Charges,01.7,"Financing: interest on past borrowing"
+municipal_transfers,Municipal Transfers,,"Provincial only: transfers to municipalities whose use is unknown (config/output/category-overrides.csv)"
+unidentified,Unidentified,_unallocated,"Lines the published reports don't split by service; a measured gap"

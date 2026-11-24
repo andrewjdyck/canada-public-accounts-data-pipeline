@@ -3,47 +3,176 @@
   "title": "can-tax-receipt spending shares (schemaVersion 1)",
   "description": "This repo's copy of the output contract (PLAN.md 'Output Contract'). Extra rules not expressible here (shares sum to 1, exactly the 10 provinces) are checked in src/publish/validate_spending_shares.py.",
   "type": "object",
-  "required": ["schemaVersion", "dataset", "pipelineVersion", "generatedAt", "fiscalYear", "federal", "provincial"],
+  "required": [
+    "schemaVersion",
+    "dataset",
+    "pipelineVersion",
+    "generatedAt",
+    "fiscalYear",
+    "federal",
+    "provincial"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schemaVersion": {"const": 1},
-    "dataset": {"const": "canada-spending-shares"},
-    "pipelineVersion": {"type": "string", "minLength": 1},
-    "generatedAt": {"type": "string", "format": "date"},
-    "fiscalYear": {"type": "string", "pattern": "^\\d{4}-\\d{2}$"},
-    "federal": {"$ref": "#/$defs/government"},
-    "provincial": {"type": "object", "additionalProperties": {"$ref": "#/$defs/government"}}
+    "schemaVersion": {
+      "const": 1
+    },
+    "dataset": {
+      "const": "canada-spending-shares"
+    },
+    "pipelineVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "fiscalYear": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}$"
+    },
+    "federal": {
+      "$ref": "#/$defs/government"
+    },
+    "provincial": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/government"
+      }
+    }
   },
   "$defs": {
     "government": {
-      "type": "object", "required": ["_meta", "categories"], "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "_meta",
+        "categories"
+      ],
+      "additionalProperties": false,
       "properties": {
         "_meta": {
           "type": "object",
-          "required": ["source", "sourceUrl", "sourceDate", "dataQuality", "documentId", "pages", "verified", "extractionNotes"],
+          "required": [
+            "source",
+            "sourceUrl",
+            "sourceDate",
+            "dataQuality",
+            "documentId",
+            "pages",
+            "verified",
+            "extractionNotes"
+          ],
           "additionalProperties": false,
           "properties": {
-            "source": {"type": "string", "minLength": 1},
-            "sourceUrl": {"type": "string", "format": "uri"},
-            "sourceDate": {"type": "string"},
-            "dataQuality": {"enum": ["actual", "estimate", "placeholder"]},
-            "documentId": {"type": "string"},
-            "pages": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1},
-            "verified": {"type": "boolean"},
-            "extractionNotes": {"type": "string"}
+            "source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sourceUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "sourceDate": {
+              "type": "string"
+            },
+            "dataQuality": {
+              "enum": [
+                "actual",
+                "estimate",
+                "placeholder"
+              ]
+            },
+            "documentId": {
+              "type": "string"
+            },
+            "pages": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "minItems": 1
+            },
+            "verified": {
+              "type": "boolean"
+            },
+            "extractionNotes": {
+              "type": "string"
+            },
+            "excludedFromShares": {
+              "type": "array",
+              "description": "Amounts recorded in gold but left out of numerator and denominator (e.g. federal transfers to provinces).",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "amountCad",
+                  "reason"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "amountCad": {
+                    "type": "number"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         },
-        "categories": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/category"}}
+        "categories": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/category"
+          }
+        }
       }
     },
     "category": {
-      "type": "object", "required": ["name", "rate"], "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "name",
+        "rate"
+      ],
+      "additionalProperties": false,
       "properties": {
-        "name": {"type": "string", "minLength": 1},
-        "rate": {"type": "number", "minimum": 0, "maximum": 1},
-        "subcategories": {"type": "array", "items": {
-          "type": "object", "required": ["name", "rate"], "additionalProperties": false,
-          "properties": {"name": {"type": "string"}, "rate": {"type": "number", "minimum": 0, "maximum": 1}}}}
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "subcategories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "rate"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "rate": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        }
       }
     }
   }

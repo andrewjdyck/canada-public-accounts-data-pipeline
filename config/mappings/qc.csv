@@ -1,13 +1,28 @@
 jurisdiction,table_id,dimension,source_label,concept_id,weight,valid_from,valid_to,method,confidence,notes
-QC,statement-of-operations-expenditure,function,Santé et Services sociaux,07,1,2024-2025,,manual,medium,Includes CHSLD long-term care and social services (10)
-QC,statement-of-operations-expenditure,function,Éducation,09,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,Enseignement supérieur,09,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,Famille,10,1,2024-2025,,manual,high,Child care and family benefits (10.4)
-QC,statement-of-operations-expenditure,function,Transports et Mobilité durable,04.5,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,Emploi et Solidarité sociale,10,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,Affaires municipales et Habitation,06,1,2024-2025,,manual,low,Municipal transfers (01.8) and housing (06.1)
-QC,statement-of-operations-expenditure,function,"Économie, Innovation et Énergie",04,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,"Environnement, Lutte contre les changements climatiques, Faune et Parcs",05,1,2024-2025,,manual,high,
-QC,statement-of-operations-expenditure,function,Other portfolios,_unallocated,1,2024-2025,,manual,high,"About $18B across justice, public security, culture, agriculture, finance..."
-QC,statement-of-operations-expenditure,function,Debt service,01.7,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Assemblée nationale,01.1,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Personnes désignées par l’Assemblée nationale,01.1,1,2024-2025,,manual,high,"Auditor General, ombudsman and other officers"
+QC,expenditure-by-portfolio,function,Affaires municipales et Habitation,06,1,2024-2025,,manual,low,Municipal transfers carved out to Municipal Transfers (config/output/category-overrides.csv); rest is housing and community programs
+QC,expenditure-by-portfolio,function,"Agriculture, Pêcheries et Alimentation",04.2,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,"Conseil du trésor, Administration gouvernementale et Efficacité de l’État",01.3,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Conseil exécutif,01.1,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Culture et Communications,08,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Cybersécurité et Numérique,01.3,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,"Économie, Innovation et Énergie",04,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Éducation,09,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Emploi et Solidarité sociale,10,1,2024-2025,,manual,high,Social assistance and solidarity programs
+QC,expenditure-by-portfolio,function,Enseignement supérieur,09,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,"Environnement, Lutte contre les changements climatiques, Faune et Parcs",05,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Famille,10.4,1,2024-2025,,manual,high,Subsidized child care and family support
+QC,expenditure-by-portfolio,function,Finances,01.1,1,2024-2025,,manual,medium,
+QC,expenditure-by-portfolio,function,"Immigration, Francisation et Intégration",10,1,2024-2025,,manual,medium,Integration and French-language services for newcomers
+QC,expenditure-by-portfolio,function,Justice,03.3,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Langue française,08,1,2024-2025,,manual,medium,
+QC,expenditure-by-portfolio,function,Relations internationales et Francophonie,01.2,1,2024-2025,,manual,medium,International relations
+QC,expenditure-by-portfolio,function,Ressources naturelles et Forêts,04.2,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Santé et Services sociaux,07,1,2024-2025,,manual,medium,Includes CHSLD long-term care and social services
+QC,expenditure-by-portfolio,function,Sécurité publique,03,1,2024-2025,,manual,high,"Police, corrections, civil security"
+QC,expenditure-by-portfolio,function,Tourisme,04,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Transports et Mobilité durable,04.5,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Travail,04.1,1,2024-2025,,manual,high,
+QC,expenditure-by-portfolio,function,Debt service,01.7,1,2024-2025,,manual,high,
 QC,change-in-net-debt-depreciation,object,Depreciation,amortization,1,2024-2025,,manual,high,

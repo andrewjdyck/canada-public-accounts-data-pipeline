@@ -11,9 +11,107 @@ statement-of-operations-expense,rows_sum -> Total transfer payments,actual_2025_
 statement-of-operations-expense,rows_sum -> Total transfer payments,actual_2024_25,359415.0,359415.0,0.0,True
 major-transfers-other-governments,rows_sum -> Total major transfer payments to other levels of government,actual_2025_26,110841.0,110841.0,0.0,True
 major-transfers-other-governments,rows_sum -> Total major transfer payments to other levels of government,actual_2024_25,105101.0,105101.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,major_transfers_2025_26,252512.0,252512.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,major_transfers_2024_25,238849.0,238849.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,other_transfers_2025_26,114994.0,114994.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,other_transfers_2024_25,120566.0,120566.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,transfer_payments_2025_26,367506.0,367506.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,transfer_payments_2024_25,359415.0,359415.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,other_expenses_2025_26,144681.0,144681.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,other_expenses_2024_25,134474.0,134474.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,public_debt_charges_2025_26,53541.0,53541.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,public_debt_charges_2024_25,53410.0,53410.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,total_2025_26,565728.0,565728.0,0.0,True
+table-3-6-grid,rows_sum -> Total expenses,total_2024_25,547299.0,547299.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Agriculture and Agri-Food,3999.0,3999.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Canadian Heritage,5530.0,5530.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Crown-Indigenous Relations and Northern Affairs,9484.0,9484.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Democratic Institutions,812.0,812.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Employment and Workforce Development,138721.0,138721.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Energy and Natural Resources,6408.0,6408.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Environment and Climate Change,4507.0,4507.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Finance and National Revenue,216754.0,216754.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Fisheries and Oceans,3573.0,3573.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Global Affairs,9414.0,9414.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Health,15629.0,15629.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,"Housing, Infrastructure and Communities",14745.0,14745.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,"Immigration, Refugees and Citizenship",6122.0,6122.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Indigenous Services,25745.0,25745.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,"Innovation, Science and Industry",11794.0,11794.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Justice,2957.0,2957.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,National Defence,39361.0,39361.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Office of the Governor General's Secretary,26.0,26.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Parliament,982.0,982.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Privy Council,402.0,402.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Public Safety,14632.0,14632.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Public Services and Procurement,7004.0,7004.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Transport,5261.0,5261.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Treasury Board,5520.0,5520.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Veterans Affairs,499.0,499.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,"Women, Gender Equality and Youth",394.0,394.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Provision for valuation and other items,1813.0,1813.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Net actuarial losses,13640.0,13640.0,0.0,True
+table-3-6-grid,columns_sum -> total_2025_26,Total expenses,565728.0,565728.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Agriculture and Agri-Food,3953.0,3953.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Canadian Heritage,5711.0,5711.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Crown-Indigenous Relations and Northern Affairs,12612.0,12612.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Democratic Institutions,330.0,330.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Employment and Workforce Development,130324.0,130324.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Energy and Natural Resources,6694.0,6694.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Environment and Climate Change,4414.0,4414.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Finance and National Revenue,216483.0,216483.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Fisheries and Oceans,2120.0,2120.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Global Affairs,9444.0,9444.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Health,14055.0,14055.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,"Housing, Infrastructure and Communities",14182.0,14182.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,"Immigration, Refugees and Citizenship",7326.0,7326.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Indigenous Services,26737.0,26737.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,"Innovation, Science and Industry",11030.0,11030.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Justice,3113.0,3113.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,National Defence,37605.0,37605.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Office of the Governor General's Secretary,29.0,29.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Parliament,954.0,954.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Privy Council,422.0,422.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Public Safety,18787.0,18787.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Public Services and Procurement,7029.0,7029.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Transport,6006.0,6006.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Treasury Board,11748.0,11748.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Veterans Affairs,546.0,546.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,"Women, Gender Equality and Youth",363.0,363.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Provision for valuation and other items,-8738.0,-8738.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Net actuarial losses,4020.0,4020.0,0.0,True
+table-3-6-grid,columns_sum -> total_2024_25,Total expenses,547299.0,547299.0,0.0,True
 (cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2025_26 vs actual_2025_26,565728.0,565728.0,0.0,True
 (cross),expenses-by-segment[Total expenses] = expenses-by-object[Total expenses],actual_2024_25 vs actual_2024_25,547299.0,547299.0,0.0,True
 (cross),major-transfers-other-governments[Total major transfer payments to other levels of government] = statement-of-operations-expense[Major transfer payments to other levels of government],actual_2025_26 vs actual_2025_26,110841.0,110841.0,0.0,True
 (cross),"statement-of-operations-expense[Total expenses, excluding net actuarial losses] = expenses-by-segment[Total expenses, excluding net actuarial losses]",actual_2025_26 vs actual_2025_26,552088.0,552088.0,0.0,True
 (cross),major-transfers-other-governments[Total major transfer payments to other levels of government] = statement-of-operations-expense[Major transfer payments to other levels of government],actual_2024_25 vs actual_2024_25,105101.0,105101.0,0.0,True
 (cross),"statement-of-operations-expense[Total expenses, excluding net actuarial losses] = expenses-by-segment[Total expenses, excluding net actuarial losses]",actual_2024_25 vs actual_2024_25,543279.0,543279.0,0.0,True
+(cross),table-3-6-grid[Agriculture and Agri-Food] = expenses-by-segment[Agriculture and Agri-Food],total_2025_26 vs actual_2025_26,3999.0,3999.0,0.0,True
+(cross),table-3-6-grid[Canadian Heritage] = expenses-by-segment[Canadian Heritage],total_2025_26 vs actual_2025_26,5530.0,5530.0,0.0,True
+(cross),table-3-6-grid[Crown-Indigenous Relations and Northern Affairs] = expenses-by-segment[Crown-Indigenous Relations and Northern Affairs],total_2025_26 vs actual_2025_26,9484.0,9484.0,0.0,True
+(cross),table-3-6-grid[Democratic Institutions] = expenses-by-segment[Democratic Institutions],total_2025_26 vs actual_2025_26,812.0,812.0,0.0,True
+(cross),table-3-6-grid[Employment and Workforce Development] = expenses-by-segment[Employment and Workforce Development],total_2025_26 vs actual_2025_26,138721.0,138721.0,0.0,True
+(cross),table-3-6-grid[Energy and Natural Resources] = expenses-by-segment[Energy and Natural Resources],total_2025_26 vs actual_2025_26,6408.0,6408.0,0.0,True
+(cross),table-3-6-grid[Environment and Climate Change] = expenses-by-segment[Environment and Climate Change],total_2025_26 vs actual_2025_26,4507.0,4507.0,0.0,True
+(cross),table-3-6-grid[Finance and National Revenue] = expenses-by-segment[Finance and National Revenue],total_2025_26 vs actual_2025_26,216754.0,216754.0,0.0,True
+(cross),table-3-6-grid[Fisheries and Oceans] = expenses-by-segment[Fisheries and Oceans],total_2025_26 vs actual_2025_26,3573.0,3573.0,0.0,True
+(cross),table-3-6-grid[Global Affairs] = expenses-by-segment[Global Affairs],total_2025_26 vs actual_2025_26,9414.0,9414.0,0.0,True
+(cross),table-3-6-grid[Health] = expenses-by-segment[Health],total_2025_26 vs actual_2025_26,15629.0,15629.0,0.0,True
+(cross),"table-3-6-grid[Housing, Infrastructure and Communities] = expenses-by-segment[Housing, Infrastructure and Communities]",total_2025_26 vs actual_2025_26,14745.0,14745.0,0.0,True
+(cross),"table-3-6-grid[Immigration, Refugees and Citizenship] = expenses-by-segment[Immigration, Refugees and Citizenship]",total_2025_26 vs actual_2025_26,6122.0,6122.0,0.0,True
+(cross),table-3-6-grid[Indigenous Services] = expenses-by-segment[Indigenous Services],total_2025_26 vs actual_2025_26,25745.0,25745.0,0.0,True
+(cross),"table-3-6-grid[Innovation, Science and Industry] = expenses-by-segment[Innovation, Science and Industry]",total_2025_26 vs actual_2025_26,11794.0,11794.0,0.0,True
+(cross),table-3-6-grid[Justice] = expenses-by-segment[Justice],total_2025_26 vs actual_2025_26,2957.0,2957.0,0.0,True
+(cross),table-3-6-grid[National Defence] = expenses-by-segment[National Defence],total_2025_26 vs actual_2025_26,39361.0,39361.0,0.0,True
+(cross),table-3-6-grid[Office of the Governor General's Secretary] = expenses-by-segment[Office of the Governor General's Secretary],total_2025_26 vs actual_2025_26,26.0,26.0,0.0,True
+(cross),table-3-6-grid[Parliament] = expenses-by-segment[Parliament],total_2025_26 vs actual_2025_26,982.0,982.0,0.0,True
+(cross),table-3-6-grid[Privy Council] = expenses-by-segment[Privy Council],total_2025_26 vs actual_2025_26,402.0,402.0,0.0,True
+(cross),table-3-6-grid[Public Safety] = expenses-by-segment[Public Safety],total_2025_26 vs actual_2025_26,14632.0,14632.0,0.0,True
+(cross),table-3-6-grid[Public Services and Procurement] = expenses-by-segment[Public Services and Procurement],total_2025_26 vs actual_2025_26,7004.0,7004.0,0.0,True
+(cross),table-3-6-grid[Transport] = expenses-by-segment[Transport],total_2025_26 vs actual_2025_26,5261.0,5261.0,0.0,True
+(cross),table-3-6-grid[Treasury Board] = expenses-by-segment[Treasury Board],total_2025_26 vs actual_2025_26,5520.0,5520.0,0.0,True
+(cross),table-3-6-grid[Veterans Affairs] = expenses-by-segment[Veterans Affairs],total_2025_26 vs actual_2025_26,499.0,499.0,0.0,True
+(cross),"table-3-6-grid[Women, Gender Equality and Youth] = expenses-by-segment[Women, Gender Equality and Youth]",total_2025_26 vs actual_2025_26,394.0,394.0,0.0,True
+(cross),table-3-6-grid[Provision for valuation and other items] = expenses-by-segment[Provision for valuation and other items],total_2025_26 vs actual_2025_26,1813.0,1813.0,0.0,True
+(cross),table-3-6-grid[Total expenses] = expenses-by-segment[Total expenses],total_2025_26 vs actual_2025_26,565728.0,565728.0,0.0,True

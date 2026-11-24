@@ -179,17 +179,17 @@ StatCan components outside government proper (not consolidated, shown for contex
 
 | Division | PA expense | PA amortization | PA ex amort. | StatCan | Gap | Gap % |
 |---|--:|--:|--:|--:|--:|--:|
-| 01 General public services | 9,969 | 0 | 9,969 | 30,283 | -20,314 | -67.1% |
+| 01 General public services | 16,283 | 0 | 16,283 | 30,283 | -14,000 | -46.2% |
 | 02 Defence | 0 | 0 | 0 | 0 | 0 |  |
-| 03 Public order and safety | 0 | 0 | 0 | 4,786 | -4,786 | -100.0% |
-| 04 Economic affairs | 12,453 | 0 | 12,453 | 15,636 | -3,183 | -20.4% |
+| 03 Public order and safety | 5,211 | 0 | 5,211 | 4,786 | 425 | +8.9% |
+| 04 Economic affairs | 16,290 | 0 | 16,290 | 15,636 | 654 | +4.2% |
 | 05 Environmental protection | 2,181 | 0 | 2,181 | 2,303 | -122 | -5.3% |
 | 06 Housing and community amenities | 5,005 | 0 | 5,005 | 2,825 | 2,180 | +77.2% |
 | 07 Health | 64,227 | 0 | 64,227 | 60,729 | 3,498 | +5.8% |
-| 08 Recreation, culture and religion | 0 | 0 | 0 | 2,735 | -2,735 | -100.0% |
+| 08 Recreation, culture and religion | 2,033 | 0 | 2,033 | 2,735 | -702 | -25.7% |
 | 09 Education | 34,735 | 0 | 34,735 | 31,485 | 3,250 | +10.3% |
-| 10 Social protection | 14,722 | 0 | 14,722 | 32,026 | -17,304 | -54.0% |
-| _unallocated Unallocated (spans several functions) | 17,971 | 5,569 | 12,402 | 0 | 12,402 |  |
+| 10 Social protection | 15,298 | 0 | 15,298 | 32,026 | -16,728 | -52.2% |
+| _unallocated Unallocated (spans several functions) | 0 | 5,569 | -5,569 | 0 | -5,569 |  |
 | **Total expense** | 161,263 | 5,569 | 155,694 | 182,808 | -27,114 | -14.8% |
 
 StatCan components outside government proper (not consolidated, shown for context only): health and social service institutions 43,419, school boards 18,748 (school year ending Aug 31 of the reference year), universities and colleges 8,749.

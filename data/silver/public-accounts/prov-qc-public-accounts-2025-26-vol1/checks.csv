@@ -2,5 +2,61 @@ table_id,check,where,computed,stated,diff,ok
 statement-of-operations-expenditure,rows_sum -> Total expenditure,budget_2025_26,165772.0,165772.0,0.0,True
 statement-of-operations-expenditure,rows_sum -> Total expenditure,actual_2025_26,165930.0,165930.0,0.0,True
 statement-of-operations-expenditure,rows_sum -> Total expenditure,actual_2024_25,161263.0,161263.0,0.0,True
-portfolio-by-object-2025-26,columns_sum -> total_2025_26,Affaires municipales et Habitation,5253.0,5253.0,0.0,True
-(cross),portfolio-by-object-2025-26[Affaires municipales et Habitation] = statement-of-operations-expenditure[Affaires municipales et Habitation],total_2025_26 vs actual_2025_26,5253.0,5253.0,0.0,True
+expenditure-by-portfolio,rows_sum -> Total expenditure,total_2025_26,165930.0,165930.0,0.0,True
+expenditure-by-portfolio,rows_sum -> Total expenditure,total_2024_25,161263.0,161263.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Assemblée nationale,196.0,196.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Personnes désignées par l’Assemblée nationale,160.0,160.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Affaires municipales et Habitation,5253.0,5253.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,"Agriculture, Pêcheries et Alimentation",1525.0,1525.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,"Conseil du trésor, Administration gouvernementale et Efficacité de l’État",1224.0,1224.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Conseil exécutif,612.0,612.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Culture et Communications,2149.0,2149.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Cybersécurité et Numérique,345.0,345.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,"Économie, Innovation et Énergie",4365.0,4365.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Éducation,23541.0,23541.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Emploi et Solidarité sociale,5811.0,5811.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Enseignement supérieur,11183.0,11183.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,"Environnement, Lutte contre les changements climatiques, Faune et Parcs",1802.0,1802.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Famille,9633.0,9633.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Finances,4267.0,4267.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,"Immigration, Francisation et Intégration",529.0,529.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Justice,2524.0,2524.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Langue française,74.0,74.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Relations internationales et Francophonie,150.0,150.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Ressources naturelles et Forêts,1293.0,1293.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Santé et Services sociaux,65945.0,65945.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Sécurité publique,3272.0,3272.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Tourisme,529.0,529.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Transports et Mobilité durable,9176.0,9176.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2025_26,Travail,224.0,224.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Assemblée nationale,192.0,192.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Personnes désignées par l’Assemblée nationale,146.0,146.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Affaires municipales et Habitation,5005.0,5005.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,"Agriculture, Pêcheries et Alimentation",1606.0,1606.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,"Conseil du trésor, Administration gouvernementale et Efficacité de l’État",1239.0,1239.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Conseil exécutif,605.0,605.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Culture et Communications,1961.0,1961.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Cybersécurité et Numérique,356.0,356.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,"Économie, Innovation et Énergie",4769.0,4769.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Éducation,23352.0,23352.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Emploi et Solidarité sociale,5707.0,5707.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Enseignement supérieur,11383.0,11383.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,"Environnement, Lutte contre les changements climatiques, Faune et Parcs",2181.0,2181.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Famille,9015.0,9015.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Finances,3619.0,3619.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,"Immigration, Francisation et Intégration",576.0,576.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Justice,2269.0,2269.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Langue française,72.0,72.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Relations internationales et Francophonie,157.0,157.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Ressources naturelles et Forêts,1388.0,1388.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Santé et Services sociaux,64227.0,64227.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Sécurité publique,2942.0,2942.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Tourisme,617.0,617.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Transports et Mobilité durable,7684.0,7684.0,0.0,True
+expenditure-by-portfolio,columns_sum -> total_2024_25,Travail,226.0,226.0,0.0,True
+(cross),expenditure-by-portfolio[Total expenditure] = statement-of-operations-expenditure[Total expenditure],total_2025_26 vs actual_2025_26,165930.0,165930.0,0.0,True
+(cross),expenditure-by-portfolio[Total expenditure] = statement-of-operations-expenditure[Total expenditure],total_2024_25 vs actual_2024_25,161263.0,161263.0,0.0,True
+(cross),expenditure-by-portfolio[Santé et Services sociaux] = statement-of-operations-expenditure[Santé et Services sociaux],total_2025_26 vs actual_2025_26,65945.0,65945.0,0.0,True
+(cross),expenditure-by-portfolio[Éducation] = statement-of-operations-expenditure[Éducation],total_2025_26 vs actual_2025_26,23541.0,23541.0,0.0,True
+(cross),expenditure-by-portfolio[Famille] = statement-of-operations-expenditure[Famille],total_2025_26 vs actual_2025_26,9633.0,9633.0,0.0,True
+(cross),expenditure-by-portfolio[Affaires municipales et Habitation] = statement-of-operations-expenditure[Affaires municipales et Habitation],total_2025_26 vs actual_2025_26,5253.0,5253.0,0.0,True

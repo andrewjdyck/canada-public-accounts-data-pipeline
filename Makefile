@@ -18,6 +18,7 @@ extract:
 clean:
 	$(PY) src/clean/clean_statcan_cofog.py
 	$(PY) src/clean/build_public_accounts_facts.py
+	$(PY) src/clean/build_federal_leaves.py
 
 # gold: public accounts vs StatCan CCOFOG
 reconcile:
@@ -26,3 +27,4 @@ reconcile:
 # gold: the can-tax-receipt output file, validated against config/output/spending-shares.schema.json
 publish:
 	$(PY) src/publish/build_spending_shares.py
+	$(PY) src/docs/render_service_map.py

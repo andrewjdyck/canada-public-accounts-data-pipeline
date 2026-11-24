@@ -41,6 +41,7 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 | gold | `data/gold/statcan-cofog.csv` | `src/clean/clean_statcan_cofog.py` | StatCan COFOG with the same jurisdiction, fiscal-year and concept ids |
 | gold | `data/gold/reconciliation/` | `src/reconcile/reconcile_cofog.py` | Public accounts vs StatCan by COFOG division, plus `summary.md` |
 | gold | `data/gold/validation/` | clean step | Mapping and total checks |
+| gold | `data/gold/federal-leaves.csv` | `src/clean/build_federal_leaves.py` | Every federal dollar as one leaf of the Table 3.6 grid (ministry × payment type), with its treatment (service, financing, unidentified, or excluded pass-through) and service ([design](docs/federal-design.md)) |
 | gold | `data/gold/spending-shares/<fy>.yaml` | `src/publish/build_spending_shares.py` | **The can-tax-receipt output file** (validated), plus `<fy>-amounts.csv` with the dollars behind each rate |
 
 | Config | Purpose |
@@ -49,7 +50,9 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 | `config/mappings/<jurisdiction>.csv` | The "spread": each source line maps to a concept, with weights for splits ([README](config/mappings/README.md)) |
 | `config/taxonomy/` | COFOG concepts, object concepts, app category rollups, StatCan components, jurisdictions ([README](config/taxonomy/README.md)) |
 | `config/reconciling-items.csv` | Known reasons public accounts and StatCan differ |
-| `config/output/` | Output contract settings: category order, federal rules, municipal-transfer overrides, and this repo's copy of the output schema |
+| `config/taxonomy/services.csv` | **The service categories** (COFOG → service). Review map: [docs/cofog-to-services.md](docs/cofog-to-services.md) |
+| `config/federal/` | Federal leaves (`leaves.csv`) and each ministry's default treatment and service by payment type (`ministry-services.csv`) |
+| `config/output/` | Output contract settings, provincial Municipal Transfers overrides, and this repo's copy of the output schema |
 
 ## Running it
 
@@ -83,13 +86,13 @@ Each step exits non-zero if its checks fail, so bad numbers never reach gold. To
 
 ## Current state
 
-_As of 2026-11-21._
+_As of 2026-11-24._
 
-- Bronze: FY2025-26 public accounts for federal plus all 10 provinces, StatCan tables 10-10-0024-01 and 10-10-0005-01.
-- Silver and gold: **all 11 jurisdictions.** Each has an expense-by-function (or ministry) table and an amortization source; Ontario also has the sector-by-expense-type matrix. Every extraction check and every mapping check passes.
-- Reconciliation against StatCan covers all 11 for FY2024-25. See [docs/reconciliation-review.md](docs/reconciliation-review.md) for the analysis.
-- Extraction uses pdfplumber word positions plus the spec (`method: pdfplumber_words`). Per-table options cover layout quirks: `drop_chars` (BC, MB dot leaders), `merge_split_digits` (AB, MB, NS), `space_thousands` (QC), `ignore_unaligned_numbers` (NB, QC note columns), and row `sign` and `memo`. The LLM extractor planned in PLAN.md A4 is not built yet.
-- Mappings are first-pass by ministry name; see each row's `confidence`. The federal mapping still puts all of Finance in general public services.
+- **Output:** `data/gold/spending-shares/2025-26.yaml` gives shares **by service** for federal and all 10 provinces (validated). Federal shares exclude transfers to provinces and territories ($110.4B), unidentified transfers to municipalities and Indigenous governments ($45.8B) and pollution pricing returns ($4.3B); these are listed in `_meta.excludedFromShares` and kept in `data/gold/federal-leaves.csv`.
+- **Federal:** built from the Volume I Table 3.6 grid ([design](docs/federal-design.md)). Major transfers are split exactly into programs. "Other transfers" use ministry defaults until **Volume II 2025-26** is in bronze. It can't be downloaded by script (the server sends an incomplete certificate chain), so download it by browser to `data/bronze/federal/ca/2026-vol2-eng.pdf`. Volume II is what will move Indigenous Services and housing/infrastructure transfers out of the excluded group and into services.
+- **Provinces:** all 10 extracted and mapped COFOG → service. Quebec uses its by-portfolio Appendix 2. Municipal Transfers holds only provincial transfers to municipalities of unknown use.
+- **Checks:** every extraction check, mapping check and leaf-sum check passes. Reconciliation against StatCan covers all 11 for FY2024-25 ([analysis](docs/reconciliation-review.md)).
+- Extraction uses pdfplumber word positions plus per-table specs. The LLM extractor planned in PLAN.md A4 is not built yet.
 
 ## StatCan COFOG reconciliation: what we found
 

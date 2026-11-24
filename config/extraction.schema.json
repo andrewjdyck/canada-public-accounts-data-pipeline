@@ -159,9 +159,10 @@
                 "enum": [
                   "detail",
                   "adjustment",
-                  "total"
+                  "total",
+                  "memo"
                 ],
-                "description": "Default detail."
+                "description": "Default detail. memo: read for checks and reference (e.g. expense-type columns beside a total) but not mapped."
               }
             }
           }
@@ -202,6 +203,10 @@
                   "type": "string"
                 },
                 "description": "Column ids left to right on this page."
+              },
+              "unlabelled": {
+                "type": "boolean",
+                "description": "Rows on this page print without labels (a continuation page of a wide table); match rows by order only."
               }
             }
           }

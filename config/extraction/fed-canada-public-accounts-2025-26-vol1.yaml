@@ -203,6 +203,218 @@ tables:
   - type: rows_sum
     equals: Total major transfer payments to other levels of government
     tolerance: 2
+- table_id: table-3-6-grid
+  title: 'Table 3.6: External expenses by segment and by type'
+  role: headline
+  method: pdfplumber_words
+  units:
+    scale: 1000000
+    currency: CAD
+    as_printed: in millions of dollars
+  scope: consolidated_summary
+  columns:
+    major_transfers_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Major transfer payments
+    major_transfers_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Major transfer payments
+    other_transfers_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Other transfer payments
+    other_transfers_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Other transfer payments
+    transfer_payments_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Total transfer payments
+      kind: total
+    transfer_payments_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Total transfer payments
+      kind: total
+    other_expenses_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Other expenses
+    other_expenses_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Other expenses
+    public_debt_charges_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Public debt charges
+    public_debt_charges_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Public debt charges
+    total_2025_26:
+      fiscal_year: 2025-2026
+      basis: actual
+      payment_type: Total expenses
+      kind: total
+    total_2024_25:
+      fiscal_year: 2024-2025
+      basis: actual_restated
+      payment_type: Total expenses
+      kind: total
+  parts:
+  - page: 128
+    printed_page: '128'
+    start_after: ^Ministries$
+    end_at: ^Total expenses5
+    columns:
+    - major_transfers_2025_26
+    - major_transfers_2024_25
+    - other_transfers_2025_26
+    - other_transfers_2024_25
+  - page: 129
+    printed_page: '129'
+    start_after: ^2026 2025 2026 2025 2026 2025 2026 2025$
+    end_at: ^367,506 359,415 144,681
+    columns:
+    - transfer_payments_2025_26
+    - transfer_payments_2024_25
+    - other_expenses_2025_26
+    - other_expenses_2024_25
+    - public_debt_charges_2025_26
+    - public_debt_charges_2024_25
+    - total_2025_26
+    - total_2024_25
+    unlabelled: true
+  rows:
+  - label: Agriculture and Agri-Food
+  - label: Canadian Heritage
+  - label: Crown-Indigenous Relations and Northern Affairs
+  - label: Democratic Institutions
+  - label: Employment and Workforce Development
+  - label: Energy and Natural Resources
+  - label: Environment and Climate Change
+  - label: Finance and National Revenue
+  - label: Fisheries and Oceans
+  - label: Global Affairs
+  - label: Health
+  - label: Housing, Infrastructure and Communities
+  - label: Immigration, Refugees and Citizenship
+  - label: Indigenous Services
+  - label: Innovation, Science and Industry
+  - label: Justice
+  - label: National Defence
+  - label: Office of the Governor General's Secretary
+  - label: Parliament
+  - label: Privy Council
+  - label: Public Safety
+  - label: Public Services and Procurement
+  - label: Transport
+  - label: Treasury Board
+  - label: Veterans Affairs
+  - label: Women, Gender Equality and Youth
+  - label: Provision for valuation and other items
+  - label: Total expenses, excluding net actuarial losses
+    kind: subtotal
+  - label: Net actuarial losses
+  - label: Total expenses
+    kind: total
+  checks:
+  - type: rows_sum
+    equals: Total expenses
+    columns:
+    - major_transfers_2025_26
+    - major_transfers_2024_25
+    - other_transfers_2025_26
+    - other_transfers_2024_25
+    - transfer_payments_2025_26
+    - transfer_payments_2024_25
+    - other_expenses_2025_26
+    - other_expenses_2024_25
+    - public_debt_charges_2025_26
+    - public_debt_charges_2024_25
+    - total_2025_26
+    - total_2024_25
+    tolerance: 2
+  - type: columns_sum
+    columns:
+    - major_transfers_2025_26
+    - other_transfers_2025_26
+    - other_expenses_2025_26
+    - public_debt_charges_2025_26
+    equals: total_2025_26
+    for_rows:
+    - Agriculture and Agri-Food
+    - Canadian Heritage
+    - Crown-Indigenous Relations and Northern Affairs
+    - Democratic Institutions
+    - Employment and Workforce Development
+    - Energy and Natural Resources
+    - Environment and Climate Change
+    - Finance and National Revenue
+    - Fisheries and Oceans
+    - Global Affairs
+    - Health
+    - Housing, Infrastructure and Communities
+    - Immigration, Refugees and Citizenship
+    - Indigenous Services
+    - Innovation, Science and Industry
+    - Justice
+    - National Defence
+    - Office of the Governor General's Secretary
+    - Parliament
+    - Privy Council
+    - Public Safety
+    - Public Services and Procurement
+    - Transport
+    - Treasury Board
+    - Veterans Affairs
+    - Women, Gender Equality and Youth
+    - Provision for valuation and other items
+    - Net actuarial losses
+    - Total expenses
+    tolerance: 2
+  - type: columns_sum
+    columns:
+    - major_transfers_2024_25
+    - other_transfers_2024_25
+    - other_expenses_2024_25
+    - public_debt_charges_2024_25
+    equals: total_2024_25
+    for_rows:
+    - Agriculture and Agri-Food
+    - Canadian Heritage
+    - Crown-Indigenous Relations and Northern Affairs
+    - Democratic Institutions
+    - Employment and Workforce Development
+    - Energy and Natural Resources
+    - Environment and Climate Change
+    - Finance and National Revenue
+    - Fisheries and Oceans
+    - Global Affairs
+    - Health
+    - Housing, Infrastructure and Communities
+    - Immigration, Refugees and Citizenship
+    - Indigenous Services
+    - Innovation, Science and Industry
+    - Justice
+    - National Defence
+    - Office of the Governor General's Secretary
+    - Parliament
+    - Privy Council
+    - Public Safety
+    - Public Services and Procurement
+    - Transport
+    - Treasury Board
+    - Veterans Affairs
+    - Women, Gender Equality and Youth
+    - Provision for valuation and other items
+    - Net actuarial losses
+    - Total expenses
+    tolerance: 2
 cross_checks:
 - left:
     table: expenses-by-segment
@@ -252,3 +464,227 @@ cross_checks:
     table: expenses-by-segment
     row: Total expenses, excluding net actuarial losses
     column: actual_2024_25
+- left:
+    table: table-3-6-grid
+    row: Agriculture and Agri-Food
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Agriculture and Agri-Food
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Canadian Heritage
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Canadian Heritage
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Crown-Indigenous Relations and Northern Affairs
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Crown-Indigenous Relations and Northern Affairs
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Democratic Institutions
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Democratic Institutions
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Employment and Workforce Development
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Employment and Workforce Development
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Energy and Natural Resources
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Energy and Natural Resources
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Environment and Climate Change
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Environment and Climate Change
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Finance and National Revenue
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Finance and National Revenue
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Fisheries and Oceans
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Fisheries and Oceans
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Global Affairs
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Global Affairs
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Health
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Health
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Housing, Infrastructure and Communities
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Housing, Infrastructure and Communities
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Immigration, Refugees and Citizenship
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Immigration, Refugees and Citizenship
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Indigenous Services
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Indigenous Services
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Innovation, Science and Industry
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Innovation, Science and Industry
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Justice
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Justice
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: National Defence
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: National Defence
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Office of the Governor General's Secretary
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Office of the Governor General's Secretary
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Parliament
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Parliament
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Privy Council
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Privy Council
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Public Safety
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Public Safety
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Public Services and Procurement
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Public Services and Procurement
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Transport
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Transport
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Treasury Board
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Treasury Board
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Veterans Affairs
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Veterans Affairs
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Women, Gender Equality and Youth
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Women, Gender Equality and Youth
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Provision for valuation and other items
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Provision for valuation and other items
+    column: actual_2025_26
+- left:
+    table: table-3-6-grid
+    row: Total expenses
+    column: total_2025_26
+  right:
+    table: expenses-by-segment
+    row: Total expenses
+    column: actual_2025_26
