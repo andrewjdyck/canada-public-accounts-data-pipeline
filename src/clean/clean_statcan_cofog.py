@@ -1,5 +1,5 @@
 """
-StatCan CCOFOG tables (silver) -> data/gold/statcan-cofog.csv.
+StatCan CCOFOG tables (silver) -> data/3_gold/statcan-cofog.csv.
 
 Adds the pipeline's ids to every StatCan value so it can be joined to public-accounts facts:
   - jurisdiction code (config/taxonomy/jurisdictions.csv)

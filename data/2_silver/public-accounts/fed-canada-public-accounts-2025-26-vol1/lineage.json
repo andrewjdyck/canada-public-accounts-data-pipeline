@@ -1,10 +1,10 @@
 {
   "doc_id": "fed-canada-public-accounts-2025-26-vol1",
-  "source_file": "data/bronze/federal/ca/2026-vol1-eng.pdf",
+  "source_file": "data/1_bronze/federal/ca/2026-vol1-eng.pdf",
   "source_sha256": "4641cd5476fe1a34139edfae612d3d906d050519f485517154c268f948a3f19e",
   "spec_file": "config/extraction/fed-canada-public-accounts-2025-26-vol1.yaml",
   "spec_sha256": "20807f75bcd80f590f4ed20507719147aaf1d10a5a0e1b9c2e3ef82933f8a9a3",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-24T00:05:32+00:00"
+  "extracted_at": "2026-11-26T16:02:36+00:00"
 }

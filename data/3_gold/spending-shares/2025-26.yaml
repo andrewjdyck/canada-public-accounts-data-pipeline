@@ -2,8 +2,8 @@
 # rate = share of that government's expense spent on the service (README 'Principles'; docs/federal-design.md).
 schemaVersion: 1
 dataset: canada-spending-shares
-pipelineVersion: bf015e5
-generatedAt: '2026-11-24'
+pipelineVersion: f5d36f9-dirty
+generatedAt: '2026-11-26'
 fiscalYear: 2025-26
 federal:
   _meta:
@@ -19,9 +19,9 @@ federal:
     - 129
     verified: false
     extractionNotes: Shares of federal expense by service. Total expenses $565.7B; $160.5B is excluded (see excludedFromShares), leaving $405.2B. Built from Volume
-      I Table 3.6 (ministry x payment type) split into program leaves (data/gold/federal-leaves.csv, design in docs/federal-design.md). Net actuarial losses are allocated
-      to ministries by operating expense. Ministry 'other transfers' not yet split by program (Volume II) take the ministry's default service, or Unidentified where
-      the ministry funds several services.
+      I Table 3.6 (ministry x payment type) split into program leaves (data/3_gold/federal-leaves.csv, design in docs/federal-design.md). Net actuarial losses are
+      allocated to ministries by operating expense. Ministry 'other transfers' not yet split by program (Volume II) take the ministry's default service, or Unidentified
+      where the ministry funds several services.
     excludedFromShares:
     - name: Transfers to provinces and territories
       amountCad: 110392000000

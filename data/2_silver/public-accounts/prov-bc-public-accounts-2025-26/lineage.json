@@ -1,10 +1,10 @@
 {
   "doc_id": "prov-bc-public-accounts-2025-26",
-  "source_file": "data/bronze/provincial/bc/public-accounts-2025-26.pdf",
+  "source_file": "data/1_bronze/provincial/bc/public-accounts-2025-26.pdf",
   "source_sha256": "4176b93681fd1f2a6a4fef46c381b378564a3c3eff19f253da836f525143c117",
   "spec_file": "config/extraction/prov-bc-public-accounts-2025-26.yaml",
   "spec_sha256": "f0477605e27bc4a2ca7aa8c6f02ff3ee3ace6932d77875315888226ec74d2922",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-24T00:05:33+00:00"
+  "extracted_at": "2026-11-26T16:02:37+00:00"
 }

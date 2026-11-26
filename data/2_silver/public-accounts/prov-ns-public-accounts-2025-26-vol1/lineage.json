@@ -1,10 +1,10 @@
 {
   "doc_id": "prov-ns-public-accounts-2025-26-vol1",
-  "source_file": "data/bronze/provincial/ns/pa-volume-1-financial-statements-2026.pdf",
+  "source_file": "data/1_bronze/provincial/ns/pa-volume-1-financial-statements-2026.pdf",
   "source_sha256": "d33a79176dff14433e25186d5c082e4fd2824837dfa3a22f9e26f1c290571dd5",
   "spec_file": "config/extraction/prov-ns-public-accounts-2025-26-vol1.yaml",
   "spec_sha256": "5271546bdd06bbe764f9e149100b30dca8a2346274e8afd798969625f8778e10",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-24T00:05:34+00:00"
+  "extracted_at": "2026-11-26T16:02:38+00:00"
 }

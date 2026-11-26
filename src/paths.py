@@ -1,9 +1,9 @@
 """Repository paths shared by every pipeline script.
 
 Layers (see README):
-  data/bronze  source documents exactly as published + source-docs-manifest.yaml
-  data/silver  values extracted from bronze, labels kept verbatim (no categories)
-  data/gold    categorised, validated, cross-jurisdiction data and reconciliations
+  data/1_bronze  source documents exactly as published + source-docs-manifest.yaml
+  data/2_silver  values extracted from bronze, labels kept verbatim (no categories)
+  data/3_gold    categorised, validated, cross-jurisdiction data and reconciliations
   config/      hand-written specs: extraction specs, taxonomy, mappings
 """
 
@@ -15,9 +15,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 
 DATA = REPO / "data"
-BRONZE = DATA / "bronze"
-SILVER = DATA / "silver"
-GOLD = DATA / "gold"
+BRONZE = DATA / "1_bronze"
+SILVER = DATA / "2_silver"
+GOLD = DATA / "3_gold"
 
 MANIFEST = BRONZE / "source-docs-manifest.yaml"
 MANIFEST_SCHEMA = BRONZE / "source-docs-manifest.schema.json"

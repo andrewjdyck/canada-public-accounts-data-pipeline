@@ -3,7 +3,7 @@ Extract StatCan full-table CSVs from their bronze zips into silver.
 
 For every manifest document with `download.method: statcan_wds`, read the data CSV
 inside the zip (without unpacking it to disk) and write
-data/silver/statcan/<product_id>.csv with the columns needed downstream, labels kept
+data/2_silver/statcan/<product_id>.csv with the columns needed downstream, labels kept
 exactly as StatCan prints them (including the CCOFOG codes in square brackets).
 Nothing is categorised or filtered here except dropping StatCan's technical columns.
 

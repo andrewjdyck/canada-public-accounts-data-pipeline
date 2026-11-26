@@ -70,11 +70,11 @@ A transfer to a municipality or Indigenous government that **can** be tied to a 
 |---|---|
 | bronze | Volume I (2025-26); Volume II (2025-26) for program detail |
 | config | Table 3.6 spec; `config/federal/ministry-services.csv` (ministry defaults by cell type); `config/federal/leaves.csv` (major-transfer leaves and named carve-outs); `config/federal/program-services.csv` (Volume II program rules); `config/taxonomy/services.csv` |
-| gold | `data/gold/federal-leaves.csv` (one row per leaf, with treatment, service and evidence) plus checks |
+| gold | `data/3_gold/federal-leaves.csv` (one row per leaf, with treatment, service and evidence) plus checks |
 | publish | Federal shares = leaves with treatment service, financing or unidentified, rolled up by service. Excluded treatments are listed in the output's `_meta.excludedFromShares` |
 | metrics | Share of federal expense classified to a specific service; amounts excluded by reason; residual sizes |
 
 ## 6. Status (2026-11-24)
 
-- Built: Table 3.6 grid extraction (116 checks), major-transfer leaves, ministry defaults, net actuarial allocation, `data/gold/federal-leaves.csv`, and federal shares by service.
-- Not yet: Volume II program leaves. The 2025-26 Volume II can't be fetched by script (the tpsgc-pwgsc.gc.ca server omits the "Entrust OV TLS Issuing RSA CA 2" intermediate certificate), so it needs a browser download into `data/bronze/federal/ca/2026-vol2-eng.pdf`. Until then, the Indigenous Services, Crown-Indigenous Relations and Housing/Infrastructure "other transfers" are `other_municipal_indigenous_transfers` (excluded), and Employment and Finance "other transfers" are `unidentified`.
+- Built: Table 3.6 grid extraction (116 checks), major-transfer leaves, ministry defaults, net actuarial allocation, `data/3_gold/federal-leaves.csv`, and federal shares by service.
+- Not yet: Volume II program leaves. The 2025-26 Volume II can't be fetched by script (the tpsgc-pwgsc.gc.ca server omits the "Entrust OV TLS Issuing RSA CA 2" intermediate certificate), so it needs a browser download into `data/1_bronze/federal/ca/2026-vol2-eng.pdf`. Until then, the Indigenous Services, Crown-Indigenous Relations and Housing/Infrastructure "other transfers" are `other_municipal_indigenous_transfers` (excluded), and Employment and Finance "other transfers" are `unidentified`.

@@ -1,5 +1,5 @@
 """
-Federal expense grid (Volume I Table 3.6) -> data/gold/federal-leaves.csv.
+Federal expense grid (Volume I Table 3.6) -> data/3_gold/federal-leaves.csv.
 
 Design: docs/federal-design.md. Every federal dollar lands in exactly one leaf, and every
 leaf has a treatment:

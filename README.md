@@ -22,27 +22,27 @@ These rules decide every classification choice in the pipeline:
 
 ```
 data/
-  bronze/   source documents exactly as published, plus source-docs-manifest.yaml describing each
-  silver/   values extracted from bronze in long format, labels verbatim, no categories
-  gold/     categorised, validated, cross-jurisdiction data; reconciliation against StatCan
+  1_bronze/ source documents exactly as published, plus source-docs-manifest.yaml describing each
+  2_silver/ values extracted from bronze in long format, labels verbatim, no categories
+  3_gold/   categorised, validated, cross-jurisdiction data; reconciliation against StatCan
 config/     hand-written specs that drive each step (never rewritten by scripts)
 src/        one folder per step: fetch -> extract -> clean -> reconcile
 ```
 
 | Layer | Path | Written by | Contents |
 |---|---|---|---|
-| bronze | `data/bronze/{federal,provincial,municipal}/...` | `src/fetch/fetch_sources.py` | Public accounts PDFs |
-| bronze | `data/bronze/statcan/<product_id>/` | `src/fetch/fetch_sources.py` | StatCan full-table CSV zips (COFOG) |
-| bronze | `data/bronze/source-docs-manifest.yaml` | by hand + `fetch_sources.py --record` | URL, retrieval date, sha256, status of every source |
-| silver | `data/silver/public-accounts/<doc_id>/<table_id>.csv` | `src/extract/extract_statement_tables.py` | One row per printed amount, with page, row label, column, fiscal year, basis; plus `checks.csv` and `lineage.json` |
-| silver | `data/silver/statcan/<product_id>.csv` | `src/extract/extract_statcan.py` | StatCan rows, labels as published |
-| gold | `data/gold/public-accounts-facts.csv` | `src/clean/build_public_accounts_facts.py` | Each amount mapped to a function (COFOG) and, where the source has it, an object (salaries, transfers, amortization, ...) |
-| gold | `data/gold/spending-shares-preview.csv` | `src/clean/build_public_accounts_facts.py` | Shares by app category (preview of the PLAN.md output contract) |
-| gold | `data/gold/statcan-cofog.csv` | `src/clean/clean_statcan_cofog.py` | StatCan COFOG with the same jurisdiction, fiscal-year and concept ids |
-| gold | `data/gold/reconciliation/` | `src/reconcile/reconcile_cofog.py` | Public accounts vs StatCan by COFOG division, plus `summary.md` |
-| gold | `data/gold/validation/` | clean step | Mapping and total checks |
-| gold | `data/gold/federal-leaves.csv` | `src/clean/build_federal_leaves.py` | Every federal dollar as one leaf of the Table 3.6 grid (ministry × payment type), with its treatment (service, financing, unidentified, or excluded pass-through) and service ([design](docs/federal-design.md)) |
-| gold | `data/gold/spending-shares/<fy>.yaml` | `src/publish/build_spending_shares.py` | **The can-tax-receipt output file** (validated), plus `<fy>-amounts.csv` with the dollars behind each rate |
+| bronze | `data/1_bronze/{federal,provincial,municipal}/...` | `src/fetch/fetch_sources.py` | Public accounts PDFs |
+| bronze | `data/1_bronze/statcan/<product_id>/` | `src/fetch/fetch_sources.py` | StatCan full-table CSV zips (COFOG) |
+| bronze | `data/1_bronze/source-docs-manifest.yaml` | by hand + `fetch_sources.py --record` | URL, retrieval date, sha256, status of every source |
+| silver | `data/2_silver/public-accounts/<doc_id>/<table_id>.csv` | `src/extract/extract_statement_tables.py` | One row per printed amount, with page, row label, column, fiscal year, basis; plus `checks.csv` and `lineage.json` |
+| silver | `data/2_silver/statcan/<product_id>.csv` | `src/extract/extract_statcan.py` | StatCan rows, labels as published |
+| gold | `data/3_gold/public-accounts-facts.csv` | `src/clean/build_public_accounts_facts.py` | Each amount mapped to a function (COFOG) and, where the source has it, an object (salaries, transfers, amortization, ...) |
+| gold | `data/3_gold/spending-shares-preview.csv` | `src/clean/build_public_accounts_facts.py` | Shares by app category (preview of the PLAN.md output contract) |
+| gold | `data/3_gold/statcan-cofog.csv` | `src/clean/clean_statcan_cofog.py` | StatCan COFOG with the same jurisdiction, fiscal-year and concept ids |
+| gold | `data/3_gold/reconciliation/` | `src/reconcile/reconcile_cofog.py` | Public accounts vs StatCan by COFOG division, plus `summary.md` |
+| gold | `data/3_gold/validation/` | clean step | Mapping and total checks |
+| gold | `data/3_gold/federal-leaves.csv` | `src/clean/build_federal_leaves.py` | Every federal dollar as one leaf of the Table 3.6 grid (ministry × payment type), with its treatment (service, financing, unidentified, or excluded pass-through) and service ([design](docs/federal-design.md)) |
+| gold | `data/3_gold/spending-shares/<fy>.yaml` | `src/publish/build_spending_shares.py` | **The can-tax-receipt output file** (validated), plus `<fy>-amounts.csv` with the dollars behind each rate |
 
 | Config | Purpose |
 |---|---|
@@ -78,7 +78,7 @@ Each step exits non-zero if its checks fail, so bad numbers never reach gold. To
 
 ### Adding a jurisdiction
 
-1. Add the document to `data/bronze/source-docs-manifest.yaml`, then run `fetch_sources.py --record`.
+1. Add the document to `data/1_bronze/source-docs-manifest.yaml`, then run `fetch_sources.py --record`.
 2. Find the expense-by-function and expense-by-object tables (`src/extract/find_text.py`, `scan_tables.py`, `inspect_pdf.py`).
 3. Write `config/extraction/<doc_id>.yaml`, using Ontario's as the template. Include the checks: rows add to totals, and schedules agree with the statement.
 4. Write `config/mappings/<code>.csv`. The clean step lists any unmapped line.
@@ -88,8 +88,8 @@ Each step exits non-zero if its checks fail, so bad numbers never reach gold. To
 
 _As of 2026-11-24._
 
-- **Output:** `data/gold/spending-shares/2025-26.yaml` gives shares **by service** for federal and all 10 provinces (validated). Federal shares exclude transfers to provinces and territories ($110.4B), unidentified transfers to municipalities and Indigenous governments ($45.8B) and pollution pricing returns ($4.3B); these are listed in `_meta.excludedFromShares` and kept in `data/gold/federal-leaves.csv`.
-- **Federal:** built from the Volume I Table 3.6 grid ([design](docs/federal-design.md)). Major transfers are split exactly into programs. "Other transfers" use ministry defaults until **Volume II 2025-26** is in bronze. It can't be downloaded by script (the server sends an incomplete certificate chain), so download it by browser to `data/bronze/federal/ca/2026-vol2-eng.pdf`. Volume II is what will move Indigenous Services and housing/infrastructure transfers out of the excluded group and into services.
+- **Output:** `data/3_gold/spending-shares/2025-26.yaml` gives shares **by service** for federal and all 10 provinces (validated). Federal shares exclude transfers to provinces and territories ($110.4B), unidentified transfers to municipalities and Indigenous governments ($45.8B) and pollution pricing returns ($4.3B); these are listed in `_meta.excludedFromShares` and kept in `data/3_gold/federal-leaves.csv`.
+- **Federal:** built from the Volume I Table 3.6 grid ([design](docs/federal-design.md)). Major transfers are split exactly into programs. "Other transfers" use ministry defaults until **Volume II 2025-26** is in bronze. It can't be downloaded by script (the server sends an incomplete certificate chain), so download it by browser to `data/1_bronze/federal/ca/2026-vol2-eng.pdf`. Volume II is what will move Indigenous Services and housing/infrastructure transfers out of the excluded group and into services.
 - **Provinces:** all 10 extracted and mapped COFOG → service. Quebec uses its by-portfolio Appendix 2. Municipal Transfers holds only provincial transfers to municipalities of unknown use.
 - **Checks:** every extraction check, mapping check and leaf-sum check passes. Reconciliation against StatCan covers all 11 for FY2024-25 ([analysis](docs/reconciliation-review.md)).
 - Extraction uses pdfplumber word positions plus per-table specs. The LLM extractor planned in PLAN.md A4 is not built yet.

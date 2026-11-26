@@ -1,10 +1,10 @@
 {
   "doc_id": "prov-pe-public-accounts-2025-26-vol2",
-  "source_file": "data/bronze/provincial/pe/2026 - PA - Volume II.pdf",
+  "source_file": "data/1_bronze/provincial/pe/2026 - PA - Volume II.pdf",
   "source_sha256": "1541ba39b8186af898c18803749b881f175b339dbb16ae9c15d6fe083bd2352a",
   "spec_file": "config/extraction/prov-pe-public-accounts-2025-26-vol2.yaml",
   "spec_sha256": "186505cbfa6baa6af34f7374e7de3575dfad67db481d4ab3dd98589c5f529612",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-24T00:05:35+00:00"
+  "extracted_at": "2026-11-26T16:02:38+00:00"
 }

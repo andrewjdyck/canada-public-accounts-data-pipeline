@@ -2,7 +2,7 @@
 Extract financial-statement tables from a bronze PDF into silver, driven by a spec.
 
 Reads config/extraction/<doc_id>.yaml (schema: config/extraction.schema.json) and,
-for each table, writes data/silver/public-accounts/<doc_id>/<table_id>.csv in long
+for each table, writes data/2_silver/public-accounts/<doc_id>/<table_id>.csv in long
 format: one row per (source row, source column) amount, labels kept as printed.
 No categorisation happens here; that is the clean step's job (gold).
 
@@ -17,7 +17,7 @@ How a table part is read (method: pdfplumber_words):
      first numeric line that has one amount per column as the anchor.
 
 Then the spec's `checks` (rows add to totals, columns add to totals) and `cross_checks`
-(between tables) are run. Results go to data/silver/public-accounts/<doc_id>/checks.csv.
+(between tables) are run. Results go to data/2_silver/public-accounts/<doc_id>/checks.csv.
 The script exits non-zero if any check fails, so a bad extraction never reaches gold.
 
 Usage:

@@ -11,7 +11,7 @@
   "properties": {
     "doc_id": {
       "type": "string",
-      "description": "Must match an id in data/bronze/source-docs-manifest.yaml."
+      "description": "Must match an id in data/1_bronze/source-docs-manifest.yaml."
     },
     "notes": {
       "type": "string"

@@ -1,10 +1,10 @@
 {
   "doc_id": "prov-qc-public-accounts-2025-26-vol1",
-  "source_file": "data/bronze/provincial/qc/CPTEN_vol1-2025-2026.pdf",
+  "source_file": "data/1_bronze/provincial/qc/CPTEN_vol1-2025-2026.pdf",
   "source_sha256": "5c396fedf704392c9d11a9d54e47bc0d5a1e0006d0534ffdc765b48d1db97c82",
   "spec_file": "config/extraction/prov-qc-public-accounts-2025-26-vol1.yaml",
   "spec_sha256": "d63c02a870bc1490eaf6959b8ea463e70b9ec8cc9bac1982e40ee139d93960fb",
   "method": "pdfplumber_words",
   "pdfplumber_version": "0.11.10",
-  "extracted_at": "2026-11-24T00:05:35+00:00"
+  "extracted_at": "2026-11-26T16:02:39+00:00"
 }

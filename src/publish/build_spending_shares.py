@@ -1,14 +1,14 @@
 """
-Build the can-tax-receipt output file: data/gold/spending-shares/<fiscal-year>.yaml.
+Build the can-tax-receipt output file: data/3_gold/spending-shares/<fiscal-year>.yaml.
 
 Each rate is the share of a government's expense going to one *service* (README "Principles",
 docs/federal-design.md). Services are defined in config/taxonomy/services.csv.
 
-Federal: rolled up from data/gold/federal-leaves.csv. Leaves treated as service, financing
+Federal: rolled up from data/3_gold/federal-leaves.csv. Leaves treated as service, financing
   or unidentified are in the shares. Pass-throughs to provinces, unidentified transfers to
   municipalities and Indigenous governments, and pollution pricing returns are left out of
   numerator and denominator and listed in _meta.excludedFromShares.
-Provinces: rolled up from data/gold/public-accounts-facts.csv (function_breakdown tables).
+Provinces: rolled up from data/3_gold/public-accounts-facts.csv (function_breakdown tables).
   Each line's COFOG concept maps to a service; lines listed in
   config/output/category-overrides.csv go to Municipal Transfers instead (whole line, or a
   carve-out of a detail-schedule row). Denominator = the statement's total expense.
@@ -17,8 +17,8 @@ Rates are rounded to 4 decimals; the rounding residual goes to the largest categ
 government's rates sum to exactly 1. Categories with no money are omitted.
 
 Writes:
-  data/gold/spending-shares/<fy>.yaml          the contract file
-  data/gold/spending-shares/<fy>-amounts.csv   the dollars behind every rate, and the exclusions
+  data/3_gold/spending-shares/<fy>.yaml          the contract file
+  data/3_gold/spending-shares/<fy>-amounts.csv   the dollars behind every rate, and the exclusions
 Then validates the file and exits non-zero on failure.
 
 Usage:
@@ -115,7 +115,7 @@ def build_federal(cfg: dict, manifest: dict, names: dict[str, str], amounts_out:
     meta = doc_meta(doc, pages, (
         f"Shares of federal expense by service. Total expenses ${gross / 1e9:,.1f}B; ${sum(excluded.values()) / 1e9:,.1f}B is "
         f"excluded (see excludedFromShares), leaving ${denominator / 1e9:,.1f}B. Built from Volume I Table 3.6 (ministry x payment "
-        "type) split into program leaves (data/gold/federal-leaves.csv, design in docs/federal-design.md). Net actuarial losses "
+        "type) split into program leaves (data/3_gold/federal-leaves.csv, design in docs/federal-design.md). Net actuarial losses "
         "are allocated to ministries by operating expense. Ministry 'other transfers' not yet split by program (Volume II) take "
         "the ministry's default service, or Unidentified where the ministry funds several services."))
     meta["excludedFromShares"] = [{"name": EXCLUSION_LABELS[t][0], "amountCad": round(v), "reason": EXCLUSION_LABELS[t][1]}

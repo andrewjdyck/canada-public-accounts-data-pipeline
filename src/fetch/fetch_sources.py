@@ -1,8 +1,8 @@
 """
-Download source documents listed in data/bronze/source-docs-manifest.yaml and verify them.
+Download source documents listed in data/1_bronze/source-docs-manifest.yaml and verify them.
 
 Download methods (`download.method` in the manifest):
-  script       download `source.url` (a PDF) to `data/bronze/<storage.relpath>` if missing.
+  script       download `source.url` (a PDF) to `data/1_bronze/<storage.relpath>` if missing.
   statcan_wds  download a Statistics Canada full-table CSV zip through the Web Data
                Service (`source.statcan_product_id`), if missing. With --refresh, also
                re-download when StatCan has published a newer release than the one recorded.

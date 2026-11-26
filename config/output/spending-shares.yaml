@@ -1,4 +1,4 @@
-# Output contract settings for data/gold/spending-shares/<fiscal-year>.yaml (PLAN.md "Output Contract").
+# Output contract settings for data/3_gold/spending-shares/<fiscal-year>.yaml (PLAN.md "Output Contract").
 # Hand-written. Read by src/publish/build_spending_shares.py.
 # Categories are services (config/taxonomy/services.csv), in that file's order; see README "Principles".
 schemaVersion: 1
@@ -8,7 +8,7 @@ fiscal_year_key: "2025-2026"   # fiscal_year as stored in gold
 basis: actual
 
 federal:
-  # Shares come from data/gold/federal-leaves.csv (src/clean/build_federal_leaves.py).
+  # Shares come from data/3_gold/federal-leaves.csv (src/clean/build_federal_leaves.py).
   # Leaves are configured in config/federal/leaves.csv and config/federal/ministry-services.csv.
   doc_id: fed-canada-public-accounts-2025-26-vol1
 

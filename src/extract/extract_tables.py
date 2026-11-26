@@ -1,8 +1,8 @@
 """
 Exploratory: dump every table pdfplumber detects on some pages of a bronze PDF.
 
-Writes data/silver/raw-tables/<doc_id>/page-NNNN/table-NN.csv plus
-data/silver/raw-tables/<doc_id>.manifest.jsonl. Use it to look at a document's
+Writes data/2_silver/raw-tables/<doc_id>/page-NNNN/table-NN.csv plus
+data/2_silver/raw-tables/<doc_id>.manifest.jsonl. Use it to look at a document's
 layout while writing its extraction spec; the pipeline itself reads tables with
 extract_statement_tables.py, driven by config/extraction/<doc_id>.yaml.
 
@@ -110,8 +110,8 @@ def extract_tables(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--doc-id", required=True, help="Document id from data/bronze/source-docs-manifest.yaml")
-    parser.add_argument("--out", type=Path, default=SILVER / "raw-tables", help="Output root (default: data/silver/raw-tables)")
+    parser.add_argument("--doc-id", required=True, help="Document id from data/1_bronze/source-docs-manifest.yaml")
+    parser.add_argument("--out", type=Path, default=SILVER / "raw-tables", help="Output root (default: data/2_silver/raw-tables)")
     parser.add_argument("--pages", default="all", help='Pages selector: "all", "1-5", or "1,3,10-12" (default: all)')
     parser.add_argument("--table-settings-json", type=str, default="", help="Optional JSON object for pdfplumber table_settings")
     args = parser.parse_args()

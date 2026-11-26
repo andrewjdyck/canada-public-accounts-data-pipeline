@@ -2,8 +2,8 @@
 Reconcile public-accounts expense against StatCan CCOFOG, by COFOG division.
 
 For each jurisdiction and fiscal year present in both gold files:
-  public accounts  data/gold/public-accounts-facts.csv, function_breakdown tables, actual basis
-  StatCan          data/gold/statcan-cofog.csv, table 10-10-0024-01, component
+  public accounts  data/3_gold/public-accounts-facts.csv, function_breakdown tables, actual basis
+  StatCan          data/3_gold/statcan-cofog.csv, table 10-10-0024-01, component
                    provincial_territorial (provinces) or federal (Canada), division level
 
 Columns written per division:
@@ -21,8 +21,8 @@ university/college components (not consolidated, so not additive; see
 config/reconciling-items.csv).
 
 Outputs:
-  data/gold/reconciliation/cofog-by-division.csv
-  data/gold/reconciliation/summary.md
+  data/3_gold/reconciliation/cofog-by-division.csv
+  data/3_gold/reconciliation/summary.md
 
 Usage:
   python src/reconcile/reconcile_cofog.py

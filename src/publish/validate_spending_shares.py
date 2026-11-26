@@ -9,7 +9,7 @@ Checks:
   - every government is dataQuality: actual (MVP definition)
 
 Usage:
-  python src/publish/validate_spending_shares.py data/gold/spending-shares/2025-26.yaml
+  python src/publish/validate_spending_shares.py data/3_gold/spending-shares/2025-26.yaml
 """
 
 from __future__ import annotations

@@ -18,10 +18,10 @@ Validation (the script exits non-zero and writes nothing to gold if any fail):
   - mapped facts add back to the table's stated total for each fiscal year and basis.
 
 Outputs:
-  data/gold/public-accounts-facts.csv          one row per mapped amount, with provenance
-  data/gold/spending-shares-preview.csv        shares by service, every year and basis (function_breakdown tables;
+  data/3_gold/public-accounts-facts.csv          one row per mapped amount, with provenance
+  data/3_gold/spending-shares-preview.csv        shares by service, every year and basis (function_breakdown tables;
                                                the published federal shares use federal-leaves.csv instead)
-  data/gold/validation/public-accounts.csv     results of the checks above
+  data/3_gold/validation/public-accounts.csv     results of the checks above
 
 Usage:
   python src/clean/build_public_accounts_facts.py
