@@ -1,5 +1,5 @@
 manifest_version: 3
-updated_at: '2026-11-22'
+updated_at: '2026-11-26'
 documents:
 - id: fed-canada-public-accounts-2025-26-vol1
   level: federal
@@ -64,7 +64,9 @@ documents:
     relpath: federal/ca/2026-vol2-eng.pdf
   file:
     format: pdf
-  status: planned
+    sha256: bc9561df45866f9e30a7a7cba597af9a6901572c559eae3dedaa80a75b70283e
+    bytes: 10072909
+  status: downloaded
   tags:
   - spending-shares
   notes: 'Program-level transfer payments by department (unaudited); splits Volume I Table 3.6 ''other transfers'' cells.
