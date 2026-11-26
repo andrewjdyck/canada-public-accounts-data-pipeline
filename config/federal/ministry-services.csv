@@ -3,17 +3,17 @@ Agriculture and Agri-Food,other_transfers,service,economic_development,high,
 Agriculture and Agri-Food,other_expenses,service,economic_development,high,
 Canadian Heritage,other_transfers,service,culture_recreation,high,
 Canadian Heritage,other_expenses,service,culture_recreation,high,Includes CBC/Radio-Canada
-Crown-Indigenous Relations and Northern Affairs,other_transfers,other_municipal_indigenous_transfers,,medium,"Self-government agreements, claims settlements and northern programs; split by service needs Volume II"
+Crown-Indigenous Relations and Northern Affairs,other_transfers,other_municipal_indigenous_transfers,,medium,"Default: claims settlements, self-government agreements and other transfers not tied to a service"
 Crown-Indigenous Relations and Northern Affairs,other_expenses,service,government_administration,medium,
 Democratic Institutions,other_transfers,service,government_administration,high,
 Democratic Institutions,other_expenses,service,government_administration,high,Elections Canada
-Employment and Workforce Development,other_transfers,unidentified,,medium,"Student grants, disability benefit, skills and other programs; split by service needs Volume II"
+Employment and Workforce Development,other_transfers,unidentified,,medium,Default for programs without a rule
 Employment and Workforce Development,other_expenses,service,government_administration,medium,Service Canada and departmental operations
 Energy and Natural Resources,other_transfers,service,economic_development,high,
 Energy and Natural Resources,other_expenses,service,economic_development,high,
 Environment and Climate Change,other_transfers,service,environment,high,
 Environment and Climate Change,other_expenses,service,environment,high,
-Finance and National Revenue,other_transfers,unidentified,,low,"Residual after pollution pricing returns; split by service needs Volume II"
+Finance and National Revenue,other_transfers,unidentified,,low,Default for programs without a rule
 Finance and National Revenue,other_expenses,service,government_administration,high,"Department of Finance, Canada Revenue Agency"
 Fisheries and Oceans,other_transfers,service,economic_development,high,
 Fisheries and Oceans,other_expenses,service,economic_development,medium,Includes the Canadian Coast Guard
@@ -21,11 +21,11 @@ Global Affairs,other_transfers,service,international,high,
 Global Affairs,other_expenses,service,international,high,
 Health,other_transfers,service,health,medium,"Canadian Dental Care Plan, research and health programs; also some bilateral agreements with provinces (e.g. rare-disease drugs) that Volume II would identify as pass-through"
 Health,other_expenses,service,health,high,"Health Canada, Public Health Agency, CIHR"
-"Housing, Infrastructure and Communities",other_transfers,other_municipal_indigenous_transfers,,low,"Mostly infrastructure and housing transfers to provinces, municipalities and housing providers; split by service needs Volume II"
+"Housing, Infrastructure and Communities",other_transfers,unidentified,,low,"Default for programs without a rule and for the part of the cell not in Volume II (mostly CMHC housing programs, consolidated in Volume I but not listed in Volume II)"
 "Housing, Infrastructure and Communities",other_expenses,service,housing_communities,medium,
 "Immigration, Refugees and Citizenship",other_transfers,service,social_assistance,medium,"Settlement and resettlement services; includes the Canada-Quebec Accord transfer, which is a pass-through"
 "Immigration, Refugees and Citizenship",other_expenses,service,government_administration,medium,"Immigration, passport and citizenship processing"
-Indigenous Services,other_transfers,other_municipal_indigenous_transfers,,medium,"Transfers to First Nations and Inuit governments and organizations for health, education, child and family services, housing and infrastructure; split by service needs Volume II"
+Indigenous Services,other_transfers,other_municipal_indigenous_transfers,,medium,"Default for programs without a rule in config/federal/program-services.csv; most programs are tied to a service there"
 Indigenous Services,other_expenses,service,health,medium,Largely First Nations and Inuit health services delivered directly
 "Innovation, Science and Industry",other_transfers,service,economic_development,high,Includes research granting councils
 "Innovation, Science and Industry",other_expenses,service,economic_development,high,

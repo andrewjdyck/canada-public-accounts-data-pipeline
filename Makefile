@@ -13,6 +13,7 @@ fetch:
 extract:
 	$(PY) src/extract/extract_statement_tables.py --all
 	$(PY) src/extract/extract_statcan.py
+	$(PY) src/extract/extract_vol2_transfers.py
 
 # gold: categorise with config/mappings + config/taxonomy, validate, compute shares
 clean:

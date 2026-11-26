@@ -1,0 +1,8 @@
+{
+  "doc_id": "fed-canada-public-accounts-2025-26-vol2",
+  "source_file": "data/1_bronze/federal/ca/2026-vol2-eng.pdf",
+  "source_sha256": "bc9561df45866f9e30a7a7cba597af9a6901572c559eae3dedaa80a75b70283e",
+  "spec_file": "config/extraction/program-tables/fed-canada-public-accounts-2025-26-vol2.yaml",
+  "spec_sha256": "406d2234d18678b1720f2a52f2e5447dc8766620200461a467ddc3b991c6b592",
+  "method": "pdfplumber_words (vol2 transfer tables)"
+}

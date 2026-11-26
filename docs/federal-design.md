@@ -74,7 +74,18 @@ A transfer to a municipality or Indigenous government that **can** be tied to a 
 | publish | Federal shares = leaves with treatment service, financing or unidentified, rolled up by service. Excluded treatments are listed in the output's `_meta.excludedFromShares` |
 | metrics | Share of federal expense classified to a specific service; amounts excluded by reason; residual sizes |
 
-## 6. Status (2026-11-24)
+## 6. Status (2026-11-26)
 
-- Built: Table 3.6 grid extraction (116 checks), major-transfer leaves, ministry defaults, net actuarial allocation, `data/3_gold/federal-leaves.csv`, and federal shares by service.
-- Not yet: Volume II program leaves. The 2025-26 Volume II can't be fetched by script (the tpsgc-pwgsc.gc.ca server omits the "Entrust OV TLS Issuing RSA CA 2" intermediate certificate), so it needs a browser download into `data/1_bronze/federal/ca/2026-vol2-eng.pdf`. Until then, the Indigenous Services, Crown-Indigenous Relations and Housing/Infrastructure "other transfers" are `other_municipal_indigenous_transfers` (excluded), and Employment and Finance "other transfers" are `unidentified`.
+**Built**
+- Table 3.6 grid extraction (116 checks), major-transfer leaves, ministry defaults, net actuarial allocation.
+- **Volume II program leaves.** `src/extract/extract_vol2_transfers.py` reads every ministry's transfer-payment table: 915 programs, and all 28 sections tie to "Total Ministry" to the dollar. `config/federal/program-services.csv` classifies programs by rules (first match wins); unmatched programs take the ministry default.
+- **How Volume II meets Volume I.** Programs already counted as major transfers are skipped. Volume II is departmental and cash-based; Volume I is consolidated and accrual, so:
+  - when programs add to more than the cell, the cell is shared in proportion to them (e.g. Veterans Affairs ×0.011, because benefits are charged to a liability);
+  - otherwise programs keep their amounts and the remainder takes the ministry default.
+- Pass-throughs found in Volume II: Workforce Development Agreements, school food program, rare-disease drug and pharmacare agreements, Canada-Quebec Accord, offshore revenue funds, bilateral infrastructure agreements, disaster assistance, and more.
+
+**Open**
+- **$12.15B of Finance and National Revenue "other transfers"** isn't listed in Volume II and isn't explained in Volume I. It is not the GST credit, which is netted against revenue (Table 3.3). Likely refundable credits paid through the tax system, but unverified. Currently Unidentified.
+- **$5.3B of Housing, Infrastructure and Communities** not in Volume II, mostly CMHC programs (a consolidated Crown corporation). Currently Unidentified; CMHC's own statements would split it.
+- **$2.8B of Employment and Workforce Development**, $1.9B of Indigenous Services and $1.6B of Crown-Indigenous Relations not in Volume II. These take the ministry default.
+- Claims settlements and self-government agreements (CIRNA, about $5.5B) and the First Nations new fiscal relationship grant ($2.1B) stay `other_municipal_indigenous_transfers`: they aren't tied to one service.

@@ -2,7 +2,7 @@
 # rate = share of that government's expense spent on the service (README 'Principles'; docs/federal-design.md).
 schemaVersion: 1
 dataset: canada-spending-shares
-pipelineVersion: f5d36f9-dirty
+pipelineVersion: b58b5ea-dirty
 generatedAt: '2026-11-26'
 fiscalYear: 2025-26
 federal:
@@ -17,54 +17,106 @@ federal:
     - 79
     - 128
     - 129
+    - 131
+    - 132
+    - 152
+    - 153
+    - 154
+    - 164
+    - 165
+    - 176
+    - 189
+    - 190
+    - 191
+    - 192
+    - 193
+    - 207
+    - 208
+    - 209
+    - 210
+    - 222
+    - 223
+    - 224
+    - 246
+    - 247
+    - 259
+    - 260
+    - 273
+    - 274
+    - 275
+    - 276
+    - 290
+    - 291
+    - 292
+    - 306
+    - 307
+    - 318
+    - 327
+    - 328
+    - 350
+    - 351
+    - 352
+    - 353
+    - 354
+    - 374
+    - 375
+    - 392
+    - 393
+    - 487
+    - 488
+    - 511
+    - 512
+    - 520
     verified: false
-    extractionNotes: Shares of federal expense by service. Total expenses $565.7B; $160.5B is excluded (see excludedFromShares), leaving $405.2B. Built from Volume
+    extractionNotes: Shares of federal expense by service. Total expenses $565.7B; $137.2B is excluded (see excludedFromShares), leaving $428.5B. Built from Volume
       I Table 3.6 (ministry x payment type) split into program leaves (data/3_gold/federal-leaves.csv, design in docs/federal-design.md). Net actuarial losses are
       allocated to ministries by operating expense. Ministry 'other transfers' not yet split by program (Volume II) take the ministry's default service, or Unidentified
       where the ministry funds several services.
     excludedFromShares:
     - name: Transfers to provinces and territories
-      amountCad: 110392000000
+      amountCad: 118883968709
       reason: 'Pass-through: counted where the service is delivered, in provincial shares'
     - name: Other municipal / Indigenous transfers
-      amountCad: 45795000000
+      amountCad: 14014440108
       reason: Transfers to municipalities and Indigenous governments or organizations not yet tied to a service
     - name: Pollution pricing proceeds returned
-      amountCad: 4308000000
+      amountCad: 4303868202
       reason: 'Not tax-funded and not a service: proceeds returned to people and businesses'
   categories:
   - name: Health
-    rate: 0.0344
+    rate: 0.0446
+  - name: Education
+    rate: 0.0199
   - name: Seniors' Benefits
-    rate: 0.204
+    rate: 0.1932
   - name: Child and Family Benefits
-    rate: 0.0743
+    rate: 0.0826
   - name: Employment Insurance
-    rate: 0.0662
+    rate: 0.0626
   - name: Social Assistance
-    rate: 0.0116
+    rate: 0.0133
   - name: Housing and Communities
-    rate: 0.0022
+    rate: 0.0152
   - name: Defence
-    rate: 0.1063
+    rate: 0.1005
   - name: Public Safety and Justice
-    rate: 0.0477
+    rate: 0.0472
   - name: Transportation
-    rate: 0.0139
-  - name: Economic Development and Research
-    rate: 0.0664
-  - name: Environment
-    rate: 0.0118
-  - name: Culture and Recreation
     rate: 0.0145
+  - name: Economic Development and Research
+    rate: 0.0651
+  - name: Environment
+    rate: 0.0102
+  - name: Culture and Recreation
+    rate: 0.0138
   - name: International Affairs and Aid
     rate: 0.0241
   - name: Government Administration
-    rate: 0.1213
+    rate: 0.1159
   - name: Debt Charges
-    rate: 0.1321
+    rate: 0.1249
   - name: Unidentified
-    rate: 0.0692
+    rate: 0.0524
 provincial:
   Alberta:
     _meta:

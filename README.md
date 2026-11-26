@@ -51,7 +51,7 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 | `config/taxonomy/` | COFOG concepts, object concepts, app category rollups, StatCan components, jurisdictions ([README](config/taxonomy/README.md)) |
 | `config/reconciling-items.csv` | Known reasons public accounts and StatCan differ |
 | `config/taxonomy/services.csv` | **The service categories** (COFOG → service). Review map: [docs/cofog-to-services.md](docs/cofog-to-services.md) |
-| `config/federal/` | Federal leaves (`leaves.csv`) and each ministry's default treatment and service by payment type (`ministry-services.csv`) |
+| `config/federal/` | Federal leaves (`leaves.csv`), Volume II program rules (`program-services.csv`), and each ministry's default treatment and service by payment type (`ministry-services.csv`) |
 | `config/output/` | Output contract settings, provincial Municipal Transfers overrides, and this repo's copy of the output schema |
 
 ## Running it
@@ -88,8 +88,8 @@ Each step exits non-zero if its checks fail, so bad numbers never reach gold. To
 
 _As of 2026-11-24._
 
-- **Output:** `data/3_gold/spending-shares/2025-26.yaml` gives shares **by service** for federal and all 10 provinces (validated). Federal shares exclude transfers to provinces and territories ($110.4B), unidentified transfers to municipalities and Indigenous governments ($45.8B) and pollution pricing returns ($4.3B); these are listed in `_meta.excludedFromShares` and kept in `data/3_gold/federal-leaves.csv`.
-- **Federal:** built from the Volume I Table 3.6 grid ([design](docs/federal-design.md)). Major transfers are split exactly into programs. "Other transfers" use ministry defaults until **Volume II 2025-26** is in bronze. It can't be downloaded by script (the server sends an incomplete certificate chain), so download it by browser to `data/1_bronze/federal/ca/2026-vol2-eng.pdf`. Volume II is what will move Indigenous Services and housing/infrastructure transfers out of the excluded group and into services.
+- **Output:** `data/3_gold/spending-shares/2025-26.yaml` gives shares **by service** for federal and all 10 provinces (validated). Excluded amounts are listed in `_meta.excludedFromShares` and kept in `data/3_gold/federal-leaves.csv`.
+- **Federal:** built from the Volume I Table 3.6 grid, with ministry "other transfers" split into 915 Volume II programs ([design](docs/federal-design.md)). Excluded from shares: transfers to provinces and territories ($118.9B), other municipal / Indigenous transfers ($14.0B), pollution pricing returns ($4.3B). Largest open item: $12.15B of Finance and National Revenue transfers not itemized in either volume.
 - **Provinces:** all 10 extracted and mapped COFOG → service. Quebec uses its by-portfolio Appendix 2. Municipal Transfers holds only provincial transfers to municipalities of unknown use.
 - **Checks:** every extraction check, mapping check and leaf-sum check passes. Reconciliation against StatCan covers all 11 for FY2024-25 ([analysis](docs/reconciliation-review.md)).
 - Extraction uses pdfplumber word positions plus per-table specs. The LLM extractor planned in PLAN.md A4 is not built yet.

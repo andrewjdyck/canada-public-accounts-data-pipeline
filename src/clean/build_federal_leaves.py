@@ -12,7 +12,7 @@ How a cell (ministry x payment type) becomes leaves:
       silver cells, or fixed amounts quoted from the notes); a leaf with no amount source takes
       the residual of the cell. Other transfers without a residual leaf fall back to the
       ministry default in config/federal/ministry-services.csv.
-      (Volume II program lines will add leaves here once 2026-vol2-eng.pdf is in bronze.)
+      Other transfers are then split by Volume II program (config/federal/program-services.csv).
   other_expenses: ministry default service.
   public_debt_charges: financing / Debt Charges.
   Net actuarial losses (one row in the grid): allocated to ministries in proportion to their
@@ -29,6 +29,7 @@ Usage:
 
 from __future__ import annotations
 
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -48,6 +49,54 @@ FIELDS = ["fiscal_year", "basis", "ministry", "cell_type", "leaf", "recipient", 
 TOL = 2_000_000  # printed in millions
 
 
+VOL2_DOC = "fed-canada-public-accounts-2025-26-vol2"
+VOL2_COLUMN = {"2025_26": "used_current_year", "2024_25": "used_previous_year"}
+
+
+def load_vol2_programs() -> dict[str, list[dict]]:
+    """Volume II program lines by Volume I segment, each with the rule that classifies it."""
+    path = SILVER / "public-accounts" / VOL2_DOC / "transfer-payments.csv"
+    if not path.exists():
+        return {}
+    rules = read_csv(CONFIG / "federal" / "program-services.csv")
+    for r in rules:
+        r["rx"] = re.compile(r["label_pattern"], re.I)
+    out: dict[str, list[dict]] = defaultdict(list)
+    for p in read_csv(path):
+        if p["row_kind"] != "detail":
+            continue
+        p["rule"] = next((r for r in rules if r["segment"] in ("*", p["segment"]) and r["rx"].search(p["label"])), None)
+        out[p["segment"]].append(p)
+    return out
+
+
+def split_by_programs(m: str, suffix: str, cell: float, programs: list[dict], leaf, defaults) -> float:
+    """Split a ministry's other-transfers cell into Volume II program leaves; return what is left.
+
+    Programs already counted as major-transfer leaves are skipped. When the programs add to more
+    than the cell (Volume II is departmental and cash-based; Volume I is consolidated and accrual),
+    the cell is shared out in proportion to the programs. Otherwise each program keeps its amount
+    and the remainder is returned for the ministry default.
+    """
+    col = VOL2_COLUMN[suffix]
+    lines = [p for p in programs if not (p["rule"] and p["rule"]["treatment"] == "major_transfer") and float(p[col])]
+    total = sum(float(p[col]) for p in lines)
+    if total <= 0:
+        return cell
+    scale = cell / total if total > cell else 1.0
+    d = defaults.get((m, "other_transfers"), {})
+    for p in lines:
+        r = p["rule"]
+        treatment = r["treatment"] if r else d.get("treatment", "unidentified")
+        service = r["service_id"] if r else d.get("service_id", "")
+        note = (r["notes"] if r else "No program rule: ministry default") + (
+            f"; scaled x{scale:.3f} to the Volume I cell (Volume II {total / 1e6:,.0f}M vs cell {cell / 1e6:,.0f}M)" if scale != 1 else "")
+        leaf(m, "other_transfers", p["label"], float(p[col]) * scale, treatment, service, r["recipient"] if r else "",
+             f"{VOL2_DOC} ({p['organization']}, {p['transfer_type']})", p["page"],
+             r["confidence"] if r else d.get("confidence", ""), note)
+    return cell - total * scale
+
+
 def main() -> int:
     names = service_names()
     silver = SILVER / "public-accounts" / DOC
@@ -58,6 +107,7 @@ def main() -> int:
             for r in read_csv(f):
                 other[(r["table_id"], r["row_label"], r["column_id"])] = r
     leaves_cfg = read_csv(CONFIG / "federal" / "leaves.csv")
+    vol2 = load_vol2_programs()
     defaults = {(r["ministry"], r["cell_type"]): r for r in read_csv(CONFIG / "federal" / "ministry-services.csv")}
     errors, out, used = [], [], set()
 
@@ -132,6 +182,10 @@ def main() -> int:
                     remaining -= amount
                     leaf(m, ctype, c["leaf"], amount, c["treatment"], c["service_id"], c["recipient"],
                          f"{DOC}/{c['amount_table'] or 'note text'}", lpage, c["confidence"], c["notes"])
+                if ctype == "other_transfers" and residual_cfg is None and vol2.get(m) and remaining > TOL:
+                    remaining = split_by_programs(m, suffix, remaining, vol2[m], leaf, defaults)
+                    if abs(remaining) <= TOL:
+                        continue
                 if named and abs(remaining) <= TOL and residual_cfg is None:
                     continue
                 if not named and cell == 0:
@@ -145,7 +199,9 @@ def main() -> int:
                 elif ctype == "major_transfers":
                     errors.append(f"{fy}: {m} has major transfers of {remaining / 1e6:,.0f}M with no leaf in config/federal/leaves.csv")
                 else:
-                    default(m, ctype, remaining, "Other transfer payments (not yet split by program)", f"{src} (residual)", page)
+                    label = ("Other transfer payments not listed in Volume II (consolidated entities, accruals)" if vol2.get(m)
+                             else "Other transfer payments (no program detail)")
+                    default(m, ctype, remaining, label, f"{src} (residual)", page)
             if m in ops_base and actuarial:
                 share = actuarial * ops_base[m] / ops_total
                 default(m, "other_expenses", share, "Net actuarial losses (allocated by operating expense)",

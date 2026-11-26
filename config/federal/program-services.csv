@@ -1,0 +1,52 @@
+segment,label_pattern,treatment,service_id,recipient,confidence,notes
+*,^\(S\) Old Age Security Payments|^\(S\) Guaranteed Income Supplement|^\(S\) Allowance Payments \(R\.S\.C,major_transfer,,,high,Already a major-transfer leaf (OAS/GIS/Allowance)
+*,Canada Health Transfer|Canada Social Transfer|Fiscal Equalization|Territorial Financing|Alternative Payments for Standing Programs|Youth Allowances Recovery,major_transfer,,,high,Already major-transfer leaves (CHT/CST/fiscal arrangements net of the Quebec abatement)
+*,Payments to provinces and territories for the purpose of Early Learning and Child Care,major_transfer,,,high,Already a major-transfer leaf
+*,Shared Health Priorities|Home Care and Mental Health,major_transfer,,,high,Already a major-transfer leaf (health agreements)
+*,Canada Community-Building Fund,major_transfer,,,high,Already a major-transfer leaf (other municipal transfers)
+*,Distribution of fuel charges|Return Fuel Charge Proceeds|Output-Based Pricing System Proceeds Fund,pollution_pricing_returns,,persons and businesses,high,Pollution pricing proceeds returned
+*,Workforce Development Agreements,pass_through_provinces,,provinces,high,Bilateral labour market agreements
+*,National School Food Program,pass_through_provinces,,provinces,high,Payments to provinces and territories
+*,Drugs for Rare Diseases|increase existing public pharmacare coverage|pursuant to section 103 of the Patent Act,pass_through_provinces,,provinces,high,Bilateral health agreements and payments to provinces
+*,Newfoundland Offshore Petroleum Resource Revenue Fund|Hibernia Dividend|Canada-Quebec Accord,pass_through_provinces,,provinces,high,Payments to a provincial government (revenue sharing / accord)
+*,Grants to the Government of the Northwest Territories and the Government of Nunavut for health care,pass_through_provinces,,territories,high,Payment to territorial governments
+*,Territorial Health Investment Fund,pass_through_provinces,,territories,high,Payment to territorial governments
+*,Provincial/Territorial delivered cost-shared programs,pass_through_provinces,,provinces,high,Sustainable Canadian Agricultural Partnership cost-shared with provinces
+*,Contributions to the provinces for assistance related to natural disasters,pass_through_provinces,,provinces,high,Disaster Financial Assistance Arrangements
+*,Low Carbon Economy Fund,pass_through_provinces,,provinces,medium,Mostly provincial and territorial agreements
+*,Grant to the Province of British Columbia,pass_through_provinces,,provinces,high,
+"Housing, Infrastructure and Communities",Investing in Canada Infrastructure Program|Provincial-Territorial Infrastructure Component|Building Canada Fund Major Infrastructure|Building Canada Fund Communities Component,pass_through_provinces,,provinces,medium,Bilateral infrastructure agreements with provinces and territories
+"Housing, Infrastructure and Communities",Public Transit Fund,service,transportation,municipalities and transit agencies,medium,Tied to transit
+"Housing, Infrastructure and Communities",National Infrastructure Component,service,transportation,various,low,
+"Housing, Infrastructure and Communities","Green and Inclusive Community Buildings|Housing Infrastructure Fund|Homelessness|Short Term Rental|not-for-profit organizations, individuals, municipal governments",service,housing_communities,"municipalities, non-profits",medium,Community buildings; housing-enabling water and wastewater; homelessness (Reaching Home)
+"Housing, Infrastructure and Communities",Disaster Mitigation|Natural Infrastructure|Green Infrastructure,service,environment,"provinces, municipalities",low,Climate adaptation and natural infrastructure
+Indigenous Services,new fiscal relationship,other_municipal_indigenous_transfers,,First Nations,high,10-year block grant covering several services; can't be split by service
+Indigenous Services,Canada Community-Building Fund|Annuities|per capita annuity|Miawpukek,other_municipal_indigenous_transfers,,First Nations,high,Not tied to a service
+Indigenous Services,community infrastructure,service,housing_communities,First Nations,medium,"Housing, water, roads and community facilities on reserve"
+Indigenous Services,child and family services|prevention and protection services,service,child_family_benefits,First Nations and agencies,high,Child and family services
+Indigenous Services,Primary Health Care|Health Infrastructure|Supplementary Health Benefits,service,health,First Nations and Inuit,high,
+Indigenous Services,Educational Advancement|Post-Secondary Education|Participation in Education,service,education,First Nations and Inuit,high,
+Indigenous Services,income support,service,social_assistance,on-reserve residents,high,
+Indigenous Services,emergency management|safety and security|Safe Indigenous Communities,service,public_safety_justice,First Nations,medium,
+Indigenous Services,contaminated sites,service,environment,First Nations,high,
+Indigenous Services,Economic Development|Land Management,service,economic_development,First Nations,medium,
+Indigenous Services,Urban Programming,service,social_assistance,Indigenous organizations,medium,
+Indigenous Services,Band Support|governments and institutions|service transfer|consultation|registration administration,service,government_administration,First Nations,medium,Funds Indigenous governments' administration
+Crown-Indigenous Relations and Northern Affairs,healthy foods,service,social_assistance,retailers in northern communities,high,Nutrition North Canada
+Crown-Indigenous Relations and Northern Affairs,Early Learning Child Care,service,child_family_benefits,Métis governments,high,
+Crown-Indigenous Relations and Northern Affairs,Métis housing,service,housing_communities,Métis governments,high,
+Crown-Indigenous Relations and Northern Affairs,North's natural resources,service,environment,northern communities,low,
+Employment and Workforce Development,Canada Student Grants|direct financing arrangement|Canada Education Savings|Canada Learning Bond|Apprenticeship,service,education,students and families,high,
+Employment and Workforce Development,Canada Disability Benefit|Disability Savings|Accessibility|Wage Earner Protection|Social Innovation|Social Development Partnerships|Canada Recovery,service,social_assistance,persons and organizations,high,
+Employment and Workforce Development,New Horizons for Seniors,service,seniors_benefits,community organizations,medium,
+Employment and Workforce Development,Early Learning and Child Care,service,child_family_benefits,Indigenous organizations,medium,Indigenous and complementary ELCC (the provincial ELCC transfer is a major transfer)
+Employment and Workforce Development,Employment Insurance Operating Account,service,employment_insurance,persons,high,
+Employment and Workforce Development,training|Skills and Employment|work experience|human resources|Temporary Foreign Worker|Development Program|Economic Growth,service,economic_development,"employers, organizations, provinces",medium,Labour market and skills programs (COFOG 04.1)
+Finance and National Revenue,International Development Association|poor countries,service,international,international organizations,high,
+Finance and National Revenue,Children's Special Allowance,service,child_family_benefits,child care agencies,medium,Not included in the Canada Child Benefit major transfer
+Finance and National Revenue,sustainable investment,service,economic_development,organizations,medium,
+"Immigration, Refugees and Citizenship",Interim Federal Health,service,health,refugee claimants,high,
+"Immigration, Refugees and Citizenship",Settlement|Resettlement,service,social_assistance,newcomers and organizations,high,
+"Immigration, Refugees and Citizenship",Interim Housing Assistance,service,housing_communities,provinces and municipalities,low,Paid to provinces and municipalities for asylum-claimant housing
+Justice,Legal Aid|Youth Justice|Justice Program,service,public_safety_justice,provinces and organizations,medium,Cost-shared legal aid and youth justice
+*,Regional Economic Growth|Economic Development Program|regional development,service,economic_development,businesses and organizations,high,Regional development agencies

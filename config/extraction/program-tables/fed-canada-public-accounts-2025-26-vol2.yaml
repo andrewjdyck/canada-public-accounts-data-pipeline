@@ -1,0 +1,148 @@
+# Volume II transfer-payment tables (hand-written). One entry per Volume II section.
+doc_id: fed-canada-public-accounts-2025-26-vol2
+notes: 'Public Accounts of Canada 2026 Volume II: each section''s ''Transfer payments'' table (in dollars). Read by src/extract/extract_vol2_transfers.py.
+  ''segment'' is the Volume I Table 3.6 ministry the section belongs to.'
+amount_column: Used in the current year
+previous_year_column: Used in the previous year
+columns_per_line: 9
+sections:
+- section: Agriculture and Agri-Food
+  segment: Agriculture and Agri-Food
+  pages:
+  - 131
+  - 132
+- section: Canadian Heritage
+  segment: Canadian Heritage
+  pages:
+  - 152
+  - 154
+- section: Crown-Indigenous Relations and Northern Affairs
+  segment: Crown-Indigenous Relations and Northern Affairs
+  pages:
+  - 164
+  - 165
+- section: Democratic Institutions
+  segment: Democratic Institutions
+  pages:
+  - 176
+  - 176
+- section: Employment and Workforce Development
+  segment: Employment and Workforce Development
+  pages:
+  - 189
+  - 193
+- section: Energy and Natural Resources
+  segment: Energy and Natural Resources
+  pages:
+  - 207
+  - 210
+- section: Environment and Climate Change
+  segment: Environment and Climate Change
+  pages:
+  - 222
+  - 224
+- section: Finance and National Revenue
+  segment: Finance and National Revenue
+  pages:
+  - 246
+  - 247
+- section: Fisheries and Oceans
+  segment: Fisheries and Oceans
+  pages:
+  - 259
+  - 260
+- section: Global Affairs
+  segment: Global Affairs
+  pages:
+  - 273
+  - 276
+- section: Health
+  segment: Health
+  pages:
+  - 290
+  - 292
+- section: Housing, Infrastructure and Communities
+  segment: Housing, Infrastructure and Communities
+  pages:
+  - 306
+  - 307
+- section: Immigration, Refugees and Citizenship
+  segment: Immigration, Refugees and Citizenship
+  pages:
+  - 318
+  - 318
+- section: Indigenous Services
+  segment: Indigenous Services
+  pages:
+  - 327
+  - 328
+- section: Innovation, Science and Industry
+  segment: Innovation, Science and Industry
+  pages:
+  - 350
+  - 354
+- section: Justice
+  segment: Justice
+  pages:
+  - 374
+  - 375
+- section: National Defence
+  segment: National Defence
+  pages:
+  - 392
+  - 393
+- section: National Revenue
+  segment: Finance and National Revenue
+  pages:
+  - 399
+  - 399
+- section: Office of the Governor General's Secretary
+  segment: Office of the Governor General's Secretary
+  pages:
+  - 406
+  - 406
+- section: Parks Canada
+  segment: Environment and Climate Change
+  pages:
+  - 411
+  - 411
+- section: Parliament
+  segment: Parliament
+  pages:
+  - 423
+  - 423
+- section: Privy Council
+  segment: Privy Council
+  pages:
+  - 438
+  - 438
+- section: Public Safety
+  segment: Public Safety
+  pages:
+  - 460
+  - 462
+- section: Public Services and Procurement
+  segment: Public Services and Procurement
+  pages:
+  - 476
+  - 476
+- section: Transport
+  segment: Transport
+  pages:
+  - 487
+  - 488
+- section: Treasury Board
+  segment: Treasury Board
+  pages:
+  - 501
+  - 501
+- section: Veterans Affairs
+  segment: Veterans Affairs
+  pages:
+  - 511
+  - 512
+- section: Women, Gender Equality and Youth
+  segment: Women, Gender Equality and Youth
+  pages:
+  - 520
+  - 520
