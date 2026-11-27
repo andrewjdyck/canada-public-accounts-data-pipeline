@@ -1,5 +1,5 @@
 manifest_version: 3
-updated_at: '2026-11-26'
+updated_at: '2026-11-27'
 documents:
 - id: fed-canada-public-accounts-2025-26-vol1
   level: federal
@@ -653,3 +653,369 @@ documents:
   - reconciliation
   notes: 'Context only: consolidated provincial-territorial AND local governments, so municipalities are included and it is
     not comparable to a province''s own summary financial statements.'
+- id: mun-vancouver-bc-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: BC
+    municipality: vancouver-bc
+  entity:
+    name: City of Vancouver
+    short: vancouver
+    type: government
+  doc:
+    kind: annual_report
+    title: City of Vancouver 2025 annual report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://vancouver.ca/files/cov/2025-annual-financial-report.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Vancouver
+  download:
+    method: script
+  storage:
+    relpath: municipal/vancouver-bc/2025-annual-financial-report.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: Found by src/fetch/scan_municipal_sources.py via url_template.
+- id: mun-toronto-on-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: 'ON'
+    municipality: toronto-on
+  entity:
+    name: City of Toronto
+    short: toronto
+    type: government
+  doc:
+    kind: annual_report
+    title: 2025 Annual Financial Report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://www.toronto.ca/wp-content/uploads/2026/08/8df0-2025-CoT-Annual-Financial-Report.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Toronto
+  download:
+    method: script
+  storage:
+    relpath: municipal/toronto-on/8df0-2025-CoT-Annual-Financial-Report.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: 'Found by src/fetch/scan_municipal_sources.py via known_document (web search), landing_page: https://www.toronto.ca/city-government/budget-finances/city-finance/annual-financial-report/.'
+- id: mun-toronto-on-financial-statement-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: 'ON'
+    municipality: toronto-on
+  entity:
+    name: City of Toronto
+    short: toronto
+    type: government
+  doc:
+    kind: financial_statement
+    title: 2025 Consolidated Financial Statements
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://www.toronto.ca/wp-content/uploads/2026/08/8f33-2025-CoT-Consolidated-Financial-Statements.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Toronto
+  download:
+    method: script
+  storage:
+    relpath: municipal/toronto-on/8f33-2025-CoT-Consolidated-Financial-Statements.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - financial_statement
+  notes: 'Found by src/fetch/scan_municipal_sources.py via known_document (web search), landing_page: https://www.toronto.ca/city-government/budget-finances/city-finance/annual-financial-report/.'
+- id: mun-ottawa-on-annual-report-2024
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: 'ON'
+    municipality: ottawa-on
+  entity:
+    name: City of Ottawa
+    short: ottawa
+    type: government
+  doc:
+    kind: annual_report
+    title: City of Ottawa 2024 annual report
+    fiscal_year: '2024'
+    period_covered:
+      start: '2024-01-01'
+      end: '2024-12-31'
+    language: en
+  source:
+    url: https://documents.ottawa.ca/sites/default/files/EN%20-%202024%20Annual%20Report.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Ottawa
+  download:
+    method: script
+  storage:
+    relpath: municipal/ottawa-on/EN - 2024 Annual Report.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: Found by src/fetch/scan_municipal_sources.py via known_document (web search).
+- id: mun-ottawa-on-financial-statement-2024
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: 'ON'
+    municipality: ottawa-on
+  entity:
+    name: City of Ottawa
+    short: ottawa
+    type: government
+  doc:
+    kind: financial_statement
+    title: City of Ottawa 2024 financial statement
+    fiscal_year: '2024'
+    period_covered:
+      start: '2024-01-01'
+      end: '2024-12-31'
+    language: en
+  source:
+    url: https://documents.ottawa.ca/sites/default/files/EN%20-%202024%20Financial%20Statement-AODA.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Ottawa
+  download:
+    method: script
+  storage:
+    relpath: municipal/ottawa-on/EN - 2024 Financial Statement-AODA.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - financial_statement
+  notes: Found by src/fetch/scan_municipal_sources.py via known_document (web search).
+- id: mun-calgary-ab-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: AB
+    municipality: calgary-ab
+  entity:
+    name: City of Calgary
+    short: calgary
+    type: government
+  doc:
+    kind: annual_report
+    title: Annual Financial Report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://www.calgary.ca/content/dam/www/cfod/finance/documents/2025-Annual-Financial-Report.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Calgary
+  download:
+    method: script
+  storage:
+    relpath: municipal/calgary-ab/2025-Annual-Financial-Report.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: 'Found by src/fetch/scan_municipal_sources.py via known_document (web search), landing_page: https://www.calgary.ca/our-finances/annual-reports.html,
+    url_template.'
+- id: mun-edmonton-ab-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: AB
+    municipality: edmonton-ab
+  entity:
+    name: City of Edmonton
+    short: edmonton
+    type: government
+  doc:
+    kind: annual_report
+    title: 2025 Financial Annual Report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://www.edmonton.ca/sites/default/files/public-files/documents/financial-annual-report-2025-compressed_0.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Edmonton
+  download:
+    method: script
+  storage:
+    relpath: municipal/edmonton-ab/financial-annual-report-2025-compressed_0.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: 'Found by src/fetch/scan_municipal_sources.py via known_document (web search), landing_page: https://www.edmonton.ca/city_government/budget_finances/financial-reports.'
+- id: mun-edmonton-ab-financial-statement-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: AB
+    municipality: edmonton-ab
+  entity:
+    name: City of Edmonton
+    short: edmonton
+    type: government
+  doc:
+    kind: financial_statement
+    title: 2025 Consolidated Financial Statements
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://www.edmonton.ca/sites/default/files/public-files/documents/financial-annual-report-financial-statements-2025-compressed.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Edmonton
+  download:
+    method: script
+  storage:
+    relpath: municipal/edmonton-ab/financial-annual-report-financial-statements-2025-compressed.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - financial_statement
+  notes: 'Found by src/fetch/scan_municipal_sources.py via known_document (web search), landing_page: https://www.edmonton.ca/city_government/budget_finances/financial-reports.'
+- id: mun-regina-sk-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: regina-sk
+  entity:
+    name: City of Regina
+    short: regina
+    type: government
+  doc:
+    kind: annual_report
+    title: Annual Report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://reginafiles.blob.core.windows.net/media/2025%20Annual%20Report.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Regina
+  download:
+    method: script
+  storage:
+    relpath: municipal/regina-sk/2025 Annual Report.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: 'Found by src/fetch/scan_municipal_sources.py via landing_page: https://www.regina.ca/city-government/budget-finance/annual-report/,
+    landing_page: https://www.regina.ca/city-government/budget-finance/financial-documents/.'
+- id: mun-regina-sk-public-accounts-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: SK
+    municipality: regina-sk
+  entity:
+    name: City of Regina
+    short: regina
+    type: government
+  doc:
+    kind: public_accounts
+    title: '2025'
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://reginafiles.blob.core.windows.net/media/2025%20Public%20Accounts.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Regina
+  download:
+    method: script
+  storage:
+    relpath: municipal/regina-sk/2025 Public Accounts.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - public_accounts
+  notes: 'Found by src/fetch/scan_municipal_sources.py via landing_page: https://www.regina.ca/city-government/budget-finance/financial-documents/.'
+- id: mun-winnipeg-mb-annual-report-2025
+  level: municipal
+  jurisdiction:
+    country: CA
+    province: MB
+    municipality: winnipeg-mb
+  entity:
+    name: City of Winnipeg
+    short: winnipeg
+    type: government
+  doc:
+    kind: annual_report
+    title: Annual Financial Report
+    fiscal_year: '2025'
+    period_covered:
+      start: '2025-01-01'
+      end: '2025-12-31'
+    language: en
+  source:
+    url: https://legacy.winnipeg.ca/finance/files/2025AnnualReport.pdf
+    retrieved_at: '2026-11-27'
+    publisher: City of Winnipeg
+  download:
+    method: script
+  storage:
+    relpath: municipal/winnipeg-mb/2025AnnualReport.pdf
+  file:
+    format: pdf
+  status: planned
+  tags:
+  - municipal
+  - annual_report
+  notes: 'Found by src/fetch/scan_municipal_sources.py via landing_page: https://www.winnipeg.ca/finance/documents_page.stm,
+    url_template.'

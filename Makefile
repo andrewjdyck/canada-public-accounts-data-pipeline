@@ -1,7 +1,7 @@
 # Bronze -> silver -> gold. Run `make all`, or one step at a time.
 PY ?= python3
 
-.PHONY: all fetch extract clean reconcile publish
+.PHONY: all fetch extract clean reconcile publish scan-municipal
 
 all: fetch extract clean reconcile publish
 
@@ -29,3 +29,8 @@ reconcile:
 publish:
 	$(PY) src/publish/build_spending_shares.py
 	$(PY) src/docs/render_service_map.py
+
+# bronze (not part of `all`): find cities' annual financial reports and record them as planned
+# manifest entries (config/municipal/cities.yaml -> data/1_bronze/municipal/source-scan.yaml)
+scan-municipal:
+	$(PY) src/fetch/scan_municipal_sources.py --update-manifest

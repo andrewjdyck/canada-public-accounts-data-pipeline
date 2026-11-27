@@ -1,0 +1,94 @@
+# Where each city publishes its annual financial reporting. Hand-written; read by
+# src/fetch/scan_municipal_sources.py, which scans these pages and records what it finds in
+# data/1_bronze/municipal/source-scan.yaml.
+#
+# landing_pages:  pages that link to the annual reports / financial statements
+# url_templates:  predictable file names; {year} is filled in for recent years and probed
+# known_documents: documents found by web search on 2026-11-27 (verified by the scan when it can reach the host)
+#
+# Kinds: annual_report (narrative + audited consolidated statements), financial_statement
+# (statements only), public_accounts (statutory detail, e.g. Saskatchewan's Cities Act s.156),
+# sofi (BC Statement of Financial Information).
+
+defaults:
+  fiscal_year_end: "12-31"   # all municipalities here report on the calendar year
+  include_link_pattern: "annual (financial )?report|financial (report|statements?)|public accounts|statement of financial information|\\bsofi\\b"
+  exclude_link_pattern: "to residents|popular|budget|quarter|forecast|investment|climate|development charges|sinking fund|trust fund|library|police|auditor general|business plan"
+  years_back: 3
+
+cities:
+  - id: vancouver-bc
+    name: City of Vancouver
+    province: "BC"
+    landing_pages:
+      - https://vancouver.ca/your-government/financial-reports-and-information.aspx
+    url_templates:
+      - {kind: annual_report, url: "https://vancouver.ca/files/cov/{year}-annual-financial-report.pdf"}
+    known_documents:
+      - {kind: annual_report, year: 2024, url: "https://vancouver.ca/files/cov/2024-annual-financial-report.pdf"}
+      - {kind: annual_report, year: 2023, url: "https://vancouver.ca/files/cov/2023-annual-financial-report.pdf"}
+    notes: "2025 Statement of Financial Information released April 2026 (news release); 2025 annual financial report not found by search."
+
+  - id: toronto-on
+    name: City of Toronto
+    province: "ON"
+    landing_pages:
+      - https://www.toronto.ca/city-government/budget-finances/city-finance/annual-financial-report/
+      - https://www.toronto.ca/city-government/budget-finances/city-finance/
+    known_documents:
+      - {kind: annual_report, year: 2025, url: "https://www.toronto.ca/wp-content/uploads/2026/08/8df0-2025-CoT-Annual-Financial-Report.pdf"}
+      - {kind: financial_statement, year: 2025, url: "https://www.toronto.ca/wp-content/uploads/2026/08/8f33-2025-CoT-Consolidated-Financial-Statements.pdf"}
+      - {kind: annual_report, year: 2024, url: "https://www.toronto.ca/wp-content/uploads/2025/08/9515-2024-City-of-Toronto-Financial-Report.pdf"}
+    notes: "File names carry a random prefix (8df0-, 9515-), so there is no URL template; scan the landing page."
+
+  - id: ottawa-on
+    name: City of Ottawa
+    province: "ON"
+    landing_pages:
+      - https://ottawa.ca/en/city-hall/accountability-and-transparency/annual-report
+    known_documents:
+      - {kind: annual_report, year: 2024, url: "https://documents.ottawa.ca/sites/default/files/EN%20-%202024%20Annual%20Report.pdf"}
+      - {kind: financial_statement, year: 2024, url: "https://documents.ottawa.ca/sites/default/files/EN%20-%202024%20Financial%20Statement-AODA.pdf"}
+    notes: "2025 annual report not found by search (Ottawa usually publishes in the second half of the year)."
+
+  - id: calgary-ab
+    name: City of Calgary
+    province: "AB"
+    landing_pages:
+      - https://www.calgary.ca/our-finances/annual-reports.html
+    url_templates:
+      - {kind: annual_report, url: "https://www.calgary.ca/content/dam/www/cfod/finance/documents/{year}-Annual-Financial-Report.pdf"}
+    known_documents:
+      - {kind: annual_report, year: 2025, url: "https://www.calgary.ca/content/dam/www/cfod/finance/documents/2025-Annual-Financial-Report.pdf"}
+    notes: "Consolidated statements include ENMAX (government business enterprise, modified equity)."
+
+  - id: edmonton-ab
+    name: City of Edmonton
+    province: "AB"
+    landing_pages:
+      - https://www.edmonton.ca/city_government/budget_finances/financial-reports
+    known_documents:
+      - {kind: annual_report, year: 2025, url: "https://www.edmonton.ca/sites/default/files/public-files/documents/financial-annual-report-2025-compressed_0.pdf"}
+      - {kind: financial_statement, year: 2025, url: "https://www.edmonton.ca/sites/default/files/public-files/documents/financial-annual-report-financial-statements-2025-compressed.pdf"}
+
+  - id: regina-sk
+    name: City of Regina
+    province: "SK"
+    landing_pages:
+      - https://www.regina.ca/city-government/budget-finance/annual-report/
+      - https://www.regina.ca/city-government/budget-finance/financial-documents/
+    known_documents:
+      - {kind: public_accounts, year: 2024, url: "https://www.regina.ca/export/sites/Regina.ca/city-government/budget-finance/.galleries/pdfs/FINAL-2024-Public-Accounts-1.pdf"}
+    notes: "2025 Annual Report and Public Accounts went to Audit and Finance Committee in May-June 2026. 2024 documents are already in the manifest (mun-regina-*)."
+
+  - id: winnipeg-mb
+    name: City of Winnipeg
+    province: "MB"
+    landing_pages:
+      - https://www.winnipeg.ca/finance/documents_page.stm
+    url_templates:
+      - {kind: annual_report, url: "https://legacy.winnipeg.ca/finance/files/{year}AnnualReport.pdf"}
+    known_documents:
+      - {kind: annual_report, year: 2024, url: "https://legacy.winnipeg.ca/finance/files/2024AnnualReport.pdf"}
+      - {kind: annual_report, year: 2023, url: "https://legacy.winnipeg.ca/finance/files/2023AnnualReport.pdf"}
+    notes: "2025 audited consolidated statements were released in May 2026 through the Decision Making Information System (clkapps.winnipeg.ca)."

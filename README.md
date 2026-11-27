@@ -33,6 +33,7 @@ src/        one folder per step: fetch -> extract -> clean -> reconcile
 |---|---|---|---|
 | bronze | `data/1_bronze/{federal,provincial,municipal}/...` | `src/fetch/fetch_sources.py` | Public accounts PDFs |
 | bronze | `data/1_bronze/statcan/<product_id>/` | `src/fetch/fetch_sources.py` | StatCan full-table CSV zips (COFOG) |
+| bronze | `data/1_bronze/municipal/source-scan.yaml` | `src/fetch/scan_municipal_sources.py` (`make scan-municipal`) | Where each city publishes its annual financial report and statements, by year, with an HTTP check of each PDF. Cities and landing pages: `config/municipal/cities.yaml` |
 | bronze | `data/1_bronze/source-docs-manifest.yaml` | by hand + `fetch_sources.py --record` | URL, retrieval date, sha256, status of every source |
 | silver | `data/2_silver/public-accounts/<doc_id>/<table_id>.csv` | `src/extract/extract_statement_tables.py` | One row per printed amount, with page, row label, column, fiscal year, basis; plus `checks.csv` and `lineage.json` |
 | silver | `data/2_silver/statcan/<product_id>.csv` | `src/extract/extract_statcan.py` | StatCan rows, labels as published |

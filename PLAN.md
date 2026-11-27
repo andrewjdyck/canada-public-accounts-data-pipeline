@@ -104,6 +104,30 @@ Status: ⬜ not started · 🔄 in progress · ✅ done
 | C3 Reconciliation | 🔄 | All 11 jurisdictions reconciled for FY2024-25 (2026-11-21); analysis in `docs/reconciliation-review.md`. Open: Quebec (−14.8%) and Saskatchewan (−12.6%) perimeter, the long-term care and child care classification tests, and the federal Finance split. |
 | C4 Year overlap | 🔄 | StatCan's latest year is 2024 (FY2024-25, preliminary). Use the restated prior-year column in each FY2025-26 document (as for Ontario), so no extra downloads are needed. |
 
+### D. Municipal (started 2026-11-27, beyond the MVP)
+
+| Task | Status | Details |
+|------|--------|---------|
+| D1 Find sources | ✅ | `config/municipal/cities.yaml` covers Vancouver, Toronto, Ottawa, Calgary, Edmonton, Regina and Winnipeg. `make scan-municipal` scans their landing pages and URL templates, checks every PDF, writes `data/1_bronze/municipal/source-scan.yaml`, and adds the newest year's documents to the manifest as `planned`. Latest found: 2025 for all except Ottawa (2024; 2025 not published yet). Vancouver's landing page refuses scripts (403), but its files are reachable, found through the URL template. |
+| D2 Download | ⬜ | `fetch_sources.py --record` for the `planned` municipal entries (large files: Regina's 2025 Annual Report is 40 MB). |
+| D3 Extraction and mapping | ⬜ | Consolidated statement of operations (expense by function) and expense-by-object notes, following the provincial pattern. Decide how municipal shares relate to provincial transfers to municipalities (README "Principles" 2). |
+
+### Parked review items (2026-11-26)
+
+Come back to these when the mapping review resumes. Details are in `docs/federal-design.md` §6.
+
+- [ ] **Federal: $12.15B of Finance and National Revenue "other transfers"** is in neither Volume II nor any Volume I table. It isn't the GST credit (netted against revenue, Table 3.3). Likely refundable credits paid through the tax system; find a source, then classify. Currently Unidentified.
+- [ ] **Federal: $5.3B of Housing, Infrastructure and Communities** isn't in Volume II, probably CMHC programs. CMHC's own financial statements could split it. Currently Unidentified.
+- [ ] **Federal: other Volume I amounts not in Volume II.** Employment and Workforce Development $2.8B (Unidentified), Indigenous Services $1.9B and Crown-Indigenous Relations $1.6B (excluded as other municipal / Indigenous transfers).
+- [ ] **Federal program rules to confirm** (`config/federal/program-services.csv`, medium/low confidence):
+  - Children's Special Allowance is treated as separate from the Canada Child Benefit major transfer.
+  - The Interim Housing Assistance Program counts as a housing service, though it's paid to provinces and municipalities.
+  - Labour-market and skills programs count as Economic Development.
+  - Bilateral infrastructure agreements count as pass-through.
+- [ ] **Review the COFOG to service map:** `docs/cofog-to-services.md`.
+- [ ] **Review provincial mappings** (`config/mappings/*.csv`), especially low-confidence rows and lines mapped to `_unallocated`.
+- [ ] **Provincial Municipal Transfers rule:** should provinces exclude unidentified municipal transfers, as the federal rule does? Currently they're counted in the shares (`config/output/category-overrides.csv`).
+
 ### Notes
 
 - Quebec publishes its public accounts in English as well as French; use the English edition if the tables match.
